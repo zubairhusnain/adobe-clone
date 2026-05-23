@@ -1,74 +1,77 @@
-# Adobe.com local clone (Samsung-clon structure)
+# Adobe.com offline clone
 
-Offline mirror of [adobe.com](https://www.adobe.com/) using the same architecture as `samsung-clon/`.
+Static PHP site for hosting on cPanel (or any Apache + PHP host). Upload the project as-is; no build step or download tools are required on the server.
 
-## Structure
+## Requirements
 
-```
-index.php              # Homepage only (PHP + asset rewriter; no index.html)
-base-url.php           # Local base URL + HTML URL rewriting
-router.php             # Front controller for Apache
-.htaccess
-pages/                 # Mirrored inner pages (one index.php per route)
-upp/ libs/ marketingtech/ content/   # Adobe static roots (mirrored assets)
-assets/
-  css/ images/ js/ remote/   # Bundled + third-party assets
-mirror-adobe.mjs       # Playwright crawler (pages + assets)
-```
+- PHP 8.0 or newer (enable in cPanel → **Select PHP Version**)
+- Apache with **mod_rewrite** enabled
+- `.htaccess` allowed (`AllowOverride All` on the document root — default on most cPanel hosts)
 
-## Setup
+## cPanel setup
 
-1. Symlink Playwright (if `npm install` fails globally):
+### 1. Upload files
 
-   ```bash
-   ln -sf ../website-cloning-tool/node_modules ./node_modules
-   ./node_modules/.bin/playwright install chromium
-   ```
+1. Sign in to cPanel → **File Manager** (or upload a ZIP via **File Manager** / FTP).
+2. Upload the full project into one of these locations:
+   - **Main domain:** `public_html/` (all files directly inside, including `index.php`, `router.php`, and `.htaccess`)
+   - **Subdomain or subfolder:** e.g. `public_html/adobe/` (entire project inside that folder)
 
-2. **Download front-page links + assets** (recommended — uses `curl`, no Playwright):
+Make sure hidden files are visible when uploading so `.htaccess` is included.
 
-   ```bash
-   cd /Applications/XAMPP/xamppfiles/htdocs/clon-adobe-website
-   bash scripts/clone-front-pages.sh
-   # or: npm run clone:front
-   ```
+### 2. Set the document root (if needed)
 
-   This creates `pages/<route>/index.php` for every `www.adobe.com` link in `index.php`, downloads CSS/JS/images into `upp/`, `libs/`, `marketingtech/`, and `assets/remote/`, and refreshes `index.php`.
+- If the site lives in `public_html/`, the domain’s document root should already point there — no change needed.
+- For a **subdomain** pointing at a subfolder, use cPanel → **Domains** → **Subdomains** (or **Addon Domains**) and set the document root to the folder that contains `index.php`.
 
-   Optional: `PAGE_WORKERS=2 ASSET_WORKERS=8 bash scripts/clone-front-pages.sh`
+### 3. Check PHP and rewrite rules
 
-3. Playwright mirror (alternative if curl fails):
+1. cPanel → **Select PHP Version** → choose **8.0+** for the domain or directory.
+2. Confirm `public_html/.htaccess` (or your subfolder’s `.htaccess`) exists and was not stripped by the upload.
+3. Open the site in a browser:
+   - Domain root: `https://yourdomain.com/`
+   - Subfolder: `https://yourdomain.com/adobe/` (path must match the folder name under `public_html`)
 
-   ```bash
-   npm run mirror
-   ```
+### 4. Optional environment variables
 
-4. Download remaining third-party assets referenced in HTML/CSS:
+Usually the app detects the URL from your domain automatically. Set these only if links or assets resolve to the wrong host/path:
 
-   ```bash
-   npm run mirror:remote-assets
-   ```
+**Subfolder install** (site at `https://example.com/adobe/`):
 
-5. Open in XAMPP:
+In `.htaccess` at the site root (above the existing `RewriteEngine On` line):
 
-   `http://localhost/clon-adobe-website/`
-
-## Important: real page content
-
-Do **not** use `instant-pages.py` — it only pastes the homepage into every route.
-
-**Download real HTML** (run in macOS Terminal, not a sandboxed agent):
-
-```bash
-bash scripts/clone-front-pages.sh
+```apache
+SetEnv CW_BASE_PATH /adobe
 ```
 
-Each `pages/<route>/index.php` will contain the actual DOM from `https://www.adobe.com/<route>.html`.
+**Force a specific public URL** (e.g. behind a proxy or wrong scheme):
 
-On first visit, `router.php` also tries a one-time PHP/curl download if a route is still a stub.
+```apache
+SetEnv CW_BASE_URL https://yourdomain.com/adobe
+```
+
+Use the path **without** a trailing slash. Omit `CW_BASE_PATH` when the site runs at the domain root (`public_html` only).
+
+### 5. File permissions
+
+Typical cPanel defaults are fine:
+
+- Folders: `755`
+- Files: `644`
+
+Ensure `index.php` and `router.php` are readable by the web server.
+
+## Verify the install
+
+1. Homepage loads: `/`
+2. An inner page loads, e.g. `/acrobat/generative-ai-pdf/`
+3. Styles and images load (no broken layout; check the browser Network tab for 404s on `/libs/`, `/acrobat/`, or `/assets/`)
+
+If you see **404** on every route except the homepage, mod_rewrite is off or `.htaccess` is ignored — contact your host or enable **AllowOverride** for that directory.
+
+If assets point at `localhost`, set `CW_BASE_URL` as in step 4.
 
 ## Notes
 
-- Internal links like `https://www.adobe.com/foo.html` rewrite to `/foo/`.
-- Analytics (GTM, DoubleClick, etc.) are stubbed or stripped for offline use.
-- Some Adobe APIs (IMS, personalization JSON) may still call remote services unless stubbed in `router.php`.
+- Internal links are rewritten for your install path; external Adobe commerce/sign-in URLs may still point to Adobe’s live site.
+- Analytics and some third-party scripts are disabled or stubbed for offline use.
