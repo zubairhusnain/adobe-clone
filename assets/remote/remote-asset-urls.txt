@@ -2212,9 +2212,8 @@ https://maps.googleapis.com/maps-api-v3/api/js/63/14d/onion.js
 https://maps.googleapis.com/maps-api-v3/api/js/63/14d/places.js
 https://maps.googleapis.com/maps-api-v3/api/js/63/14d/util.js
 https://maps.googleapis.com/maps/api/js
-https://maps.googleapis.com/maps/api/js?
-https://maps.googleapis.com/maps/api/js?key=REDACTED_GOOGLE_API_KEY&region=kr
-https://maps.googleapis.com/maps/api/js?region=kr&key=REDACTED_GOOGLE_API_KEY&libraries=places&loading=async&callback=Function.prototype
+https://maps.googleapis.com/maps/api/js?region=kr
+https://maps.googleapis.com/maps/api/js?region=kr&libraries=places&loading=async&callback=Function.prototype
 https://maps.gstatic.com/intl/en_us/mapfiles/drag_cross_67_16.png
 https://mas.adobe.com/studio/libs/fragment-client.js
 https://milo.adobe.com/tools/send-to-caas/send-to-caas.js
