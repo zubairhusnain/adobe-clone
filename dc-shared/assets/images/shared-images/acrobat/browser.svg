@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="_5_Icon_Browser" data-name="5_Icon_Browser" transform="translate(6865 -13476)">
+    <g id="Group_302285" data-name="Group 302285" transform="translate(-6865 13476.001)">
+      <rect id="Rectangle_221212" data-name="Rectangle 221212" width="28" height="28" rx="6" transform="translate(0 -0.001)" fill="#000b1d"/>
+    </g>
+    <g id="Decorative_icon" data-name="Decorative icon" transform="translate(-6858.5 13482.5)">
+      <rect id="Placement_Area" data-name="Placement Area" width="15" height="15" fill="#fff" opacity="0"/>
+      <g id="Icon">
+        <rect id="Canvas" width="15" height="15" fill="#fff" opacity="0"/>
+        <path id="Path_713438" data-name="Path 713438" d="M3,4.417v10a.417.417,0,0,0,.417.417H14.25a.417.417,0,0,0,.417-.417v-10A.417.417,0,0,0,14.25,4H3.417A.417.417,0,0,0,3,4.417ZM13.833,14h-10V6.5h10Z" transform="translate(-0.5 -0.667)" fill="#fff"/>
+        <path id="Path_713439" data-name="Path 713439" d="M1.833,2.667H12.667V1.417A.417.417,0,0,0,12.25,1H1.417A.417.417,0,0,0,1,1.417v10a.417.417,0,0,0,.417.417h.417Z" transform="translate(-0.167 -0.167)" fill="#fff"/>
+        <path id="Path_713440" data-name="Path 713440" d="M3,4.417v10a.417.417,0,0,0,.417.417H14.25a.417.417,0,0,0,.417-.417v-10A.417.417,0,0,0,14.25,4H3.417A.417.417,0,0,0,3,4.417ZM13.833,14h-10V6.5h10Z" transform="translate(-0.5 -0.667)" fill="#fff"/>
+        <path id="Path_713441" data-name="Path 713441" d="M1.833,2.667H12.667V1.417A.417.417,0,0,0,12.25,1H1.417A.417.417,0,0,0,1,1.417v10a.417.417,0,0,0,.417.417h.417Z" transform="translate(-0.167 -0.167)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

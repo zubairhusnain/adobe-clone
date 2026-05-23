@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="_5_Icon_E-signature" data-name="5_Icon_E-signature" transform="translate(8406 -13749)">
+    <g id="Adobe_Fonts" data-name="Adobe Fonts" transform="translate(-8406 13749.001)">
+      <g id="Group_302285" data-name="Group 302285" transform="translate(0 -0.001)">
+        <rect id="Rectangle_221212" data-name="Rectangle 221212" width="28" height="28" rx="6" fill="#000b1d"/>
+      </g>
+    </g>
+    <rect id="Placement_Area" data-name="Placement Area" width="15" height="15" transform="translate(-8399 13756)" fill="#fff" opacity="0"/>
+    <g id="Icon" transform="translate(-8400 13755)">
+      <rect id="Canvas" width="15" height="15" fill="#fff" opacity="0"/>
+      <path id="Path_713460" data-name="Path 713460" d="M13.1,2.147a.415.415,0,0,0-.585-.586h0a.554.554,0,0,0-.049.06L8.817,5.257l0,.007a.286.286,0,0,0-.06.05.415.415,0,0,0,.583.583.379.379,0,0,0,.05-.06l.005.005L13.043,2.2,13.036,2.2a.357.357,0,0,0,.06-.048Z" transform="translate(-1.445 -0.242)" fill="#fff"/>
+      <path id="Path_713461" data-name="Path 713461" d="M12.726,3.05c-.3.3-3.974,4.019-4,4.042a.922.922,0,0,1-.984.012l-.32-.3-4.5,4.409a.625.625,0,0,0-.136.2l-.78,2.669a.156.156,0,0,0,.206.2L4.9,13.47a.625.625,0,0,0,.192-.13l8.992-8.96Z" transform="translate(-0.333 -0.508)" fill="#fff"/>
+      <path id="Path_713462" data-name="Path 713462" d="M15.3,2.074,16.59,3.305a1.158,1.158,0,0,0-.336-1.347,1.375,1.375,0,0,0-1.342-.442c-.075.027.027.125.057.156S15.276,2.034,15.3,2.074Z" transform="translate(-2.481 -0.247)" fill="#fff"/>
+      <path id="Path_713463" data-name="Path 713463" d="M15.348,14.368a4.482,4.482,0,0,0-3.266-.388A8.019,8.019,0,0,0,9.215,15.4c-.333.24-.7.493-.949.383a1.077,1.077,0,0,1-.365-.422A3.528,3.528,0,0,0,7.65,15a1.886,1.886,0,0,0-.162-.161l-.6.6a1.048,1.048,0,0,1,.116.092,2.812,2.812,0,0,1,.19.276,1.711,1.711,0,0,0,.736.738,1.134,1.134,0,0,0,.458.1,2.392,2.392,0,0,0,1.315-.568,7.22,7.22,0,0,1,2.567-1.278,3.7,3.7,0,0,1,2.659.3.417.417,0,1,0,.417-.722Z" transform="translate(-1.148 -2.305)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

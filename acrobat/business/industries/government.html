@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Government</title>
+    <link rel="canonical" href="https://www.adobe.com/acrobat/business/industries/government.html">
+    <meta name="description" content="Citizen and community needs keep growing. Stay up to speed by uniting powerful e-signature capabilities with the Adobe tools they already know and trust.">
+    <meta property="og:title" content="Government">
+    <meta property="og:description" content="Citizen and community needs keep growing. Stay up to speed by uniting powerful e-signature capabilities with the Adobe tools they already know and trust.">
+    <meta property="og:image" content="https://www.adobe.com/acrobat/business/industries/media_1389236a02754d6e2727e72c6ee3acd053b6f32c1.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/acrobat/business/industries/media_1389236a02754d6e2727e72c6ee3acd053b6f32c1.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Government">
+    <meta name="twitter:description" content="Citizen and community needs keep growing. Stay up to speed by uniting powerful e-signature capabilities with the Adobe tools they already know and trust.">
+    <meta name="twitter:image" content="https://www.adobe.com/acrobat/business/industries/media_1389236a02754d6e2727e72c6ee3acd053b6f32c1.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="jarvis-chat" content="desktop">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="checkout-workflow-step" content="commitment">
+    <meta name="gnav-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/globalnav/localnav-acrobat-business">
+    <meta name="footer-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/footer/footer">
+    <meta name="jarvis-surface-id" content="DocumentCloudsignAcro">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://acrobat.adobe.com" crossorigin="">
+    <script src="/acrobat/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+    <script nomodule src="/acrobat/scripts/fallback.js"></script>
+    <script>
+  window.setLibs = (prodLibs, location = window.location) => {
+    const { hostname, search } = location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('milolibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return '/libs';
+    if (branch === 'local') return 'http://localhost:6456/libs';
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--') ? '' : '--milo--adobecom'}.${env}.live/libs`;
+  };
+
+  window.getUnityLibs = (prodLibs = '/unitylibs') => {
+    const { hostname, search } = window.location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('unitylibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return prodLibs;
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--')? '' : '--unity--adobecom'}.${env}.live/unitylibs`;
+  }
+
+  window.extractLocalePrefix = (pathname = window.location.pathname) => {
+    const segments = pathname.split('/').filter(Boolean);
+    if (!segments[0] || segments[0] === 'acrobat') {
+      return '';
+    }
+    return `/${segments[0]}`;
+  }
+
+  window.loadLink = (href, options = {}) => {
+    const { as, callback, crossorigin, rel, fetchpriority } = options;
+    let link = document.head.querySelector(`link[href="${href}"]`);
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', rel);
+      if (as) link.setAttribute('as', as);
+      if (crossorigin) link.setAttribute('crossorigin', crossorigin);
+      if (fetchpriority) link.setAttribute('fetchpriority', fetchpriority);
+      link.setAttribute('href', href);
+      if (callback) {
+        link.onload = (e) => callback(e.type);
+        link.onerror = (e) => callback(e.type);
+      }
+      document.head.appendChild(link);
+    } else if (callback) {
+      callback('noop');
+    }
+    return link;
+  }
+
+  const miloLibs = setLibs('/libs');
+  const unityLibs = getUnityLibs();
+  const localePrefix =  extractLocalePrefix();
+
+
+  const preloads = document.querySelector('meta[name="preloads"]')?.content?.split(',').map(x => x.trim().replace('$MILOLIBS', miloLibs).replace('$UNITYLIBS', unityLibs).replace('$LOCALEPREFIX', localePrefix)) || [];
+  preloads.forEach((link) => {
+    if (link.endsWith('.js')) {
+      loadLink(link, { as: 'script', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (link.endsWith('.css')) {
+      loadLink(link, { as: 'style', rel: 'preload' });
+    } else if (/\.(json|html|svg)$/.test(link)) {
+      loadLink(link, { as: 'fetch', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (/\.(png|jpg|jpeg|gif|webp)$/.test(link)) {
+      loadLink(link, { as: 'image', rel: 'preload', fetchpriority: 'high' });
+    }
+  });
+
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const ssrFlag = document.querySelector('meta[name="head-loaded"]');
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/dc-shared/assets/sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/dc-shared/assets/sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !ssrFlag) {
+      fetchAndParseSitemap();
+    }
+  })();
+  
+  const meta = document.createElement('meta');
+  meta.setAttribute('name', 'head-loaded');
+  document.head.append(meta);
+</script>
+  <script >bazadebezolkohpepadr="917651884"</script><script type="text/javascript" src="https://www.adobe.com/akam/13/36b240a0"  defer></script></head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="breadcrumbs">
+          <div>
+            <div>
+              <ul>
+                <li><a href="https://www.adobe.com/">Home</a></li>
+                <li><a href="https://www.adobe.com/acrobat.html">Acrobat</a></li>
+                <li><a href="https://www.adobe.com/acrobat/business/industries.html">Industries</a></li>
+                <li>Government</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="marquee small dark static-links">
+          <div>
+            <div>linear-gradient(85deg, rgba(179,10,1,1) 0%, rgba(199,34,22,1) 50%, rgba(254,142,119,1) 100%)</div>
+            <div>linear-gradient(85deg, rgba(179,10,1,1) 0%, rgba(199,34,22,1) 50%, rgba(254,142,119,1) 100%)</div>
+            <div>linear-gradient(85deg, rgba(179,10,1,1) 0%, rgba(199,34,22,1) 50%, rgba(254,142,119,1) 100%)</div>
+          </div>
+          <div>
+            <div>
+              <p>ADOBE DOCUMENT CLOUD FOR GOVERNMENT</p>
+              <h1 id="give-citizens-a-faster-digital-way-to-sign">Give citizens a faster digital way to sign.</h1>
+              <p>Citizen and community needs keep growing. Stay up to speed by uniting powerful e-signature capabilities with the Adobe tools they already know and trust.</p>
+              <p><strong><a href="https://www.adobe.com/acrobat/business/contact.html">Contact Sales</a></strong></p>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1389236a02754d6e2727e72c6ee3acd053b6f32c1.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1389236a02754d6e2727e72c6ee3acd053b6f32c1.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1389236a02754d6e2727e72c6ee3acd053b6f32c1.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1389236a02754d6e2727e72c6ee3acd053b6f32c1.png?width=750&#x26;format=png&#x26;optimize=medium" width="640" height="466">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="aside notification medium">
+          <div>
+            <div>#f5f5f5</div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1a54fc501b3feda2c01ea209f26361b12cf4ec7e8.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1a54fc501b3feda2c01ea209f26361b12cf4ec7e8.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1a54fc501b3feda2c01ea209f26361b12cf4ec7e8.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="2021 Microsoft partner of the year Logo" src="./media_1a54fc501b3feda2c01ea209f26361b12cf4ec7e8.png?width=750&#x26;format=png&#x26;optimize=medium" width="336" height="224">
+              </picture>
+            </div>
+            <div>
+              <h2 id="adobe-is-fedramp-moderate-authorized">Adobe is FedRAMP Moderate Authorized.</h2>
+              <p>Adobe Acrobat Sign is now FedRAMP Moderate Authorized — allowing your agency to address existing public sector workforce pain points and enabling government growth toward long-term IT modernization.</p>
+              <p><em><a href="https://blog.adobe.com/en/publish/2022/06/06/adobe-reaches-public-sector-milestone-with-fedramp-moderate-authorization-for-adobe-acrobat-sign-for-government">Learn more</a></em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text intro center no-spacing-bottom">
+          <div>
+            <div>
+              <h3 id="delight-citizens-with-paperless-signatures">Delight citizens with paperless signatures.</h3>
+              <p>Cut costs while empowering your teams to deliver the fast, mobile-friendly services your citizens need. With Acrobat Sign, it’s easy to securely send digital documents for e-signature and track every step of the process from any device, anywhere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block vertical small xs-spacing">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1317df4504c82a3cdcedbb6183d6269a27cdaa108.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1317df4504c82a3cdcedbb6183d6269a27cdaa108.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1317df4504c82a3cdcedbb6183d6269a27cdaa108.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_1317df4504c82a3cdcedbb6183d6269a27cdaa108.png?width=750&#x26;format=png&#x26;optimize=medium" width="50" height="56">
+                </picture>
+              </p>
+              <h3 id="support-any-mission">Support any mission.</h3>
+              <p>E-signatures improve efficiencies across all departments in your agency — from mission-critical services like requests for permits, construction planning, or health services to internal operations like <a href="/dc-shared/assets/pdf/acrobat/business/industries/adobe-sign-for-hr-efficiency.pdf">human resources</a>, <a href="/dc-shared/assets/pdf/acrobat/business/industries/adobe-sign-for-government-procurement-agility.pdf">procurement</a>, and IT.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small xs-spacing">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1bb0f151b30b16cccac04b611c4d935ac51cea5d6.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1bb0f151b30b16cccac04b611c4d935ac51cea5d6.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1bb0f151b30b16cccac04b611c4d935ac51cea5d6.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_1bb0f151b30b16cccac04b611c4d935ac51cea5d6.png?width=750&#x26;format=png&#x26;optimize=medium" width="69" height="57">
+                </picture>
+              </p>
+              <h3 id="make-it-automatic">Make it automatic.</h3>
+              <p>Employee-driven and <a href="https://www.adobe.com/acrobat/business/features/document-workflows.html">self-serve workflows</a> make it easy to initiate and track signing processes, enforce deadlines, and archive final documents automatically, complete with audit trails.</p>
+              <p><a href="https://www.adobe.com/acrobat/business/compliance/electronic-signature-legality.html">Learn more about automation</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small xs-spacing">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1fefdab6be75fb9389056544134b601f7a4f71988.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1fefdab6be75fb9389056544134b601f7a4f71988.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1fefdab6be75fb9389056544134b601f7a4f71988.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_1fefdab6be75fb9389056544134b601f7a4f71988.png?width=750&#x26;format=png&#x26;optimize=medium" width="49" height="57">
+                </picture>
+              </p>
+              <h3 id="get-everyones-signature">Get everyone’s signature.</h3>
+              <p><a href="https://www.adobe.com/sign.html">Legal e-signatures</a> let you choose from a variety of signer identity verification methods, including US government-issued IDs, certificate-based employee IDs like PIV or CAC cards, and more.</p>
+              <p><a href="https://www.adobe.com/acrobat/business/compliance/electronic-signature-legality.html">Learn about e-signature legality</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small xs-spacing">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1f0601c8b6dd2723651e64eaa713b00d705221556.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1f0601c8b6dd2723651e64eaa713b00d705221556.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1f0601c8b6dd2723651e64eaa713b00d705221556.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_1f0601c8b6dd2723651e64eaa713b00d705221556.png?width=750&#x26;format=png&#x26;optimize=medium" width="62" height="65">
+                </picture>
+              </p>
+              <h3 id="ensure-compliance">Ensure compliance.</h3>
+              <p>E-signature processes protect sensitive information, ensure legality and accessibility, and enforce regulatory and policy rules automatically — so you can <a href="https://www.adobe.com/trust/compliance/compliance-list.html">meet requirements</a> for FedRAMP, HIPAA, GDPR, and more.</p>
+              <p><a href="https://www.adobe.com/acrobat/business/resources/compliance.html">Learn more about compliance</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Four up, xl spacing</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="media checklist dark static-links xl-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_18b3affa85c17631bb88b4282e10e80fb25b7d7fb.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_18b3affa85c17631bb88b4282e10e80fb25b7d7fb.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_18b3affa85c17631bb88b4282e10e80fb25b7d7fb.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_18b3affa85c17631bb88b4282e10e80fb25b7d7fb.png?width=750&#x26;format=png&#x26;optimize=medium" width="1394" height="1046">
+              </picture>
+            </div>
+            <div>
+              <h3 id="go-digital-and-get-more-out-of-your-systems">Go digital, and get more out of your systems.</h3>
+              <p><span class="icon icon-checkmark"></span>Easily integrate e-signatures into your Microsoft systems and other business applications you already use. Our prebuilt integrations help you get even more value from Microsoft, Salesforce, ServiceNow, Workday, and more. <a href="/acrobat/business/integrations">Learn how to get more from your business systems.</a></p>
+              <p><span class="icon icon-checkmark"></span>E-signatures make work faster, easier, and more secure — but getting started requires a team effort. Read this eBook to get smart about the benefits so you can be an advocate for transforming your agency’s processes. <a href="https://www.adobe.com/content/dam/dx-dc/pdf/ue/your-signature-move-gov-ue.pdf">Read about five key reasons to use e-signatures.</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>background</div>
+            <div>linear-gradient(85deg, rgba(254,142,119,1) 0%, rgba(254,142,119,1) 50%, rgba(179,13,0,1) 100%)</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>Xl spacing</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text intro center">
+          <div>
+            <div>
+              <h3 id="how-can-adobe-help-transform-your-agency-take-a-look">How can Adobe help transform your agency? Take a look.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="media s-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_16e8da7e64971104b45ef9f7ce65df8f58f0df1b6.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_16e8da7e64971104b45ef9f7ce65df8f58f0df1b6.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_16e8da7e64971104b45ef9f7ce65df8f58f0df1b6.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="img" src="./media_16e8da7e64971104b45ef9f7ce65df8f58f0df1b6.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1004" height="582">
+              </picture>
+            </div>
+            <div>
+              <h4 id="state-of-utah">State of Utah</h4>
+              <p>With Acrobat Sign, the State of Utah was able to keep government running while accelerating telework during a dual crisis.</p>
+              <p><a href="https://blog.adobe.com/en/publish/2020/04/27/the-state-of-utah-uses-adobe-sign-to-accelerate-telework-during-crisis">Read the State of Utah’s story</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_139a552d59a91703657f2e0a29d6ed72eac4025e5.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_139a552d59a91703657f2e0a29d6ed72eac4025e5.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_139a552d59a91703657f2e0a29d6ed72eac4025e5.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="img" src="./media_139a552d59a91703657f2e0a29d6ed72eac4025e5.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1004" height="582">
+              </picture>
+            </div>
+            <div>
+              <h4 id="colorado-department-of-transportation">Colorado Department of Transportation</h4>
+              <p>Read about how the Colorado Department of Transportation transformed its construction planning process using e-signatures.</p>
+              <p><a href="https://blog.adobe.com/en/publish/2020/01/13/cdot-saves-time-and-money-paving-the-way-to-digital-with-adobe-sign">Read Colorado DOT’s story</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Two up, l spacing, grid width 10</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center dark l-spacing">
+          <div>
+            <div>
+              <h3 id="a-total-solution-for-going-paperless-with-e-signatures">A total solution for going paperless with e-signatures.</h3>
+              <p>Transform your agency with end-to-end digital document and form processes that make signing and approvals easy and legal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Grid width 8</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#000000</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="media s-heading static-links">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_19c70efcf06f7d56d8c86c2c6086c57b60973c42f.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_19c70efcf06f7d56d8c86c2c6086c57b60973c42f.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_19c70efcf06f7d56d8c86c2c6086c57b60973c42f.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="Sign on the digital line" src="./media_19c70efcf06f7d56d8c86c2c6086c57b60973c42f.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="414">
+              </picture>
+            </div>
+            <div>
+              <h3 id="sign-on-the-digital-line">Sign on the digital line.</h3>
+              <p>Automate legal and secure electronic signature processes with Acrobat Sign.</p>
+              <p><a href="https://www.adobe.com/sign/electronic-signatures.html">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading static-links">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1ad15c377b11c04445ab098f2870f817e43d931e5.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1ad15c377b11c04445ab098f2870f817e43d931e5.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1ad15c377b11c04445ab098f2870f817e43d931e5.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="Sign on the digital line" src="./media_1ad15c377b11c04445ab098f2870f817e43d931e5.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="414">
+              </picture>
+            </div>
+            <div>
+              <h3 id="drive-document-workflow-efficiencies">Drive document workflow efficiencies.</h3>
+              <p>Combine Adobe Acrobat with workflow automation and e-signatures to transform your document processes.</p>
+              <p><a href="https://www.adobe.com/acrobat/business.html">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading static-links">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_10a5f8442895a62a2124d0f61dd7546e85dbf0b91.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_10a5f8442895a62a2124d0f61dd7546e85dbf0b91.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_10a5f8442895a62a2124d0f61dd7546e85dbf0b91.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="Sign on the digital line" src="./media_10a5f8442895a62a2124d0f61dd7546e85dbf0b91.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="414">
+              </picture>
+            </div>
+            <div>
+              <h3 id="make-filling-out-forms-easy">Make filling out forms easy.</h3>
+              <p>Use Adobe Experience Manager Forms to build enrollment and onboarding journeys on par with private sector experiences.</p>
+              <p><a href="https://business.adobe.com/products/experience-manager/forms/aem-forms.html">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading static-links">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_19e4612346b4ad9359266109e265b23d527ac992f.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_19e4612346b4ad9359266109e265b23d527ac992f.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_19e4612346b4ad9359266109e265b23d527ac992f.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="Sign on the digital line" src="./media_19e4612346b4ad9359266109e265b23d527ac992f.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="414">
+              </picture>
+            </div>
+            <div>
+              <h3 id="ensure-government-continuity">Ensure government continuity.</h3>
+              <p>Continue delivering essential support and resources when disaster hits.</p>
+              <p><a href="https://www.adobe.com/">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Four up, s spacing, dark</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#000000</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text intro center">
+          <div>
+            <div>
+              <h2 id="explore-these-resources-build-better-workflows">Explore these resources. Build better workflows.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="media s-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_12c98eabda5bdacb3de3ca7e8cc38e9759fbebd1c.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_12c98eabda5bdacb3de3ca7e8cc38e9759fbebd1c.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_12c98eabda5bdacb3de3ca7e8cc38e9759fbebd1c.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_12c98eabda5bdacb3de3ca7e8cc38e9759fbebd1c.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="376" height="231">
+              </picture>
+            </div>
+            <div>
+              <h3 id="rapid-response">Rapid response.</h3>
+              <p>Get started in days, not months. Visit the Acrobat Sign Rapid Response Resource Hub, where you’ll find quick-start learning videos and step-by-step use case recipes.</p>
+              <p><a href="https://acrobatusers.com/gov-rapid-response-resource-hub/">Explore the hub now</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_14de800b51c76c33d44eaf02982e1c352d5b8a9f9.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_14de800b51c76c33d44eaf02982e1c352d5b8a9f9.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_14de800b51c76c33d44eaf02982e1c352d5b8a9f9.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_14de800b51c76c33d44eaf02982e1c352d5b8a9f9.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="376" height="231">
+              </picture>
+            </div>
+            <div>
+              <h3 id="process-transformation">Process transformation.</h3>
+              <p>Check out this infographic to find ways to streamline your document and signature processes to delight citizens, save time, and enhance security.</p>
+              <p><a href="/dc-shared/assets/pdf/acrobat/business/industries/adobe-sign-for-hr-efficiency.pdf">Get the infographic</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1bc2d1797b2ea23bf907c435fc02ad19a1a5e054a.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1bc2d1797b2ea23bf907c435fc02ad19a1a5e054a.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1bc2d1797b2ea23bf907c435fc02ad19a1a5e054a.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1bc2d1797b2ea23bf907c435fc02ad19a1a5e054a.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="376" height="231">
+              </picture>
+            </div>
+            <div>
+              <h3 id="21st-century-idea-compliance">21st century idea compliance.</h3>
+              <p>Acrobat Sign helps agencies comply with the 21st Century Integrated Digital Experience Act (IDEA) to deliver modern signature experiences.</p>
+              <p><a href="/dc-shared/assets/pdf/acrobat/business/industries/document-cloud-and-21st-century-idea-sb-ue.pdf">Download the brief</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_15bd16a654e75dcdcdc1c92fb940cc9a4b90ed2bb.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_15bd16a654e75dcdcdc1c92fb940cc9a4b90ed2bb.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_15bd16a654e75dcdcdc1c92fb940cc9a4b90ed2bb.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_15bd16a654e75dcdcdc1c92fb940cc9a4b90ed2bb.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="376" height="231">
+              </picture>
+            </div>
+            <div>
+              <h3 id="faster-service-delivery">Faster service delivery.</h3>
+              <p>Accelerate the process of sending and collecting signatures while delivering cost-effective digital services with trusted, legal e-signatures.</p>
+              <p><a href="/dc-shared/assets/pdf/acrobat/business/industries/adobe-document-cloud-government-sb-ue.pdf">Download the brief</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_169385f07e07c2c57d8ff161ce5906d07eb0eac3b.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_169385f07e07c2c57d8ff161ce5906d07eb0eac3b.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_169385f07e07c2c57d8ff161ce5906d07eb0eac3b.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="Inserting image..." src="./media_169385f07e07c2c57d8ff161ce5906d07eb0eac3b.png?width=750&#x26;format=png&#x26;optimize=medium" width="379" height="213">
+              </picture>
+            </div>
+            <div>
+              <h3 id="e-signature-legality">E-signature legality.</h3>
+              <p>Acrobat Sign is the world’s most trusted e-signature solution, built to meet the broadest range of legal requirements for ultimate compliance.</p>
+              <p><a href="https://www.adobe.com/acrobat/business/compliance/electronic-signature-legality.html">Learn more about e-signature legality</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1f18cc2f311ad31214e5a56f5966fa7ec05880ade.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1f18cc2f311ad31214e5a56f5966fa7ec05880ade.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1f18cc2f311ad31214e5a56f5966fa7ec05880ade.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1f18cc2f311ad31214e5a56f5966fa7ec05880ade.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="376" height="231">
+              </picture>
+            </div>
+            <div>
+              <h3 id="security-and-compliance">Security and compliance.</h3>
+              <p>Trust Adobe Document Cloud to help you comply with standards like FedRAMP, HIPAA, SOC 2 Type 2, and US Section 508.</p>
+              <p><a href="/dc-shared/assets/pdf/acrobat/business/industries/document-cloud-and-21st-century-idea-sb-ue.pdf">Download the brief</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Three up, s spacing</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/shared-fragments/business/black-get-in-touch-contact">https://main--dc--adobecom.hlx.live/dc-shared/fragments/shared-fragments/business/black-get-in-touch-contact</a></p>
+      </div>
+    </main>
+    <footer></footer>
+  <noscript><img src="https://www.adobe.com/akam/13/pixel_36b240a0?a=dD01ZDRkZDE3NjRkZWEyZWQxNDQwODI3YTE2ZjhlYjhkNzU3MTNjZmJjJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

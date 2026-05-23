@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <link rel="canonical" href="https://www.adobe.com/federal/footer/fragments/footer-acom-column-5">
+    <meta property="og:title" content="Contact">
+    <meta property="og:url" content="https://www.adobe.com/federal/footer/fragments/footer-acom-column-5">
+    <meta property="og:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact">
+    <meta name="twitter:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium"><!-- Modifying this file will impact your performance -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/scripts/fallback.js" nomodule></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <h2 id="contact">Contact</h2>
+        <ul>
+          <li><a href="https://www.adobe.com/#open-jarvis-chat">Chat with sales</a></li>
+          <li><a href="https://business.adobe.com/request-consultation.html">Request information</a></li>
+        </ul>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

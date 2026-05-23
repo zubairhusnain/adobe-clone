@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gnav Brand (Logo, Brand Image Only)</title>
+    <link rel="canonical" href="https://www.adobe.com/federal/events/localnav-events">
+    <meta property="og:title" content="Gnav Brand (Logo, Brand Image Only)">
+    <meta property="og:url" content="https://www.adobe.com/federal/events/localnav-events">
+    <meta property="og:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gnav Brand (Logo, Brand Image Only)">
+    <meta name="twitter:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="robots" content="noindex, nofollow"><!-- Modifying this file will impact your performance -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/scripts/fallback.js" nomodule></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="gnav-brand logo brand-image-only">
+          <div>
+            <div>
+              <p><a href="/federal/assets/svgs/adobe-logo.svg">https://main--federal--adobecom.hlx.page/federal/assets/svgs/adobe-logo.svg|Adobe, Inc.</a></p>
+              <p><a href="/federal/assets/svgs/adobe-wordmark-white-resize.svg">https://main--federal--adobecom.hlx.page/federal/assets/svgs/adobe-wordmark-white-resize.svg | Adobe, Inc.</a></p>
+              <p><a href="https://www.adobe.com/">Adobe</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="large-menu section">
+          <div>
+            <div>
+              <h2 id="learn--support"><a href="/federal/globalnav/acom/sections/section-menu-help">Learn &#x26; Support</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="community"><a href="https://www.adobe.com/community">Community</a></h2>
+      </div>
+      <div>
+        <h2 id="product-community"><a href="https://community.adobe.com#_blank">Product Community</a></h2>
+      </div>
+      <div>
+        <h2 id="inspiration-gallery"><a href="https://firefly.adobe.com/community#_blank">Inspiration Gallery</a></h2>
+      </div>
+      <div>
+        <h2 id="creator-resources"><a href="https://www.adobe.com/community/creator-resources">Creator Resources</a></h2>
+      </div>
+      <div></div>
+      <div>
+        <div class="large-menu">
+          <div>
+            <div>
+              <h2 id="events"><a href="/federal/events/fragments/section-menu-events">Events</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="behance"><a href="https://www.behance.net/search/projects#_blank">Behance</a></h2>
+      </div>
+      <div>
+        <div class="profile"></div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

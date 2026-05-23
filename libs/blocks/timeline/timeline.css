@@ -1,0 +1,269 @@
+.timeline {
+  box-sizing: border-box;
+  padding: 0 var(--grid-margins-width) var(--spacing-xl) var(--grid-margins-width);
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.dialog-modal .timeline {
+  padding: 0 var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
+}
+
+/* Columns use subgrid so bars and periods align across left/right */
+.timeline > .left,
+.timeline > .right {
+  display: grid;
+  grid-row: 1 / -1;
+  grid-template-rows: subgrid;
+}
+
+.timeline > .right {
+  grid-template-columns: 1.5fr 1fr;
+  gap: 0 8px;
+}
+
+[dir="rtl"] .timeline > .right {
+  grid-template-columns: 1fr 1fr;
+}
+
+.timeline.segment-timeline-3-9,
+.timeline.segment-timeline-4-8,
+.timeline.segment-timeline-5-7 {
+  grid-template-columns: 1fr 58.3%;
+}
+
+.timeline.segment-timeline-6-6 {
+  grid-template-columns: 50% 50%;
+}
+
+.timeline.segment-timeline-7-5,
+.timeline.segment-timeline-8-4,
+.timeline.segment-timeline-9-3 {
+  grid-template-columns: 1fr 41.7%;
+}
+
+.timeline h1,
+.timeline h2,
+.timeline h3,
+.timeline h4,
+.timeline h5,
+.timeline h6,
+.timeline p {
+  color: var(--text-color);
+  margin: 0;
+  font-size: var(--type-body-xs-size);
+  line-height: var(--type-body-xs-lh);
+}
+
+/* Text entries — grid row 1 */
+.timeline > .left > [data-valign],
+.timeline > .right > [data-valign] {
+  grid-row: 1;
+}
+
+.timeline > .left > [data-valign]:not(.left-center) > * {
+  max-width: 100px;
+}
+
+.timeline > .right > :first-child {
+  grid-column: 1;
+  max-width: 135px;
+}
+
+.timeline > .right > .right-end {
+  grid-column: 2;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.timeline > .right > .right-end > * {
+  max-width: 100px;
+}
+
+/* Bar wrappers — grid row 2, decorative (aria-hidden) */
+.timeline .bar-wrapper {
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+}
+
+.timeline > .right > .bar-wrapper {
+  grid-column: 1 / -1;
+  justify-content: space-between;
+}
+
+.timeline .bar {
+  height: 20px;
+  width: 2px;
+  border-radius: 1px;
+  margin: var(--spacing-xxs) 0;
+}
+
+/* Period labels — grid row 3 */
+.timeline .period {
+  grid-row: 3;
+  text-align: center;
+  font-weight: 700;
+  padding: 4px var(--spacing-xxs);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.timeline > .right > .period {
+  grid-column: 1 / -1;
+  margin-left: 3px;
+}
+
+.timeline > .left > .period {
+  margin-right: 1px;
+}
+
+.dark .timeline .period,
+.timeline.dark .period {
+  color: var(--color-black);
+}
+
+.dark .timeline > .left > [data-valign] > *,
+.dark .timeline > .right > [data-valign] > *,
+.timeline.dark > .left > [data-valign] > *,
+.timeline.dark > .right > [data-valign] > * {
+  color: var(--color-white);
+}
+
+.timeline.segment-timeline-3-9 .left-center,
+.timeline.segment-timeline-4-8 .left-center,
+.timeline.segment-timeline-5-7 .left-center,
+.timeline.segment-timeline-6-6 .left-center {
+  display: none;
+}
+
+@media screen and (max-width: 599.99px) {
+  .timeline.segment-timeline-7-5 > .right,
+  .timeline.segment-timeline-8-4 > .right,
+  .timeline.segment-timeline-9-3 > .right {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline.segment-timeline-7-5 .right-center,
+  .timeline.segment-timeline-8-4 .right-center,
+  .timeline.segment-timeline-9-3 .right-center {
+    display: none;
+  }
+
+  .timeline.segment-timeline-7-5 > .left,
+  .timeline.segment-timeline-8-4 > .left,
+  .timeline.segment-timeline-9-3 > .left {
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 8px;
+  }
+
+  .timeline.segment-timeline-7-5 > .left > .bar-wrapper,
+  .timeline.segment-timeline-7-5 > .left > .period,
+  .timeline.segment-timeline-8-4 > .left > .bar-wrapper,
+  .timeline.segment-timeline-8-4 > .left > .period,
+  .timeline.segment-timeline-9-3 > .left > .bar-wrapper,
+  .timeline.segment-timeline-9-3 > .left > .period {
+    grid-column: 1 / -1;
+  }
+
+  .timeline.segment-timeline-7-5 .left-center,
+  .timeline.segment-timeline-8-4 .left-center,
+  .timeline.segment-timeline-9-3 .left-center {
+    grid-row: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .timeline > .left > .left-center > * {
+    padding-right: 0;
+  }
+
+  .timeline.segment-timeline-7-5 > .right > .right-end,
+  .timeline.segment-timeline-8-4 > .right > .right-end,
+  .timeline.segment-timeline-9-3 > .right > .right-end {
+    grid-column: 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .timeline.segment-timeline-7-5 .left-center,
+  .timeline.segment-timeline-8-4 .left-center,
+  .timeline.segment-timeline-9-3 .left-center {
+    display: none;
+  }
+}
+
+[dir="rtl"] .timeline > .left > [data-valign] > * {
+  padding: 0;
+  text-align: right;
+}
+
+[dir="rtl"] .timeline > .right > .right-end {
+  padding: 0 0 var(--spacing-xxs) 0;
+  text-align: left;
+}
+
+[dir="rtl"] .timeline > .left > .period {
+  margin: 0 0 0 1px;
+}
+
+[dir="rtl"] .timeline > .right > .period {
+  margin: 0 3px 0 0;
+}
+
+[dir="rtl"] .timeline.segment-timeline-7-5 > .left > .left-center > *,
+[dir="rtl"] .timeline.segment-timeline-8-4 > .left > .left-center > *,
+[dir="rtl"] .timeline.segment-timeline-9-3 > .left > .left-center > * {
+  padding: 0;
+  text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+  .timeline.segment-timeline-3-9 {
+    grid-template-columns: 1fr 75%;
+  }
+
+  .timeline.segment-timeline-4-8 {
+    grid-template-columns: 1fr 66.69%;
+  }
+
+  .timeline.segment-timeline-5-7 {
+    grid-template-columns: 1fr 58.3%;
+  }
+
+  .timeline.segment-timeline-6-6 {
+    grid-template-columns: 1fr 50%;
+  }
+
+  .timeline.segment-timeline-7-5 {
+    grid-template-columns: 1fr 41.7%;
+  }
+
+  .timeline.segment-timeline-8-4 {
+    grid-template-columns: 1fr 33.3%;
+  }
+
+  .timeline.segment-timeline-9-3 {
+    grid-template-columns: 1fr 25%;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .timeline {
+    padding-left: calc((100vw - 1000px) / 2);
+    padding-right: calc((100vw - 1000px) / 2);
+  }
+
+  .dialog-modal .timeline {
+    padding: 0 var(--spacing-xl) var(--spacing-xl) var(--spacing-xl);
+  }
+}

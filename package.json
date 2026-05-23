@@ -1,0 +1,23 @@
+{
+  "name": "copy-website",
+  "private": true,
+  "devDependencies": {
+    "playwright": "^1.54.0"
+  },
+  "scripts": {
+    "mirror:adobe:test": "node mirror-samsung.mjs --base https://www.adobe.com --input index.php --pages-php --max 3 --fast",
+    "mirror:adobe": "node mirror-samsung.mjs --base https://www.adobe.com --input index.php --pages-php --fast --concurrency 3",
+    "mirror:adobe:full": "node mirror-samsung.mjs --base https://www.adobe.com --input index.php --pages-php --full --concurrency 2 --wait 2000",
+    "mirror:adobe:assets": "node mirror-samsung.mjs --base https://www.adobe.com --download-remote-assets-project",
+    "mirror:learn:photoshop": "python3 scripts/mirror-learn-photoshop.py",
+    "setup:adobe:fast": "python3 scripts/fast-adobe-offline.py && python3 scripts/download-missing-gnav.py",
+    "repair:assets": "php scripts/verify-served-assets.php && python3 scripts/download-missing-served-assets.py && python3 scripts/fast-adobe-offline.py",
+    "audit:adobe": "node scripts/audit-pages.mjs",
+    "mirror:samsung": "node mirror-samsung.mjs --max 30",
+    "mirror:nvidia": "node mirror-nvidia.mjs",
+    "mirror:nvidia:dry": "node mirror-nvidia.mjs --dry-run",
+    "localize:assets": "node localize-all-assets.mjs",
+    "setup:site": "node setup-full-site.mjs",
+    "test:pages": "node test-all-pages.mjs"
+  }
+}

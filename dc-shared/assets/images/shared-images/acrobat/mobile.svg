@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="_5_Icon_Mobile" data-name="5_Icon_Mobile" transform="translate(8594 -13618)">
+    <g id="Adobe_Fonts" data-name="Adobe Fonts" transform="translate(-8594 13618.001)">
+      <g id="Group_302285" data-name="Group 302285" transform="translate(0 -0.001)">
+        <rect id="Rectangle_221212" data-name="Rectangle 221212" width="28" height="28" rx="6" fill="#000b1d"/>
+      </g>
+    </g>
+    <g id="Decorative_icon" data-name="Decorative icon" transform="translate(-8588 13624)">
+      <rect id="Placement_Area" data-name="Placement Area" width="16" height="16" fill="#fff" opacity="0"/>
+      <g id="Icon">
+        <rect id="Canvas" width="16" height="16" fill="#fff" opacity="0"/>
+        <path id="Path_713436" data-name="Path 713436" d="M12,0H4.889A.889.889,0,0,0,4,.889V15.111A.889.889,0,0,0,4.889,16H12a.889.889,0,0,0,.889-.889V.889A.889.889,0,0,0,12,0ZM8,.889h.889a.463.463,0,0,1,.444.444.462.462,0,0,1-.444.444H8a.455.455,0,0,1-.444-.444A.455.455,0,0,1,8,.889ZM8.444,15.6a.933.933,0,1,1,.933-.933A.933.933,0,0,1,8.444,15.6ZM12,13.333H4.889V2.667H12Z" transform="translate(-0.444 0)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

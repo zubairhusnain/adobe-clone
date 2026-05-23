@@ -1,0 +1,10 @@
+/*!
+ * Bazaarvoice swat_container 1.6.0 config
+ * Wed, 20 May 2026 11:04:38 GMT
+ *
+ * http://bazaarvoice.com/
+ *
+ * Copyright 2026 Bazaarvoice. All rights reserved.
+ *
+ */
+window.performance && window.performance.mark && window.performance.mark('bv_loader_configure_swat_container_start');BV["swat_container"].configure({"locale":"pl_PL","apiKey":"caNpP6aY6rXFwkVFOUhEpZvehAdPRHjimvk88c7NjULeE","displayCode":"20567","domains":[{"allowSubdomain":true,"domainAddress":"bazaarvoice.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"samsung.dotcomui.local","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"my-samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true}],"containerUrl":"https://www.samsung.com/pl/container/","homePageURL":"http://www.samsung.com/pl","features":{"allowCssOverrides":false,"useProductPagesForSubmissionFlag":false},"messages":{"unsubscribe_success":"Pomyślnie anulowano subskrypcję.","unsubscribe_failure":"Coś poszło nie tak. Spróbuj ponownie później.","userVerified":"{Gender, select, other {Dziękujemy! Przesłana przez Ciebie treść zostanie uwierzytelniona.} }","userAlreadyVerified":"Ten adres e-mail został już zweryfikowany.","unsubscribe_unknownError":"Coś poszło nie tak. Spróbuj ponownie później.","display_deeplink_common_error":"Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.","close_modal_screen_reader_message":"Zamknij okno dialogowe. Naciśnij Enter, aby zamknąć okno dialogowe."},"labelStyles":{"familyID":"sniffedFontFamily326698143","size":13,"color":"#363636","lineHeight":19.5,"characterStyles":[],"family":"SamsungOne, arial","sampleBackgroundColor":"white","textTransform":"none"},"homePageUrl":"http://www.samsung.com/pl"});

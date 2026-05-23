@@ -1,0 +1,10 @@
+/*!
+ * Bazaarvoice swat_container 1.6.0 config
+ * Tue, 07 Apr 2026 15:20:40 GMT
+ *
+ * http://bazaarvoice.com/
+ *
+ * Copyright 2026 Bazaarvoice. All rights reserved.
+ *
+ */
+window.performance && window.performance.mark && window.performance.mark('bv_loader_configure_swat_container_start');BV["swat_container"].configure({"locale":"fr_BE","apiKey":"casM210zr5SiR4OzQDucOX4j70BGz5bFMEF7nBPJqjTwA","displayCode":"20560","domains":[{"allowSubdomain":true,"domainAddress":"bazaarvoice.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"org-qaweb.samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true}],"containerUrl":"http://www.samsung.com/be_fr/container/","homePageURL":"http://www.samsung.com/be_fr/","features":{"allowCssOverrides":false,"useProductPagesForSubmissionFlag":false},"messages":{"unsubscribe_success":"Vous êtes bien désabonné(e).","unsubscribe_failure":"Une erreur s'est produite. Veuillez réessayer plus tard.","userVerified":"{Gender, select, other {Merci ! Votre contenu a bien été authentifié.} }","userAlreadyVerified":"Cette adresse email a déjà été vérifiée.","unsubscribe_unknownError":"Une erreur s'est produite. Veuillez réessayer plus tard.","display_deeplink_common_error":"Une erreur inattendue s'est produite. Veuillez réessayer plus tard.","close_modal_screen_reader_message":"Fermer la fenêtre modale. Appuyez sur Entrée pour fermer la fenêtre modale."},"labelStyles":{"familyID":"fontFamily2","size":13,"color":"#333","lineHeight":19.5,"characterStyles":[],"family":"Arial, Helvetica, sans-serif","sampleBackgroundColor":"white","textTransform":"none"},"homePageUrl":"http://www.samsung.com/be_fr/"});

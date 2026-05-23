@@ -1,0 +1,10 @@
+/*!
+ * Bazaarvoice swat_container 1.6.0 config
+ * Wed, 29 Apr 2026 15:14:31 GMT
+ *
+ * http://bazaarvoice.com/
+ *
+ * Copyright 2026 Bazaarvoice. All rights reserved.
+ *
+ */
+window.performance && window.performance.mark && window.performance.mark('bv_loader_configure_swat_container_start');BV["swat_container"].configure({"locale":"sr_RS","apiKey":"caUDLqekLlCCYhN9hzq1OoQjxri1fNaMRRFInEyNYt9hY","displayCode":"19352","domains":[{"allowSubdomain":true,"domainAddress":"samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"bazaarvoice.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"my-samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true}],"containerUrl":"https://www.samsung.com/rs/container","homePageURL":"http://samsung.com/rs","features":{"allowCssOverrides":false,"useProductPagesForSubmissionFlag":true},"messages":{"unsubscribe_success":"Uspešno ste otkazali pretplatu.","unsubscribe_failure":"Došlo je do problema. Pokušajte ponovo kasnije.","userVerified":"{Gender, select, other {Zahvaljujemo vam! Uspešno ste obavili autentifikaciju svog sadržaja.} }","userAlreadyVerified":"E-adresa je već verifikovana.","unsubscribe_unknownError":"Došlo je do problema. Pokušajte ponovo kasnije.","display_deeplink_common_error":"Došlo je do neočekivane greške. Pokušajte ponovo kasnije.","close_modal_screen_reader_message":"Zatvorite modalni prozor. Pritisnite taster Enter da biste zatvorili modalni prozor."},"labelStyles":{"familyID":"sniffedFontFamily326698143","size":13,"color":"#363636","lineHeight":19.5,"characterStyles":[],"family":"SamsungOne, arial","sampleBackgroundColor":"white","textTransform":"none"},"homePageUrl":"http://samsung.com/rs"});

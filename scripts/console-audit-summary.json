@@ -1,0 +1,180 @@
+{
+  "base": "http://localhost/clon-adobe-website",
+  "failed": [
+    {
+      "route": "/",
+      "url": "http://localhost/clon-adobe-website/",
+      "errors": [
+        "TypeError: Cannot read properties of null (reading 'insertAdjacentHTML')"
+      ]
+    },
+    {
+      "route": "/about-adobe/integrity/",
+      "url": "http://localhost/clon-adobe-website/about-adobe/integrity/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/acrobat/",
+      "url": "http://localhost/clon-adobe-website/acrobat/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/acrobat/free-trial-download/",
+      "url": "http://localhost/clon-adobe-website/acrobat/free-trial-download/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/acrobat/online/ai-chat-pdf/",
+      "url": "http://localhost/clon-adobe-website/acrobat/online/ai-chat-pdf/",
+      "errors": [
+        "TypeError: Cannot read properties of null (reading 'insertAdjacentHTML')",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "ReferenceError: Cannot access 'lanaLogging' before initialization"
+      ]
+    },
+    {
+      "route": "/acrobat/online/compress-pdf/",
+      "url": "http://localhost/clon-adobe-website/acrobat/online/compress-pdf/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "ReferenceError: Cannot access 'lanaLogging' before initialization"
+      ]
+    },
+    {
+      "route": "/acrobat/online/merge-pdf/",
+      "url": "http://localhost/clon-adobe-website/acrobat/online/merge-pdf/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "ReferenceError: Cannot access 'lanaLogging' before initialization"
+      ]
+    },
+    {
+      "route": "/acrobat/online/pdf-editor/",
+      "url": "http://localhost/clon-adobe-website/acrobat/online/pdf-editor/",
+      "errors": [
+        "TypeError: Cannot read properties of null (reading 'insertAdjacentHTML')",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "ReferenceError: Cannot access 'lanaLogging' before initialization"
+      ]
+    },
+    {
+      "route": "/acrobat/online/pdf-to-word/",
+      "url": "http://localhost/clon-adobe-website/acrobat/online/pdf-to-word/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "ReferenceError: Cannot access 'lanaLogging' before initialization"
+      ]
+    },
+    {
+      "route": "/acrobat/pricing/",
+      "url": "http://localhost/clon-adobe-website/acrobat/pricing/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/community/",
+      "url": "http://localhost/clon-adobe-website/community/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/education/",
+      "url": "http://localhost/clon-adobe-website/education/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/express/",
+      "url": "http://localhost/clon-adobe-website/express/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/express/feature/image/remove-background/",
+      "url": "http://localhost/clon-adobe-website/express/feature/image/remove-background/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/howtobuy/buying-programs/government/",
+      "url": "http://localhost/clon-adobe-website/howtobuy/buying-programs/government/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/legal/terms/",
+      "url": "http://localhost/clon-adobe-website/legal/terms/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ]
+    },
+    {
+      "route": "/nonprofits/acrobat/",
+      "url": "http://localhost/clon-adobe-website/nonprofits/acrobat/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/products/firefly/",
+      "url": "http://localhost/clon-adobe-website/products/firefly/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/products/firefly/features/ai-art-generator/",
+      "url": "http://localhost/clon-adobe-website/products/firefly/features/ai-art-generator/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/products/firefly/features/ai-photo-editor/",
+      "url": "http://localhost/clon-adobe-website/products/firefly/features/ai-photo-editor/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/products/firefly/features/text-to-image/",
+      "url": "http://localhost/clon-adobe-website/products/firefly/features/text-to-image/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/products/photoshop-lightroom/",
+      "url": "http://localhost/clon-adobe-website/products/photoshop-lightroom/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/products/substance3d/",
+      "url": "http://localhost/clon-adobe-website/products/substance3d/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    },
+    {
+      "route": "/sign/",
+      "url": "http://localhost/clon-adobe-website/sign/",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adobe Acrobat Pro free trial | Start a free trial</title>
+    <link rel="canonical" href="https://www.adobe.com/acrobat/free-trial-download.html">
+    <meta name="description" content="Try Adobe Acrobat by downloading a fully functional free trial. Use PDF tools and AI Assistant to organize and share all of your documents.">
+    <meta property="og:title" content="Adobe Acrobat Pro free trial | Start a free trial">
+    <meta property="og:description" content="Try Adobe Acrobat by downloading a fully functional free trial. Use PDF tools and AI Assistant to organize and share all of your documents.">
+    <meta property="og:image" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adobe Acrobat Pro free trial | Start a free trial">
+    <meta name="twitter:description" content="Try Adobe Acrobat by downloading a fully functional free trial. Use PDF tools and AI Assistant to organize and share all of your documents.">
+    <meta name="twitter:image" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="target" content="on">
+    <meta name="personalization-v2" content="on">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="jarvis-chat" content="desktop">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="checkout-workflow-step" content="commitment">
+    <meta name="gnav-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/globalnav/localnav-acrobat">
+    <meta name="footer-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/footer/footer">
+    <meta name="personalization" content="https://main--da-dc--adobecom.aem.page/acrobat/free-trial-download.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://acrobat.adobe.com" crossorigin="">
+    <script src="/acrobat/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+    <script nomodule src="/acrobat/scripts/fallback.js"></script>
+    <script>
+  window.setLibs = (prodLibs, location = window.location) => {
+    const { hostname, search } = location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('milolibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return '/libs';
+    if (branch === 'local') return 'http://localhost:6456/libs';
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--') ? '' : '--milo--adobecom'}.${env}.live/libs`;
+  };
+
+  window.getUnityLibs = (prodLibs = '/unitylibs') => {
+    const { hostname, search } = window.location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('unitylibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return prodLibs;
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--')? '' : '--unity--adobecom'}.${env}.live/unitylibs`;
+  }
+
+  window.extractLocalePrefix = (pathname = window.location.pathname) => {
+    const segments = pathname.split('/').filter(Boolean);
+    if (!segments[0] || segments[0] === 'acrobat') {
+      return '';
+    }
+    return `/${segments[0]}`;
+  }
+
+  window.loadLink = (href, options = {}) => {
+    const { as, callback, crossorigin, rel, fetchpriority } = options;
+    let link = document.head.querySelector(`link[href="${href}"]`);
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', rel);
+      if (as) link.setAttribute('as', as);
+      if (crossorigin) link.setAttribute('crossorigin', crossorigin);
+      if (fetchpriority) link.setAttribute('fetchpriority', fetchpriority);
+      link.setAttribute('href', href);
+      if (callback) {
+        link.onload = (e) => callback(e.type);
+        link.onerror = (e) => callback(e.type);
+      }
+      document.head.appendChild(link);
+    } else if (callback) {
+      callback('noop');
+    }
+    return link;
+  }
+
+  const miloLibs = setLibs('/libs');
+  const unityLibs = getUnityLibs();
+  const localePrefix =  extractLocalePrefix();
+
+
+  const preloads = document.querySelector('meta[name="preloads"]')?.content?.split(',').map(x => x.trim().replace('$MILOLIBS', miloLibs).replace('$UNITYLIBS', unityLibs).replace('$LOCALEPREFIX', localePrefix)) || [];
+  preloads.forEach((link) => {
+    if (link.endsWith('.js')) {
+      loadLink(link, { as: 'script', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (link.endsWith('.css')) {
+      loadLink(link, { as: 'style', rel: 'preload' });
+    } else if (/\.(json|html|svg)$/.test(link)) {
+      loadLink(link, { as: 'fetch', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (/\.(png|jpg|jpeg|gif|webp)$/.test(link)) {
+      loadLink(link, { as: 'image', rel: 'preload', fetchpriority: 'high' });
+    }
+  });
+
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const ssrFlag = document.querySelector('meta[name="head-loaded"]');
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/dc-shared/assets/sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/dc-shared/assets/sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !ssrFlag) {
+      fetchAndParseSitemap();
+    }
+  })();
+  
+  const meta = document.createElement('meta');
+  meta.setAttribute('name', 'head-loaded');
+  document.head.append(meta);
+</script>
+  <script >bazadebezolkohpepadr="917651884"</script><script type="text/javascript" src="https://www.adobe.com/akam/13/36b240a0"  defer></script></head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="hero-marquee center xl-heading l-body s-min-height">
+          <div>
+            <div><strong>linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%) , linear-gradient(180deg, rgba(255, 255, 255, 1) 35%, rgba(255, 255, 255, 0) 90%) , linear-gradient(90deg, rgba(254, 81, 70, 1) 0%, rgba(179, 11, 0, 1) 100%)</strong></div>
+          </div>
+          <div>
+            <div>con-block-row-lockup (m-icon)</div>
+            <div><a href="/dc-shared/assets/images/product-icons/svg/acrobat-pro-64.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/svg/acrobat-pro-64.svg</a> Adobe Acrobat</div>
+          </div>
+          <div>
+            <div>
+              <h1 id="work-smarter-with-a-7-day-free-trial">Work smarter with a 7-day free trial.</h1>
+              <p>With <strong>Acrobat Pro and AI Assistant</strong>, you have full access to advanced PDF tools so you can work anywhere, on any device.</p>
+              <p><a href="https://milo.adobe.com/tools/ost?osi=-lYm-YaTSZoUgv1gzqCgybgFotLqRsLwf8CgYdvdnsQ,bKwlW94xSVU_ykn4WHDjS1eiZrXopDo8VD7UhGAKYBI&#x26;type=price">PRICE - ABM - Adobe Acrobat Pro and AI Assistant</a> {{small-tax-incl-label}} for the {{annual-paid-monthly-plan}}. Monthly plans also available.</p>
+            </div>
+          </div>
+          <div>
+            <div>con-block-row-supplemental (s-body)</div>
+            <div><em>Fee applies of half your remaining annual commitment if you cancel 14 days after your free trial ends.</em> <em><span class="icon icon-tooltip"></span>| top | If you cancel 14 days after your free trial ends, your service will only continue until the end of that month’s billing period.</em></div>
+          </div>
+          <div>
+            <div>con-block-row-text</div>
+            <div><strong><a href="https://milo.adobe.com/tools/ost?osi=-lYm-YaTSZoUgv1gzqCgybgFotLqRsLwf8CgYdvdnsQ,bKwlW94xSVU_ykn4WHDjS1eiZrXopDo8VD7UhGAKYBI&#x26;type=checkoutUrl&#x26;text=free-trial&#x26;workflowStep=email">{{start-free-trial}} | Start free trial Acrobat Pro and AI Assistant</a></strong> <em><a href="/acrobat/pricing">See plans and pricing | See plans and pricing Acrobat</a></em></div>
+          </div>
+          <div>
+            <div>con-block-row-list</div>
+            <div>
+              <ul>
+                <li><span class="icon icon-checkmark"></span><strong>Premium features</strong> available on <strong>desktop</strong>, <strong>web</strong>, and <strong>mobile</strong></li>
+                <li><span class="icon icon-checkmark"></span><strong>You won’t be charged</strong> until your free trial ends</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/promo-banners/acrobat-ai-assistant">https://main--da-dc--adobecom.aem.page/dc-shared/fragments/promo-banners/acrobat-ai-assistant</a></p>
+      </div>
+      <div>
+        <div class="text intro center">
+          <div>
+            <div>
+              <h2 id="how-the-7-day-free-trial-works">How the 7-day free trial works.</h2>
+              <p>Try Acrobat Pro with a 7-day free trial. If you need more time to try all the features, you’ll still have an extra 14 days to cancel and receive a full refund.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text center max-width-8-desktop">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1a393a5236a90893568c73c7b9f342fcb40b57d1f.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1a393a5236a90893568c73c7b9f342fcb40b57d1f.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1a393a5236a90893568c73c7b9f342fcb40b57d1f.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1a393a5236a90893568c73c7b9f342fcb40b57d1f.png?width=750&#x26;format=png&#x26;optimize=medium" width="600" height="308">
+              </picture>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_15a27f25d8e32417e4c6310a090b3bce0fd09127c.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_15a27f25d8e32417e4c6310a090b3bce0fd09127c.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_15a27f25d8e32417e4c6310a090b3bce0fd09127c.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_15a27f25d8e32417e4c6310a090b3bce0fd09127c.png?width=750&#x26;format=png&#x26;optimize=medium" width="1184" height="266">
+              </picture>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1bfdc94ac9fc9080727e1be8ad2176ce147840a78.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1bfdc94ac9fc9080727e1be8ad2176ce147840a78.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1bfdc94ac9fc9080727e1be8ad2176ce147840a78.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1bfdc94ac9fc9080727e1be8ad2176ce147840a78.png?width=750&#x26;format=png&#x26;optimize=medium" width="1616" height="266">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="text center max-width-8-desktop xl-spacing-bottom">
+          <div>
+            <div><strong><a href="https://milo.adobe.com/tools/ost?osi=-lYm-YaTSZoUgv1gzqCgybgFotLqRsLwf8CgYdvdnsQ&#x26;type=checkoutUrl&#x26;text=start-free-trial&#x26;workflowStep=commitment">CTA {{start-free-trial}}</a></strong></div>
+          </div>
+        </div>
+        <div class="text center xl-spacing">
+          <div>
+            <div>
+              <h2 id="what-can-you-do-with-your-acrobat-pro-free-trial">What can you do with your Acrobat Pro free trial?</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/acrobat/free-trial-download/edit-text-and-images-desktop">https://main--da-dc--adobecom.aem.page/dc-shared/fragments/acrobat/free-trial-download/edit-text-and-images-desktop</a></p>
+      </div>
+      <div>
+        <div class="aside split small half">
+          <div>
+            <div><strong>#F8F8F8</strong></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_19b548d3f3d553982eb69de8e11d432fbf5acb2d8.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_19b548d3f3d553982eb69de8e11d432fbf5acb2d8.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_19b548d3f3d553982eb69de8e11d432fbf5acb2d8.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_19b548d3f3d553982eb69de8e11d432fbf5acb2d8.png?width=750&#x26;format=png&#x26;optimize=medium" width="1920" height="1040">
+              </picture>
+            </div>
+            <div>
+              <h2 id="unlock-insights-and-next-steps-with-pdf-spaces"><strong>Unlock insights and next steps with PDF Spaces.</strong></h2>
+              <p>Bring all your project files into one workspace and ask AI Assistant questions to get deep insights with precise citations.</p>
+              <p><em><a href="/acrobat/generative-ai-pdf">Learn More</a></em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center xl-spacing-top">
+          <div>
+            <div>#f7f7f7</div>
+          </div>
+          <div>
+            <div>
+              <h2 id="your-acrobat-pro-free-trial-comes-with-more-than-great-tools">Your Acrobat Pro free trial comes with more than great tools.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block inline small s-spacing-bottom m-icon">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/shared-images/acrobat/desktop.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/shared-images/acrobat/desktop.svg | Desktop icon</a></p>
+              <p>Desktop apps for Mac and Windows</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block inline small s-spacing-bottom m-icon">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/shared-images/acrobat/browser.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/shared-images/acrobat/browser.svg | Browser icon</a></p>
+              <p>Available on web and mobile, plus <a href="/acrobat/pdf-viewer-extension">browser extensions</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block inline small s-spacing-bottom m-icon">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/shared-images/acrobat/mobile.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/shared-images/acrobat/mobile.svg | Mobile icon</a></p>
+              <p>Adobe Scan and Acrobat Reader mobile apps</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block inline small s-spacing-bottom m-icon">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/shared-images/acrobat/integrate.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/shared-images/acrobat/integrate.svg | Integrate icon</a></p>
+              <p>Works with the apps you already use, like Microsoft 365 and Dropbox</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block inline small s-spacing-bottom m-icon">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/shared-images/acrobat/adobe.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/shared-images/acrobat/adobe.svg | Adobe icon</a></p>
+              <p>Integrates seamlessly with <a href="/creativecloud">Adobe Creative Cloud</a> and <a href="https://www.adobe.com/express/">Adobe Express</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block inline small s-spacing-bottom m-icon">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/shared-images/acrobat/adobe.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/shared-images/acrobat/adobe.svg | Security icon</a></p>
+              <p>SSL security so you can work and share with confidence</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block inline small s-spacing-bottom m-icon">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/shared-images/acrobat/esignature.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/shared-images/acrobat/esignature.svg | E-signature icon</a></p>
+              <p>Binding, compliant, and secure e-signatures</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>four-up, xl spacing</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#f7f7f7</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/acrobat/discover-small-business-video-blade">https://main--dc--adobecom.aem.live/dc-shared/fragments/acrobat/discover-small-business-video-blade</a></p>
+      </div>
+      <div>
+        <div class="text center l-spacing">
+          <div>
+            <div>
+              <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="accordion">
+          <div>
+            <div><strong>How do I download and install my free trial version of Acrobat Pro?</strong></div>
+          </div>
+          <div>
+            <div>After clicking “Start free trial” from this web page, you will be asked to provide your email address. If you already have an Adobe ID you’ll be asked to sign in. Otherwise follow steps to start your free trial.</div>
+          </div>
+          <div>
+            <div><strong>When does the free trial period officially begin?</strong></div>
+          </div>
+          <div>
+            <div>The free trial period begins on the day you sign up. At the end of the free trial period, your payment method will be charged unless you cancel. Cancel before your free trial ends and you won't be charged. When the free trial expires, you can still use Acrobat to view PDFs, comment and fill forms. To access premium features again, you will need to purchase Acrobat.</div>
+          </div>
+          <div>
+            <div><strong>I have an older version of Acrobat installed on my computer. What will happen to it if I install the free trial version of Acrobat Pro?</strong></div>
+          </div>
+          <div>
+            <div>Installation of Adobe Acrobat Pro free trial by default uninstalls any earlier version of Adobe Acrobat on Windows devices. If you choose to retain the existing Acrobat software on your machine, change the default by unchecking the “Remove earlier version” option in Acrobat downloader UI. If you have uninstalled the previous version, then you can reinstall it when you are finished with the trial. Make sure you have your original serial number and installation files.</div>
+          </div>
+          <div>
+            <div><strong>Does it work for both Windows and Mac OS? (System Requirements)</strong></div>
+          </div>
+          <div>
+            <div>
+              <p>Yes, this free trial is available for both Windows and Mac OS.</p>
+              <h4 id="windows">Windows</h4>
+              <ul>
+                <li>1.5 GHz or faster processor</li>
+                <li>Microsoft Windows Server 2016 (64 bit), 2008 R2 (64 bit), 2012 (64 bit), or 2012 R2 (64 bit); Windows 7 (32 bit and 64 bit), Windows 8 (32 bit and 64 bit), or Windows 10</li>
+                <li>1.5 GB of RAM</li>
+                <li>2.5 GB of available hard-disk space</li>
+                <li>1024x768 screen resolution</li>
+                <li>Internet Explorer 11; Firefox Extended Support Release (ESR); or Chrome</li>
+                <li>Video hardware acceleration (optional)</li>
+              </ul>
+              <h4 id="mac">Mac</h4>
+              <ul>
+                <li>Intel® processor</li>
+                <li>Mac OS X v10.11, 10.12 or 10.13</li>
+                <li>1.0 GB of RAM</li>
+                <li>2.75 GB of available hard-disk space</li>
+                <li>1024x768 screen resolution</li>
+                <li>Safari 9.0 for OS X 10.11, Safari 10.0 for OS X 10.12, Safari 11.0 for OS X 10.13 (browser plug-in for Safari is supported on 64-bit Intel processor only)</li>
+              </ul>
+              <h4 id="browser">Browser</h4>
+              <ul>
+                <li>These requirements apply to the Acrobat Pro subscription plan, and are in addition to the desktop requirements listed above</li>
+                <li>Microsoft Windows 10 using Microsoft Edge, Internet Explorer 11, Firefox, or Chrome</li>
+                <li>Microsoft Windows 7 using Internet Explorer 11 or later, Firefox, or Chrome</li>
+                <li>Mac OS X v10.12 (Sierra) or later using Safari 11 or later, Firefox, or Chrome</li>
+                <li>iOS: Native browser based on the iOS release and Chrome</li>
+                <li>Android: Native browser that ships with the OS and Chrome</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div><strong>Can I get technical support or help during my free trial period?</strong></div>
+          </div>
+          <div>
+            <div>To get support during your free trial, click <a href="https://helpx.adobe.com/contact.html?step=APRO-APAP-APCC-ACRO-CPDF-ECHP-acrobat">here</a>, where you can access a range of free information, including tutorials, forums, and expert advice.</div>
+          </div>
+          <div>
+            <div><strong>Can I continue to use Adobe Acrobat Reader during my Acrobat Pro free trial period?</strong></div>
+          </div>
+          <div>
+            <div>Acrobat Pro will be set as your default PDF viewer, but you can reset Reader as the default by opening Reader DC application and going to Edit > Preferences > General. Click on the Select As Default PDF Handler button and follow the on-screen instructions.</div>
+          </div>
+          <div>
+            <div><strong>How do I uninstall my free trial software?</strong></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>Windows</strong>: To uninstall your free trial version on a Windows device, close any open Adobe software on your computer, open the Windows Control Panel and double-click Programs and Features. Click on Acrobat Pro, and select “Uninstall” from the menu.</p>
+              <p><strong>Mac OS</strong>: To remove the trial on a Mac, use the Acrobat Uninstaller in the /Applications/Adobe Acrobat Pro folder.</p>
+            </div>
+          </div>
+          <div>
+            <div><strong>What languages are supported?</strong></div>
+          </div>
+          <div>
+            <div>See the <a href="https://helpx.adobe.com/acrobat/system-requirements.html">Acrobat system requirements page</a> for information.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/acrobat/get-acrobat-support">https://main--da-dc--adobecom.aem.page/dc-shared/fragments/acrobat/get-acrobat-support</a></p>
+      </div>
+      <div>
+        <div class="text center xl-spacing xl-button xl-heading">
+          <div>
+            <div><strong>#fbfbfb</strong></div>
+          </div>
+          <div>
+            <div>
+              <h2 id="try-acrobat-pro">Try Acrobat Pro.</h2>
+              <p>7-day free trial, then <a href="https://milo.adobe.com/tools/ost?osi=vQmS1H18A6_kPd0tYBgKnp-TQIF0GbT6p8SH8rWcLMs&#x26;type=price&#x26;seat=false">PRICE - ABM - Adobe Acrobat Pro</a> {{small-tax-incl-label}} for the {{annual-paid-monthly-plan}}.</p>
+              <p><em><a href="https://milo.adobe.com/tools/ost?osi=-lYm-YaTSZoUgv1gzqCgybgFotLqRsLwf8CgYdvdnsQ&#x26;type=checkoutUrl&#x26;text=start-free-trial&#x26;workflowStep=commitment">CTA {{free-trial}}</a></em> <strong><a href="https://milo.adobe.com/tools/ost?osi=vQmS1H18A6_kPd0tYBgKnp-TQIF0GbT6p8SH8rWcLMs&#x26;type=checkoutUrl&#x26;text=buy-now&#x26;workflowStep=commitment">CTA {{buy-now}}</a></strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="breadcrumbs">
+          <div>
+            <div>
+              <ul>
+                <li><a href="https://www.adobe.com">Home</a></li>
+                <li><a href="/acrobat">Adobe Acrobat</a></li>
+                <li>Download Free Trial</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  <noscript><img src="https://www.adobe.com/akam/13/pixel_36b240a0?a=dD01ZDRkZDE3NjRkZWEyZWQxNDQwODI3YTE2ZjhlYjhkNzU3MTNjZmJjJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

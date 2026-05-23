@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../assets/js/cw-offline-shim.js"></script>
+    <meta http-equiv="refresh" content="0;url=./buy/">
+
+    <title>Adobe Creative Cloud Pro for students and teachers | Adobe Creative Cloud</title>
+    <link rel="canonical" href="https://www.adobe.com/education/students/creativecloud.html">
+    <meta name="description" content="Students and teachers are eligible for a big discount on Adobe Creative Cloud. Get access to Photoshop, Illustrator, InDesign, Premiere and more.">
+    <meta property="og:title" content="Adobe Creative Cloud Pro for students and teachers | Adobe Creative Cloud">
+    <meta property="og:description" content="Students and teachers are eligible for a big discount on Adobe Creative Cloud. Get access to Photoshop, Illustrator, InDesign, Premiere and more.">
+    <meta property="og:url" content="https://www.adobe.com/education/students/creativecloud.html">
+    <meta property="og:image" content="https://www.adobe.com/education/students/media_14a141cf8900a74105b7122f28472dce9fd8cf872.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/education/students/media_14a141cf8900a74105b7122f28472dce9fd8cf872.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adobe Creative Cloud Pro for students and teachers | Adobe Creative Cloud">
+    <meta name="twitter:description" content="Students and teachers are eligible for a big discount on Adobe Creative Cloud. Get access to Photoshop, Illustrator, InDesign, Premiere and more.">
+    <meta name="twitter:image" content="https://www.adobe.com/education/students/media_14a141cf8900a74105b7122f28472dce9fd8cf872.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="gnav-source" content="https://main--edu--adobecom.aem.page/edu-shared/gnav/localnav-edu-ccp">
+    <meta name="footer-source" content="/federal/footer/footer">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="personalization" content="https://main--edu--adobecom.aem.page/students/creativecloud.json">
+    <meta name="mweb" content="on"><!-- Modifying this file will impact your performance -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="head-loaded" content="false">
+    <script src="/edu/scripts/fallback.js" nomodule></script>
+    <script>
+  const libs = (() => {
+    const { hostname, search } = window.location;
+    if (!['.aem.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return '/libs';
+    const branch = new URLSearchParams(search).get('milolibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'local') return 'http://localhost:6456/libs';
+    return branch.includes('--') ? `https://${branch}.aem.live/libs` : `https://${branch}--milo--adobecom.aem.live/libs`;
+  })();
+
+  const miloStyles = document.createElement('link');
+  const miloUtils = document.createElement('link');
+  const miloDecorate = document.createElement('link');
+
+  miloStyles.setAttribute('as', 'style');
+  miloStyles.setAttribute('href', `${libs}/styles/styles.css`);
+
+  [miloUtils, miloDecorate].forEach((tag) => {
+    tag.setAttribute('crossorigin', 'true');
+    tag.setAttribute('as', 'script');
+  })
+
+  miloUtils.setAttribute('href', `${libs}/utils/utils.js`);
+  miloDecorate.setAttribute('href', `${libs}/utils/decorate.js`);
+
+  [miloStyles, miloUtils, miloDecorate].forEach((tag) => tag.setAttribute('rel', 'preload'));
+  document.head.append(miloStyles, miloUtils, miloDecorate);
+
+  /* hreflang links for phase 1 only. Replace this with normal hreflang code when going live with rest of world. */
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+  const isTestOverride = window.location.search.includes('includehreflang');
+
+  const flagMeta = document.querySelector('meta[name="head-loaded"]');
+  const ssrFlag = flagMeta?.content === 'true';
+
+  const k12Map = new Map([
+    ['en-US', ''],
+    ['ja-JP', '/jp'],
+    ['ko-KR', '/kr'],
+    ['tr-TR', '/tr'],
+    ['en-CA', '/ca'],
+    ['ar-AE', '/ae_ar'],
+    ['fr-CA', '/ca_fr'],
+    ['da-DK', '/dk'],
+    ['hu-HU', '/hu'],
+    ['uk-UA', '/ua'],
+    ['x-default', ''],
+  ]);
+
+  const educationMap = new Map([
+    ['en-US', ''],
+    ['en-AU', '/au'],
+    ['de-DE', '/de'],
+    ['es-ES', '/es'],
+    ['fr-FR', '/fr'],
+    ['it-IT', '/it'],
+    ['ja-JP', '/jp'],
+    ['ko-KR', '/kr'],
+    ['zh-HK', '/hk_zh'],
+    ['zh-TW', '/tw'],
+    ['nl-NL', '/nl'],
+    ['pl-PL', '/pl'],
+    ['tr-TR', '/tr'],
+    ['en-GB', '/uk'],
+    ['en-CA', '/ca'],
+    ['ar-AE', '/ae_ar'],
+    ['en-AE', '/ae_en'],
+    ['de-AT', '/at'],
+    ['en-BE', '/be_en'],
+    ['fr-BE', '/be_fr'],
+    ['fr-CA', '/ca_fr'],
+    ['de-CH', '/ch_de'],
+    ['fr-CH', '/ch_fr'],
+    ['es-CL', '/cl'],
+    ['en-GR', '/gr_en'],
+    ['en-HK', '/hk_en'],
+    ['en-IE', '/ie'],
+    ['en-IL', '/il_en'],
+    ['en-IN', '/in'],
+    ['lt-LT', '/lt'],
+    ['de-LU', '/lu_de'],
+    ['en-LU', '/lu_en'],
+    ['fr-LU', '/lu_fr'],
+    ['en-DZ', '/mena_en'],
+    ['en-NZ', '/nz'],
+    ['ar-SA', '/sa_ar'],
+    ['en-SA', '/sa_en'],
+    ['en-TH', '/th_en'],
+    ['th-TH', '/th_th'],
+    ['en-ZA', '/za'],
+    ['en-BJ', '/africa'],
+    ['en-CM', '/africa'],
+    ['en-MA', '/africa'],
+    ['en-TG', '/africa'],
+    ['en-TN', '/africa'],
+    ['es-AR', '/ar'],
+    ['es-CO', '/co'],
+    ['es-CR', '/cr'],
+    ['es-EC', '/ec'],
+    ['ar-EG', '/eg_ar'],
+    ['en-EG', '/eg_en'],
+    ['es-GT', '/gt'],
+    ['en-ID', '/id_en'],
+    ['id-ID', '/id_id'],
+    ['hi-IN', '/in_hi'],
+    ['ar-KW', '/kw_ar'],
+    ['en-KW', '/kw_en'],
+    ['en-MY', '/my_en'],
+    ['ms-MY', '/my_ms'],
+    ['en-NG', '/ng'],
+    ['es-PE', '/pe'],
+    ['en-PH', '/ph_en'],
+    ['fil-PH', '/ph_fil'],
+    ['es-PR', '/pr'],
+    ['ar-QA', '/qa_ar'],
+    ['en-QA', '/qa_en'],
+    ['en-VN', '/vn_en'],
+    ['vi-VN', '/vn_vi'],
+    ['da-DK', '/dk'],
+    ['fi-FI', '/fi'],
+    ['no-NO', '/no'],
+    ['sv-SE', '/se'],
+    ['es-PA', '/la'],
+    ['es-SV', '/la'],
+    ['es-VE', '/la'],
+    ['es-MX', '/mx'],
+    ['nl-BE', '/be_nl'],
+    ['it-CH', '/ch_it'],
+    ['cs-CZ', '/cz'],
+    ['hu-HU', '/hu'],
+    ['he-IL', '/il_he'],
+    ['ar-IL', '/mena_ar'],
+    ['ar-IQ', '/mena_ar'],
+    ['ar-JO', '/mena_ar'],
+    ['ar-LB', '/mena_ar'],
+    ['ar-MA', '/mena_ar'],
+    ['ar-OM', '/mena_ar'],
+    ['pt-PT', '/pt'],
+    ['ro-RO', '/ro'],
+    ['sl-SI', '/si'],
+    ['sk-SK', '/sk'],
+    ['uk-UA', '/ua'],
+    ['en-SG', '/sg'],
+    ['pt-BR', '/br'],
+    ['x-default', ''],
+  ]);
+
+  (() => {
+    function createHreflangLinks() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const educationPathName = '/education.html';
+      const k12PathName = '/education/k12.html';
+      const { origin, pathname } = window.location;
+      let sitemap;
+
+      if (pathname.toLowerCase() === educationPathName) sitemap = educationMap;
+      if (pathname.toLowerCase() === k12PathName) sitemap = k12Map;
+
+      if (sitemap) {
+        const linkElements = [];
+        for (const [hreflang, href] of sitemap) {
+          const link = document.createElement('link');
+          link.rel = 'alternate';
+          link.hreflang = hreflang;
+          link.href = sitemapOrigin + href + pathname;
+          linkElements.push(link);
+        }
+
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      }
+    }
+
+    if ((isAllowedAgent && !ssrFlag) || isTestOverride) {
+      createHreflangLinks();
+    }
+  })();
+
+  flagMeta.content = 'true';
+</script>
+    <script src="/edu/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,"></head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <p><a href="/edu-shared/fragments/merch/students/creativecloud/marquee/students-ccp-discount">https://main--edu--adobecom.aem.page/edu-shared/fragments/merch/students/creativecloud/marquee/students-ccp-discount</a></p>
+      </div>
+      <div>
+        <p><a href="/edu-shared/fragments/merch/students/creativecloud/sticky-banner/default">https://main--edu--adobecom.aem.page/edu-shared/fragments/merch/students/creativecloud/sticky-banner/default</a></p>
+      </div>
+      <div>
+        <div class="text center xl-heading l-body xxl-spacing-top xl-spacing-bottom left-mobile">
+          <div>
+            <div>
+              <h2 id="see-what-you-can-make-with-creative-cloud-pro">See what you can make with {{creative-cloud-pro}}.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>grid width 10</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="brick light rounded-corners split static-links button-fill xl-heading s-lockup">
+          <div>
+            <div>#980D05</div>
+          </div>
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_12aa4384684c4398ba8ee21b0f39b8398e8991a9b.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_12aa4384684c4398ba8ee21b0f39b8398e8991a9b.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_12aa4384684c4398ba8ee21b0f39b8398e8991a9b.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_12aa4384684c4398ba8ee21b0f39b8398e8991a9b.png?width=750&#x26;format=png&#x26;optimize=medium" width="3168" height="1536">
+                </picture>
+              </p>
+              <p>top, center, cover</p>
+            </div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_12aa4384684c4398ba8ee21b0f39b8398e8991a9b.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_12aa4384684c4398ba8ee21b0f39b8398e8991a9b.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_12aa4384684c4398ba8ee21b0f39b8398e8991a9b.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_12aa4384684c4398ba8ee21b0f39b8398e8991a9b.png?width=750&#x26;format=png&#x26;optimize=medium" width="3168" height="1536">
+                </picture>
+              </p>
+              <p>top, center, cover</p>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1fc23e0451fc80a199b26bd451ebc366567dc7d8e.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1fc23e0451fc80a199b26bd451ebc366567dc7d8e.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1fc23e0451fc80a199b26bd451ebc366567dc7d8e.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1fc23e0451fc80a199b26bd451ebc366567dc7d8e.png?width=750&#x26;format=png&#x26;optimize=medium" width="4752" height="2304">
+              </picture><br>top, left, cover
+            </div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/mnemonic-logo/svg/photoshop.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/mnemonic-logo/svg/photoshop.svg</a> {{photoshop}}</p>
+              <h3 id="edit-images-for-flyers-and-posters">Edit images for flyers and posters.</h3>
+              <p><em><a href="/education/students/photoshop">Learn more|Learn more Photoshop</a></em></p>
+            </div>
+          </div>
+        </div>
+        <div class="brick light rounded-corners static-links button-fill xl-heading">
+          <div>
+            <div>#FFA037</div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/mnemonic-logo/svg/acrobat-pro.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/mnemonic-logo/svg/acrobat-pro.svg</a> {{ACROBAT}}</p>
+              <h3 id="study-smarter-with-your-docs">Study smarter with your docs.</h3>
+              <p><em><a href="/education/students/acrobat">Learn more|Learn more Acrobat</a></em></p>
+            </div>
+          </div>
+        </div>
+        <div class="brick light rounded-corners button-fill xl-heading">
+          <div>
+            <div>#B6DB00</div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/mnemonic-logo/svg/firefly.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/mnemonic-logo/svg/firefly.svg</a> {{Firefly}}</p>
+              <h3 id="visualize-your-ideas-in-seconds">Visualize your ideas in seconds.</h3>
+              <p><em><a href="/cc-shared/fragments/creativecloud/pro/modal/brick1-modal#firefly-modal">Watch video|Watch video Firefly</a></em></p>
+            </div>
+          </div>
+        </div>
+        <div class="brick light rounded-corners split static-links button-fill xl-heading xs-icon">
+          <div>
+            <div>#FF9500</div>
+          </div>
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_14a5c990a86b947402e68ab909ab6285f010392f8.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_14a5c990a86b947402e68ab909ab6285f010392f8.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_14a5c990a86b947402e68ab909ab6285f010392f8.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_14a5c990a86b947402e68ab909ab6285f010392f8.png?width=750&#x26;format=png&#x26;optimize=medium" width="3168" height="1536">
+                </picture>
+              </p>
+              <p>top, center, cover</p>
+            </div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_14a5c990a86b947402e68ab909ab6285f010392f8.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_14a5c990a86b947402e68ab909ab6285f010392f8.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_14a5c990a86b947402e68ab909ab6285f010392f8.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_14a5c990a86b947402e68ab909ab6285f010392f8.png?width=750&#x26;format=png&#x26;optimize=medium" width="3168" height="1536">
+                </picture>
+              </p>
+              <p>top, center, cover</p>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_12df913aa9e65d379f66655d83dd4d81683997c3c.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_12df913aa9e65d379f66655d83dd4d81683997c3c.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_12df913aa9e65d379f66655d83dd4d81683997c3c.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_12df913aa9e65d379f66655d83dd4d81683997c3c.png?width=750&#x26;format=png&#x26;optimize=medium" width="3168" height="1536">
+              </picture><br>top, left, cover
+            </div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/mnemonic-logo/svg/illustrator.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/mnemonic-logo/svg/illustrator.svg</a> {{ILLUSTRATOR}}</p>
+              <h3 id="design-stylish-logos-and-graphics">Design stylish logos and graphics.</h3>
+              <p><em><a href="https://www.adobe.com/creativecloud/buy/students/illustrator.html">Learn more|Learn more Illustrator</a></em></p>
+            </div>
+          </div>
+        </div>
+        <div class="brick light rounded-corners xl-heading button-fill">
+          <div>
+            <div>#1D3430</div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1e878092f0265770296a9dfabe6b12cf5684a187e.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1e878092f0265770296a9dfabe6b12cf5684a187e.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1e878092f0265770296a9dfabe6b12cf5684a187e.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1e878092f0265770296a9dfabe6b12cf5684a187e.png?width=750&#x26;format=png&#x26;optimize=medium" width="3168" height="1536">
+              </picture><br>top, right, cover
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1e878092f0265770296a9dfabe6b12cf5684a187e.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1e878092f0265770296a9dfabe6b12cf5684a187e.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1e878092f0265770296a9dfabe6b12cf5684a187e.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1e878092f0265770296a9dfabe6b12cf5684a187e.png?width=750&#x26;format=png&#x26;optimize=medium" width="3168" height="1536">
+              </picture><br>top, right, cover
+            </div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_1e5f4a7d231ca7c2ee86a32175bf98d0951f80315.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_1e5f4a7d231ca7c2ee86a32175bf98d0951f80315.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_1e5f4a7d231ca7c2ee86a32175bf98d0951f80315.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="" src="./media_1e5f4a7d231ca7c2ee86a32175bf98d0951f80315.png?width=750&#x26;format=png&#x26;optimize=medium" width="4800" height="1536">
+                </picture>
+              </p>
+              <p>top, left, cover</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/mnemonic-logo/svg/premiere.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/mnemonic-logo/svg/premiere.svg</a> {{premiere}}</p>
+              <h3 id="create-memorable-videos-and-films">Create memorable videos and films</h3>
+              <p><em><a href="https://www.adobe.com/creativecloud/buy/students/premiere-pro.html">Learn more|Learn more {{premiere}}</a></em></p>
+            </div>
+            <div><a href="/edu-shared/assets/video/ste/media_111ab4a9910f37559e7958a2654915be949cbbd55.mp4#_autoplay">https://main--edu--adobecom.aem.page/edu-shared/assets/video/ste/media_111ab4a9910f37559e7958a2654915be949cbbd55.mp4#_autoplay</a></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>masonry</div>
+            <div>
+              <p>span-8, span-4</p>
+              <p>span-4, span-8</p>
+              <p>Full width</p>
+            </div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>s-icon, s-lockup</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/edu-shared/fragments/merch/students/creativecloud/merch-card/mini-compare-segment-blade">https://main--edu--adobecom.aem.page/edu-shared/fragments/merch/students/creativecloud/merch-card/mini-compare-segment-blade</a></p>
+      </div>
+      <div>
+        <div class="text center l-spacing-top xl-spacing-bottom xl-heading left-mobile">
+          <div>
+            <div>
+              <h2 id="whats-included-in-creative-cloud-pro"><strong>What’s included in {{creative-cloud-pro}}?</strong></h2>
+              <p>Apps for everything. Loads of perks. Plus, Firefly generative AI features for creating images with simple text prompts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>grid-width-10</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="block-group-start hide-block">
+          <div>
+            <div></div>
+          </div>
+        </div>
+        <div class="tabs center no-spacing-bottom no-border-bottom segmented-control">
+          <div>
+            <div>
+              <ol>
+                <li>Popular</li>
+                <li>Photo</li>
+                <li>Video</li>
+                <li>Social media</li>
+                <li>Illustration</li>
+                <li>3D &#x26; AR</li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <div>active tab</div>
+            <div>1</div>
+          </div>
+          <div>
+            <div>id</div>
+            <div>for-the-kids</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/photoshop-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/photoshop-64.svg | {{photoshop}}</a></p>
+              <h3 id="photoshop"><a href="https://www.adobe.com/creativecloud/buy/students/photoshop.html">{{photoshop}}</a></h3>
+              <p>Create gorgeous images, rich graphics, and incredible art.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/illustrator-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/illustrator-64.svg | {{ILLUSTRATOR}}</a></p>
+              <h3 id="illustrator"><a href="https://www.adobe.com/creativecloud/buy/students/illustrator.html">{{ILLUSTRATOR}}</a></h3>
+              <p>Create beautiful designs, icons, and more — then use them anyplace at any size.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/acrobat-pro-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/acrobat-pro-64.svg | {{APRO}}</a></p>
+              <h3 id="apro"><a href="https://www.adobe.com/acrobat/students.html">{{APRO}}</a></h3>
+              <p>Create, edit, sign, and manage your PDFs — quickly, easily, anywhere.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/firefly-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/firefly-64.svg | {{adobe-firefly}}</a></p>
+              <h3 id="adobe-firefly"><a href="https://www.adobe.com/products/firefly.html">{{adobe-firefly}}</a></h3>
+              <p>Use everyday language to create extraordinary results with generative AI.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/premiere-pro-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/premiere-pro-64.svg | {{premiere}}</a></p>
+              <h3 id="premiere"><a href="https://www.adobe.com/creativecloud/buy/students/premiere-pro.html">{{premiere}}</a></h3>
+              <p>Create pro-quality videos like documentaries, short films, and more.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/express-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/express-64.svg | {{CCEX}}</a></p>
+              <h3 id="ccex"><a href="https://www.adobe.com/creativecloud/buy/students/express.html">{{CCEX}}</a></h3>
+              <p>Edit and share photos anywhere for social posts, club websites, and blogs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>for-the-kids, 1</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>l spacing top, xl spacing bottom, static links, three up, xl-gap</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#fff</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block small inline m-icon s-heading m-body">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/photoshop-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/photoshop-64.svg | {{photoshop}}</a></p>
+              <h3 id="photoshop-1"><a href="https://www.adobe.com/creativecloud/buy/students/photoshop.html">{{photoshop}}</a></h3>
+              <p>Create gorgeous images, rich graphics, and incredible art.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/lightroom-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/lightroom-64.svg | {{lightroom}}</a></p>
+              <h3 id="lightroom"><a href="https://www.adobe.com/creativecloud/buy/students/lightroom.html">{{lightroom}}</a></h3>
+              <p>Edit and share photos anywhere for social posts, club websites, and blogs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/express-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/express-64.svg | {{CCEX}}</a></p>
+              <h3 id="ccex-1"><a href="https://www.adobe.com/creativecloud/buy/students/express.html">{{CCEX}}</a></h3>
+              <p>Edit and share photos anywhere for social posts, club websites, and blogs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>for-the-kids, 2</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>l spacing top, xl spacing bottom, static links, three up, xl-gap</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#fff</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/premiere-pro-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/premiere-pro-64.svg | {{premiere}}</a></p>
+              <h3 id="premiere-1"><a href="https://www.adobe.com/creativecloud/buy/students/premiere-pro.html">{{premiere}}</a></h3>
+              <p>Create pro-quality videos like documentaries, short films, and more.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/after-effects-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/after-effects-64.svg | {{AEFT}}</a></p>
+              <h3 id="aeft"><a href="https://www.adobe.com/products/aftereffects.html">{{AEFT}}</a></h3>
+              <p>Create movie titles, intros, and transitions with the industry standard for motion graphics and visual effects.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>for-the-kids, 3</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>l spacing top, xl spacing bottom, static links, three up, xl-gap</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#fff</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/express-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/express-64.svg | {{CCEX}}</a></p>
+              <h3 id="ccex-2"><a href="https://www.adobe.com/creativecloud/buy/students/express.html">{{CCEX}}</a></h3>
+              <p>Edit and share photos anywhere for social posts, club websites, and blogs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_17839b28078b0f2ad9f4cb918dc5ca674bafa0c63.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_17839b28078b0f2ad9f4cb918dc5ca674bafa0c63.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_17839b28078b0f2ad9f4cb918dc5ca674bafa0c63.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="Photoshop Express icon" src="./media_17839b28078b0f2ad9f4cb918dc5ca674bafa0c63.png?width=750&#x26;format=png&#x26;optimize=medium" width="79" height="77">
+                </picture>
+              </p>
+              <h3 id="photoshop-express"><a href="https://www.adobe.com/products/photoshop-express.html">{{photoshop-express}}</a></h3>
+              <p>Edit and transform your photos on the go.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>for-the-kids, 4</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>l spacing top, xl spacing bottom, static links, three up, xl-gap</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#fff</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/illustrator-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/illustrator-64.svg | {{ILLUSTRATOR}}</a></p>
+              <h3 id="illustrator-1"><a href="https://www.adobe.com/creativecloud/buy/students/illustrator.html">{{ILLUSTRATOR}}</a></h3>
+              <p>Create beautiful designs, icons, and more — then use them anyplace at any size.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/photoshop-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/photoshop-64.svg | {{photoshop}}</a></p>
+              <h3 id="photoshop-2"><a href="https://www.adobe.com/creativecloud/buy/students/photoshop.html">{{photoshop}}</a></h3>
+              <p>Create gorgeous images, rich graphics, and incredible art.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/fresco-64.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/fresco-64.svg | {{fresco}}</a></p>
+              <h3 id="fresco"><a href="https://www.adobe.com/products/fresco.html">{{fresco}}</a></h3>
+              <p>Enjoy a natural painting and drawing experience with the world’s largest collection of brushes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>for-the-kids, 5</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>l spacing top, xl spacing bottom, static links, three up, xl-gap</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#fff</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block small inline m-icon">
+          <div>
+            <div>
+              <p><a href="/edu-shared/assets/images/icons/product/substance-3d-collection-ste-long.svg">https://main--edu--adobecom.aem.page/edu-shared/assets/images/icons/product/substance-3d-collection-ste-long.svg | {{substance-3d-collection}}</a></p>
+              <h3 id="substance-3d-collection-apps-for-students"><a href="https://substance3d.adobe.com/education/">{{substance-3d-collection}} apps for students</a></h3>
+              <p>Model, texture, and render 3D assets and scenes. Free for eligible students and teachers. Not included in {{creative-cloud-pro}}.<br><a href="/cc-shared/fragments/modals/see-whats-included/3d-see-whats-included#ste-3d-see-whats-included">See what’s included.</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>for-the-kids, 6</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>l spacing top, xl spacing bottom, static links, two up, xl-gap</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#fff</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="block-group-end hide-block">
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text dark center xs-spacing-top xxl-spacing-bottom">
+          <div>
+            <div><a href="/cc-shared/fragments/modals/see-whats-included/cc-all-apps-see-whats-included-edu#see-whats-included-edu">See what’s included</a></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text dark xl-heading full-width center xxl-spacing-top no-spacing-bottom">
+          <div>
+            <div>
+              <h2 id="creative-cloud-pro-is-more-than-just-great-apps">{{Creative-Cloud-Pro}} is more than just great apps.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>background</div>
+            <div>#1E1E1E</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="brick light rounded-corners s-heading m-body">
+          <div>
+            <div>#DADADA</div>
+          </div>
+          <div>
+            <div>
+              <h2 id="tutorials-fonts-and-stock-images">Tutorials, fonts, and stock images</h2>
+              <ul>
+                <li>
+                  <p>
+                    <picture>
+                      <source type="image/webp" srcset="./media_1f1c5119ab19499da1cd60c73cf9d9a631a72232b.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                      <source type="image/webp" srcset="./media_1f1c5119ab19499da1cd60c73cf9d9a631a72232b.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                      <source type="image/png" srcset="./media_1f1c5119ab19499da1cd60c73cf9d9a631a72232b.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                      <img loading="lazy" alt="" src="./media_1f1c5119ab19499da1cd60c73cf9d9a631a72232b.png?width=750&#x26;format=png&#x26;optimize=medium" width="64" height="64">
+                    </picture>
+                  </p>
+                  <p><a href="https://www.adobe.com/learn">Tutorials</a> for the basics and beyond</p>
+                </li>
+                <li>
+                  <p>
+                    <picture>
+                      <source type="image/webp" srcset="./media_14408bf2c08d406a630c8668486eeb92070dba929.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                      <source type="image/webp" srcset="./media_14408bf2c08d406a630c8668486eeb92070dba929.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                      <source type="image/png" srcset="./media_14408bf2c08d406a630c8668486eeb92070dba929.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                      <img loading="lazy" alt="" src="./media_14408bf2c08d406a630c8668486eeb92070dba929.png?width=750&#x26;format=png&#x26;optimize=medium" width="64" height="64">
+                    </picture>
+                  </p>
+                  <p><a href="https://fonts.adobe.com/">Adobe Fonts</a> — 30,000+ fonts at your fingertips</p>
+                </li>
+                <li>
+                  <p>
+                    <picture>
+                      <source type="image/webp" srcset="./media_10797d0b06412561a4b8cd940bfa50c803d08ab96.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                      <source type="image/webp" srcset="./media_10797d0b06412561a4b8cd940bfa50c803d08ab96.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                      <source type="image/png" srcset="./media_10797d0b06412561a4b8cd940bfa50c803d08ab96.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                      <img loading="lazy" alt="" src="./media_10797d0b06412561a4b8cd940bfa50c803d08ab96.png?width=750&#x26;format=png&#x26;optimize=medium" width="64" height="64">
+                    </picture>
+                  </p>
+                  <p><a href="https://stock.adobe.com/">Adobe Stock</a> — One million+ free photos, drawings, video clips, and more</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="brick light rounded-corners s-heading m-body">
+          <div>
+            <div>#DADADA</div>
+          </div>
+          <div>
+            <div>
+              <h2 id="generative-ai-tools">Generative AI tools</h2>
+              <ul>
+                <li>
+                  <p>
+                    <picture>
+                      <source type="image/webp" srcset="./media_1144a4fdb91282a082bd5f5e931df0d194522f05a.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                      <source type="image/webp" srcset="./media_1144a4fdb91282a082bd5f5e931df0d194522f05a.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                      <source type="image/png" srcset="./media_1144a4fdb91282a082bd5f5e931df0d194522f05a.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                      <img loading="lazy" alt="" src="./media_1144a4fdb91282a082bd5f5e931df0d194522f05a.png?width=750&#x26;format=png&#x26;optimize=medium" width="64" height="64">
+                    </picture>
+                  </p>
+                  <p>Unlimited access to standard creative AI image and vector features</p>
+                </li>
+                <li>
+                  <p>
+                    <picture>
+                      <source type="image/webp" srcset="./media_12de97340708e87b786ed7c2ea5ab8ec51c61931d.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                      <source type="image/webp" srcset="./media_12de97340708e87b786ed7c2ea5ab8ec51c61931d.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                      <source type="image/png" srcset="./media_12de97340708e87b786ed7c2ea5ab8ec51c61931d.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                      <img loading="lazy" alt="" src="./media_12de97340708e87b786ed7c2ea5ab8ec51c61931d.png?width=750&#x26;format=png&#x26;optimize=medium" width="64" height="64">
+                    </picture>
+                  </p>
+                  <p>4,000 monthly <a href="https://helpx.adobe.com/firefly/get-set-up/learn-the-basics/generative-credits-overview.html#_blank#_dnt">generative credits</a> for premium creative AI video and audio features</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="brick light rounded-corners s-heading m-body">
+          <div>
+            <div>#DADADA</div>
+          </div>
+          <div>
+            <div>
+              <h2 id="creative-community">Creative community</h2>
+              <ul>
+                <li>
+                  <p>
+                    <picture>
+                      <source type="image/webp" srcset="./media_13133737c2dcd7565906355b27f49e9182de67c0b.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                      <source type="image/webp" srcset="./media_13133737c2dcd7565906355b27f49e9182de67c0b.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                      <source type="image/png" srcset="./media_13133737c2dcd7565906355b27f49e9182de67c0b.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                      <img loading="lazy" alt="" src="./media_13133737c2dcd7565906355b27f49e9182de67c0b.png?width=750&#x26;format=png&#x26;optimize=medium" width="64" height="64">
+                    </picture>
+                  </p>
+                  <p><a href="https://www.behance.net/">Behance</a> — Promote your work, get inspired, and get hired</p>
+                </li>
+                <li>
+                  <p>
+                    <picture>
+                      <source type="image/webp" srcset="./media_1489e2158f77676805bcdb5e3862c173c79299b8c.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                      <source type="image/webp" srcset="./media_1489e2158f77676805bcdb5e3862c173c79299b8c.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                      <source type="image/png" srcset="./media_1489e2158f77676805bcdb5e3862c173c79299b8c.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                      <img loading="lazy" alt="" src="./media_1489e2158f77676805bcdb5e3862c173c79299b8c.png?width=750&#x26;format=png&#x26;optimize=medium" width="64" height="64">
+                    </picture>
+                  </p>
+                  <p><a href="https://portfolio.adobe.com/">Adobe Portfolio</a> — Design your own website in minutes</p>
+                </li>
+                <li>
+                  <p>
+                    <picture>
+                      <source type="image/webp" srcset="./media_1c70033b50770e104448ae0d3b1adb651c80bfb86.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                      <source type="image/webp" srcset="./media_1c70033b50770e104448ae0d3b1adb651c80bfb86.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                      <source type="image/png" srcset="./media_1c70033b50770e104448ae0d3b1adb651c80bfb86.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                      <img loading="lazy" alt="" src="./media_1c70033b50770e104448ae0d3b1adb651c80bfb86.png?width=750&#x26;format=png&#x26;optimize=medium" width="64" height="64">
+                    </picture>
+                  </p>
+                  <p>Special student discount on Adobe Certified Professional certifications</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>masonry</div>
+            <div>span-4, span-4, span-4</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div>xxl-spacing, static-links, m-body</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#1E1E1E</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text max-width-8-desktop center xl-button xl-heading xxl-spacing-top xxl-spacing-bottom">
+          <div>
+            <div>
+              <h2 id="what-students-are-saying">What students are saying.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="block-group-start hide-block">
+          <div>
+            <div></div>
+          </div>
+        </div>
+        <div class="carousel show-3 container hinting-mobile m-gap ups-desktop no-border align-height">
+          <div>
+            <div>edu-student-work-show</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card l-rounded-corners media-tall no-border l-heading m-body">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div><a href="https://video.tv.adobe.com/v/3483859?hidetitle=true" title="Follow link">https://video.tv.adobe.com/v/3483859</a></div>
+          </div>
+          <div>
+            <div>
+              <h3 id="jacob-guerrero">Jacob Guerrero</h3>
+              <p>University of Colorado Denver, Major: Digital Design</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>background</div>
+            <div>#fff</div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>carousel</div>
+            <div>edu-student-work-show</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card l-rounded-corners media-tall no-border l-heading m-body">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div><a href="https://video.tv.adobe.com/v/3483860?hidetitle=true">https://video.tv.adobe.com/v/3483860</a></div>
+          </div>
+          <div>
+            <div>
+              <h3 id="daniel-heechan-lim">Daniel Heechan Lim</h3>
+              <p>Stanford University, Major: Film and Media Studies</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>carousel</div>
+            <div>edu-student-work-show</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card l-rounded-corners media-tall no-border l-heading m-body">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div><a href="https://video.tv.adobe.com/v/3483861?hidetitle=true" title="Follow link">https://video.tv.adobe.com/v/3483861</a></div>
+          </div>
+          <div>
+            <div>
+              <h3 id="avrey-ovard">Avrey Ovard</h3>
+              <p>Parsons School of Design, Major: Fashion Design</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>carousel</div>
+            <div>edu-student-work-show</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="block-group-end hide-block">
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="aside dark l-button m-body">
+          <div>
+            <div>#1E1E1E</div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_13d6c15fef38e8268751ac55e633ab35cfcab04e0.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_13d6c15fef38e8268751ac55e633ab35cfcab04e0.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_13d6c15fef38e8268751ac55e633ab35cfcab04e0.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_13d6c15fef38e8268751ac55e633ab35cfcab04e0.png?width=750&#x26;format=png&#x26;optimize=medium" width="4060" height="2707">
+              </picture>
+            </div>
+            <div>
+              <h2 id="learn-create-and-grow-your-skills-to-advance-your-career">Learn, create, and grow your skills to advance your career.</h2>
+              <p>Access hands-on tutorials and digital badges through Adobe Learn. Whether you’re starting out or looking to level up, explore resources you can use to build real-world creative skills and showcase on your resume.</p>
+              <p><em><a href="https://adobe.com/learn">Learn more</a></em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/edu-shared/fragments/merch/students/creativecloud/faq">https://main--edu--adobecom.aem.page/edu-shared/fragments/merch/students/creativecloud/faq</a></p>
+      </div>
+      <div>
+        <p><a href="/edu-shared/fragments/merch/students/creativecloud/ready-for-next-step-blade">https://main--edu--adobecom.aem.page/edu-shared/fragments/merch/students/creativecloud/ready-for-next-step-blade</a></p>
+      </div>
+      <div>
+        <div class="breadcrumbs">
+          <div>
+            <div>
+              <ul>
+                <li><a href="https://www.adobe.com/">{{home}}</a></li>
+                <li><a href="/education">Education</a></li>
+                <li>Creative Cloud Pro</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer></body>
+</html>

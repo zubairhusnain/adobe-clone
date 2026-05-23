@@ -1,0 +1,10 @@
+/*!
+ * Bazaarvoice swat_container 1.6.0 config
+ * Mon, 18 May 2026 09:58:36 GMT
+ *
+ * http://bazaarvoice.com/
+ *
+ * Copyright 2026 Bazaarvoice. All rights reserved.
+ *
+ */
+window.performance && window.performance.mark && window.performance.mark('bv_loader_configure_swat_container_start');BV["swat_container"].configure({"locale":"fr_FR","apiKey":"ca8MPxckDyaeNhlwyCiVgjG6wfaGfNHHuCaOpQHWCBHHo","displayCode":"20562","domains":[{"allowSubdomain":true,"domainAddress":"bazaarvoice.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"dev-microsite.samsung.fr","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"totalu","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"p6-qa.samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"experiencesamsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true}],"containerUrl":"","homePageURL":"http://www.samsung.com/fr","features":{"allowCssOverrides":false,"useProductPagesForSubmissionFlag":true},"messages":{"unsubscribe_success":"Vous êtes bien désabonné(e).","unsubscribe_failure":"Une erreur s'est produite. Veuillez réessayer plus tard.","userVerified":"{Gender, select, other {Merci ! Votre contenu a bien été authentifié.} }","userAlreadyVerified":"Cette adresse email a déjà été vérifiée.","unsubscribe_unknownError":"Une erreur s'est produite. Veuillez réessayer plus tard.","display_deeplink_common_error":"Une erreur inattendue s'est produite. Veuillez réessayer plus tard.","close_modal_screen_reader_message":"Fermer la fenêtre modale. Appuyez sur Entrée pour fermer la fenêtre modale."},"labelStyles":{"familyID":"sniffedFontFamily326698143","size":13,"color":"#363636","lineHeight":19.5,"characterStyles":[],"family":"SamsungOne, arial","sampleBackgroundColor":"white","textTransform":"none"},"homePageUrl":"http://www.samsung.com/fr"});

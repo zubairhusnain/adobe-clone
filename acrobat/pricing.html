@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adobe Acrobat Pro pricing &#x26; options | Adobe Acrobat</title>
+    <link rel="canonical" href="https://www.adobe.com/acrobat/pricing.html">
+    <meta name="description" content="Compare Adobe Acrobat Pro plans to find the one that works best for your professional and personal needs. The right features and price are available for you.">
+    <meta property="og:title" content="Adobe Acrobat Pro pricing &#x26; options | Adobe Acrobat">
+    <meta property="og:description" content="Compare Adobe Acrobat Pro plans to find the one that works best for your professional and personal needs. The right features and price are available for you.">
+    <meta property="og:image" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adobe Acrobat Pro pricing &#x26; options | Adobe Acrobat">
+    <meta name="twitter:description" content="Compare Adobe Acrobat Pro plans to find the one that works best for your professional and personal needs. The right features and price are available for you.">
+    <meta name="twitter:image" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="target" content="on">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="jarvis-chat" content="desktop">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="checkout-workflow-step" content="commitment">
+    <meta name="gnav-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/globalnav/acom-gnav-thin">
+    <meta name="footer-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/footer/footer-thin">
+    <meta name="jarvis-surface-id" content="AcrobatPricingSales1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://acrobat.adobe.com" crossorigin="">
+    <script src="/acrobat/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+    <script nomodule src="/acrobat/scripts/fallback.js"></script>
+    <script>
+  window.setLibs = (prodLibs, location = window.location) => {
+    const { hostname, search } = location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('milolibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return '/libs';
+    if (branch === 'local') return 'http://localhost:6456/libs';
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--') ? '' : '--milo--adobecom'}.${env}.live/libs`;
+  };
+
+  window.getUnityLibs = (prodLibs = '/unitylibs') => {
+    const { hostname, search } = window.location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('unitylibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return prodLibs;
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--')? '' : '--unity--adobecom'}.${env}.live/unitylibs`;
+  }
+
+  window.extractLocalePrefix = (pathname = window.location.pathname) => {
+    const segments = pathname.split('/').filter(Boolean);
+    if (!segments[0] || segments[0] === 'acrobat') {
+      return '';
+    }
+    return `/${segments[0]}`;
+  }
+
+  window.loadLink = (href, options = {}) => {
+    const { as, callback, crossorigin, rel, fetchpriority } = options;
+    let link = document.head.querySelector(`link[href="${href}"]`);
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', rel);
+      if (as) link.setAttribute('as', as);
+      if (crossorigin) link.setAttribute('crossorigin', crossorigin);
+      if (fetchpriority) link.setAttribute('fetchpriority', fetchpriority);
+      link.setAttribute('href', href);
+      if (callback) {
+        link.onload = (e) => callback(e.type);
+        link.onerror = (e) => callback(e.type);
+      }
+      document.head.appendChild(link);
+    } else if (callback) {
+      callback('noop');
+    }
+    return link;
+  }
+
+  const miloLibs = setLibs('/libs');
+  const unityLibs = getUnityLibs();
+  const localePrefix =  extractLocalePrefix();
+
+
+  const preloads = document.querySelector('meta[name="preloads"]')?.content?.split(',').map(x => x.trim().replace('$MILOLIBS', miloLibs).replace('$UNITYLIBS', unityLibs).replace('$LOCALEPREFIX', localePrefix)) || [];
+  preloads.forEach((link) => {
+    if (link.endsWith('.js')) {
+      loadLink(link, { as: 'script', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (link.endsWith('.css')) {
+      loadLink(link, { as: 'style', rel: 'preload' });
+    } else if (/\.(json|html|svg)$/.test(link)) {
+      loadLink(link, { as: 'fetch', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (/\.(png|jpg|jpeg|gif|webp)$/.test(link)) {
+      loadLink(link, { as: 'image', rel: 'preload', fetchpriority: 'high' });
+    }
+  });
+
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const ssrFlag = document.querySelector('meta[name="head-loaded"]');
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/dc-shared/assets/sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/dc-shared/assets/sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !ssrFlag) {
+      fetchAndParseSitemap();
+    }
+  })();
+  
+  const meta = document.createElement('meta');
+  meta.setAttribute('name', 'head-loaded');
+  document.head.append(meta);
+</script>
+  <script >bazadebezolkohpepadr="917651884"</script><script type="text/javascript" src="https://www.adobe.com/akam/13/36b240a0"  defer></script></head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="hero-marquee center no-min-height l-lockup">
+          <div>
+            <div>#ffffff</div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/svg/acrobat-pro.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/svg/acrobat-pro.svg</a></p>
+              <h1 id="plans-and-pricing-for-adobe-acrobat">Plans and pricing for Adobe Acrobat.</h1>
+            </div>
+          </div>
+          <div>
+            <div>con-block-row-supplemental (heading-m)</div>
+            <div>
+              <h2 id="choose-your-plan">Choose your plan.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="block-group-start hide-block">
+          <div>
+            <div></div>
+          </div>
+        </div>
+        <div class="tabs center">
+          <div>
+            <div>
+              <ol>
+                <li>Individuals</li>
+                <li>Business</li>
+                <li>Students &#x26; Teachers</li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <div>active tab</div>
+            <div>1</div>
+          </div>
+          <div>
+            <div>id</div>
+            <div>acrobat</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/merch/acrobat/pricing/individual-pill-tabs">https://main--da-dc--adobecom.aem.page/dc-shared/fragments/merch/acrobat/pricing/individual-pill-tabs</a></p>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>acrobat, 1</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div><strong>m spacing</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>acrobat, 2</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div><strong>m spacing</strong></div>
+          </div>
+          <div>
+            <div>link</div>
+            <div>/acrobat/pricing/business</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-metadata">
+          <div>
+            <div>tab</div>
+            <div>acrobat, 3</div>
+          </div>
+          <div>
+            <div>style</div>
+            <div><strong>m spacing</strong></div>
+          </div>
+          <div>
+            <div>link</div>
+            <div>/acrobat/pricing/students</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="block-group-end hide-block">
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  <noscript><img src="https://www.adobe.com/akam/13/pixel_36b240a0?a=dD01ZDRkZDE3NjRkZWEyZWQxNDQwODI3YTE2ZjhlYjhkNzU3MTNjZmJjJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

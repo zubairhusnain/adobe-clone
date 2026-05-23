@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personal document management and PDF software | Adobe Acrobat</title>
+    <link rel="canonical" href="https://www.adobe.com/acrobat/personal-document-management.html">
+    <meta name="description" content="Simplify home documents with personal document management software from Adobe Acrobat. Store, organize, protect, and share PDFs with ease.">
+    <meta property="og:title" content="Personal document management and PDF software | Adobe Acrobat">
+    <meta property="og:description" content="Simplify home documents with personal document management software from Adobe Acrobat. Store, organize, protect, and share PDFs with ease.">
+    <meta property="og:image" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Personal document management and PDF software | Adobe Acrobat">
+    <meta name="twitter:description" content="Simplify home documents with personal document management software from Adobe Acrobat. Store, organize, protect, and share PDFs with ease.">
+    <meta name="twitter:image" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="jarvis-chat" content="desktop">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="checkout-workflow-step" content="commitment">
+    <meta name="gnav-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/globalnav/localnav-acrobat">
+    <meta name="footer-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/footer/footer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://acrobat.adobe.com" crossorigin="">
+    <script src="/acrobat/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+    <script nomodule src="/acrobat/scripts/fallback.js"></script>
+    <script>
+  window.setLibs = (prodLibs, location = window.location) => {
+    const { hostname, search } = location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('milolibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return '/libs';
+    if (branch === 'local') return 'http://localhost:6456/libs';
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--') ? '' : '--milo--adobecom'}.${env}.live/libs`;
+  };
+
+  window.getUnityLibs = (prodLibs = '/unitylibs') => {
+    const { hostname, search } = window.location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('unitylibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return prodLibs;
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--')? '' : '--unity--adobecom'}.${env}.live/unitylibs`;
+  }
+
+  window.extractLocalePrefix = (pathname = window.location.pathname) => {
+    const segments = pathname.split('/').filter(Boolean);
+    if (!segments[0] || segments[0] === 'acrobat') {
+      return '';
+    }
+    return `/${segments[0]}`;
+  }
+
+  window.loadLink = (href, options = {}) => {
+    const { as, callback, crossorigin, rel, fetchpriority } = options;
+    let link = document.head.querySelector(`link[href="${href}"]`);
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', rel);
+      if (as) link.setAttribute('as', as);
+      if (crossorigin) link.setAttribute('crossorigin', crossorigin);
+      if (fetchpriority) link.setAttribute('fetchpriority', fetchpriority);
+      link.setAttribute('href', href);
+      if (callback) {
+        link.onload = (e) => callback(e.type);
+        link.onerror = (e) => callback(e.type);
+      }
+      document.head.appendChild(link);
+    } else if (callback) {
+      callback('noop');
+    }
+    return link;
+  }
+
+  const miloLibs = setLibs('/libs');
+  const unityLibs = getUnityLibs();
+  const localePrefix =  extractLocalePrefix();
+
+
+  const preloads = document.querySelector('meta[name="preloads"]')?.content?.split(',').map(x => x.trim().replace('$MILOLIBS', miloLibs).replace('$UNITYLIBS', unityLibs).replace('$LOCALEPREFIX', localePrefix)) || [];
+  preloads.forEach((link) => {
+    if (link.endsWith('.js')) {
+      loadLink(link, { as: 'script', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (link.endsWith('.css')) {
+      loadLink(link, { as: 'style', rel: 'preload' });
+    } else if (/\.(json|html|svg)$/.test(link)) {
+      loadLink(link, { as: 'fetch', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (/\.(png|jpg|jpeg|gif|webp)$/.test(link)) {
+      loadLink(link, { as: 'image', rel: 'preload', fetchpriority: 'high' });
+    }
+  });
+
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const ssrFlag = document.querySelector('meta[name="head-loaded"]');
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/dc-shared/assets/sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/dc-shared/assets/sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !ssrFlag) {
+      fetchAndParseSitemap();
+    }
+  })();
+  
+  const meta = document.createElement('meta');
+  meta.setAttribute('name', 'head-loaded');
+  document.head.append(meta);
+</script>
+  <script >bazadebezolkohpepadr="917651884"</script><script type="text/javascript" src="https://www.adobe.com/akam/13/36b240a0"  defer></script></head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="hero-marquee static-links bg-bottom-tablet bg-bottom-mobile xl-heading m-body no-min-height">
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p>Personal</p>
+              <h1 id="simplify-your-personal-documents-and-paperwork">Simplify your personal documents and paperwork.</h1>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_12d8dd7ccd8808bf21e9c7082ea86101f47d81bbd.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_12d8dd7ccd8808bf21e9c7082ea86101f47d81bbd.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_12d8dd7ccd8808bf21e9c7082ea86101f47d81bbd.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_12d8dd7ccd8808bf21e9c7082ea86101f47d81bbd.png?width=750&#x26;format=png&#x26;optimize=medium" width="1440" height="1120">
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>con-block-row-text (order-0-desktop, m-body, s-spacing-bottom)</div>
+            <div>Acrobat makes it easy for you and your family to manage all types of documents so you can spend more time on the things that matter most.</div>
+          </div>
+          <div>
+            <div>con-block-row-text (order-1-desktop, xs-spacing-bottom)</div>
+            <div><strong><a href="https://milo.adobe.com/tools/ost?osi=-lYm-YaTSZoUgv1gzqCgybgFotLqRsLwf8CgYdvdnsQ&#x26;type=checkoutUrl&#x26;text=free-trial">CTA {{free-trial}} | Free trial Acrobat Pro</a></strong> <em><a href="https://www.adobe.com/acrobat/pricing.html">Compare plans</a></em></div>
+          </div>
+          <div>
+            <div>con-block-row-bgcolor</div>
+            <div>linear-gradient(0deg, rgba(253,53,34,1) 0%, rgba(254,135,109,1) 100%)</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/acrobat/how-to/sticky-banner">https://main--dc--adobecom.aem.live/dc-shared/fragments/acrobat/how-to/sticky-banner</a></p>
+      </div>
+      <div>
+        <div class="text xl-heading s-body center l-spacing-bottom xxl-spacing-top max-width-6-desktop">
+          <div>
+            <div>
+              <h2 id="whatever-youre-working-on-get-it-done-with-no-hassle">Whatever you’re working on, get it done with no hassle.</h2>
+              <p>Whether you’re helping kids with schoolwork, organizing your tax documents, or compiling and editing files for a home project, Acrobat makes it all easier than ever.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media large xl-heading l-spacing-top xl-spacing-bottom">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1508022e93ce7cefe33068aabfb88dc422050e024.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1508022e93ce7cefe33068aabfb88dc422050e024.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1508022e93ce7cefe33068aabfb88dc422050e024.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1508022e93ce7cefe33068aabfb88dc422050e024.png?width=750&#x26;format=png&#x26;optimize=medium" width="1400" height="1050">
+              </picture>
+            </div>
+            <div>
+              <h3 id="an-easier-faster-way-to-get-things-done">An easier, faster way to get things done.</h3>
+              <p><strong>Edit anything.</strong> Convert almost any digital or paper doc, such as a resume, to an editable, searchable PDF.</p>
+              <p><strong>Consolidate documents.</strong> Combine multiple tax, medical, or financial files into one doc.</p>
+              <p><strong>Share with anyone.</strong> Send documents to others, directly from Acrobat — no email attachments necessary.</p>
+              <p><strong>Fill and sign digitally.</strong> Digitally fill out documents such as waivers and school forms and then add your e-signature and return it.</p>
+              <p><em><a href="/acrobat/pricing">See all features</a></em></p>
+              <p><em>‎</em></p>
+              <p>WATCH TUTORIALS</p>
+              <p>‎<span class="icon icon-play-circle"></span><a href="/dc-shared/fragments/modals/videos/acrobat/personal-document-management/edit-any-document#edit-any">Edit any document</a><br><span class="icon icon-play-circle"></span><a href="/dc-shared/fragments/modals/videos/acrobat/personal-document-management/share-a-pdf-from-acrobat#share-a-pdf">Share a PDF from Acrobat</a><br><span class="icon icon-play-circle"></span><a href="/dc-shared/fragments/modals/videos/acrobat/personal-document-management/digitally-fill-and-sign-forms#digitally-fill">Digitally fill and sign forms</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media large xl-heading l-spacing-top xl-spacing-bottom">
+          <div>
+            <div>
+              <h3 id="keep-your-documents-and-data-safe">Keep your documents and data safe.</h3>
+              <p><strong>Add password protection.</strong> Prevent unwanted copying, changing, or printing of your PDF.</p>
+              <p><strong>Set permissions.</strong> Control who can access, edit, or share your PDF.</p>
+              <p><strong>Rely on Adobe.</strong> Acrobat is the #1 most-used PDF app in the world, trusted by millions daily.</p>
+              <p><em><a href="https://www.adobe.com/acrobat/pricing.html">See all features</a></em></p>
+              <p><em>‎</em></p>
+              <p>WATCH TUTORIALS</p>
+              <p><span class="icon icon-play-circle"></span><a href="/dc-shared/fragments/modals/videos/acrobat/personal-document-management/password-protect-your-pdf#password-protect">Password-protect your PDF</a></p>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_10634b320c9d600a7a0ebef2a55343ca33738af56.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_10634b320c9d600a7a0ebef2a55343ca33738af56.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_10634b320c9d600a7a0ebef2a55343ca33738af56.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_10634b320c9d600a7a0ebef2a55343ca33738af56.png?width=750&#x26;format=png&#x26;optimize=medium" width="1400" height="1050">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="media large xl-heading l-spacing-top xl-spacing-bottom">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_11915fba51f646f2ed38d00b15fa07a6be04757b2.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_11915fba51f646f2ed38d00b15fa07a6be04757b2.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_11915fba51f646f2ed38d00b15fa07a6be04757b2.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_11915fba51f646f2ed38d00b15fa07a6be04757b2.png?width=750&#x26;format=png&#x26;optimize=medium" width="1400" height="1050">
+              </picture>
+            </div>
+            <div>
+              <h3 id="whatever-youre-working-on-make-it-stand-out">Whatever you’re working on, make it stand out.</h3>
+              <p><strong>Be a great collaborator.</strong> Share files and group projects to work together more efficiently.</p>
+              <p><strong>Improve your studies.</strong> Consolidate research and classwork into a custom digital study guide.</p>
+              <p><strong>Create like a pro.</strong> Put together professional-looking resumes, presentations, and reports in no time.</p>
+              <p><em><a href="https://www.adobe.com">See all features</a></em></p>
+              <p><em>‎</em></p>
+              <p>WATCH TUTORIALS</p>
+              <p>‎<span class="icon icon-play-circle"></span><a href="/dc-shared/fragments/modals/videos/acrobat/personal-document-management/collaborate-on-group-projects#collaborate">Collaborate on group projects</a><br><span class="icon icon-play-circle"></span><a href="/dc-shared/fragments/modals/videos/acrobat/personal-document-management/organize-study-materials#organize">Organize study materials</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="text xs-body">
+          <div>
+            <div>
+              <hr>
+            </div>
+          </div>
+        </div>
+        <div class="text center xxl-body xxl-spacing max-width-8-desktop">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_19fbe283217dfd764b1867803f8baa4f2f91e41cf.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_19fbe283217dfd764b1867803f8baa4f2f91e41cf.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_19fbe283217dfd764b1867803f8baa4f2f91e41cf.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="PCWorld Editors&#x27; Choice" src="./media_19fbe283217dfd764b1867803f8baa4f2f91e41cf.png?width=750&#x26;format=png&#x26;optimize=medium" width="159" height="159">
+                </picture>
+              </p>
+              <p>Best Overall PDF Editor<br>“Adobe Acrobat Pro remains the industry standard for good reason. Its recent interface redesign makes it much easier to navigate its robust toolset.”</p>
+            </div>
+          </div>
+        </div>
+        <div class="text xl-heading s-body center l-spacing-bottom xxl-spacing-top max-width-6-desktop">
+          <div>
+            <div><strong>#F5F5F5</strong></div>
+          </div>
+          <div>
+            <div>
+              <h2 id="not-ready-to-begin-your-acrobat-trialtry-our-free-online-tools">Not ready to begin your Acrobat trial?<br>Try our free online tools.</h2>
+              <p>You can download our mobile apps or try some of our free online web tools right now, on the spot, to experience some of the most popular features in Acrobat.</p>
+              <p><em><a href="https://www.adobe.com/acrobat/online.html">See all free online tools</a></em> <em><a href="https://chrome.google.com/webstore/detail/adobe-acrobat-pdf-edit-co/efaidnbmnnnibpcajpcglclefindmkaj?mv=acomacrobat#_blank">Get Google Chrome extension</a></em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card s-heading xs-body dark no-border footer-align-left">
+          <div>
+            <div><strong>#282828</strong></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1bc258be9d581e9c952eb66c56de73a12f697de9b.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1bc258be9d581e9c952eb66c56de73a12f697de9b.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1bc258be9d581e9c952eb66c56de73a12f697de9b.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1bc258be9d581e9c952eb66c56de73a12f697de9b.png?width=750&#x26;format=png&#x26;optimize=medium" width="552" height="560">
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h3 id="export-pdf">Export PDF</h3>
+              <p>Convert PDFs to Microsoft Office and other file formats.</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/features#export">Try now</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card s-heading xs-body dark no-border footer-align-left">
+          <div>
+            <div><strong>#282828</strong></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_106f802d90759731e9116f8b4f0d00d6da891706a.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_106f802d90759731e9116f8b4f0d00d6da891706a.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_106f802d90759731e9116f8b4f0d00d6da891706a.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_106f802d90759731e9116f8b4f0d00d6da891706a.png?width=750&#x26;format=png&#x26;optimize=medium" width="552" height="560">
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h3 id="fill--sign">Fill &#x26; Sign</h3>
+              <p>Complete a digital form and add your signature.</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/sign-pdf">Try now</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card s-heading xs-body dark no-border footer-align-left">
+          <div>
+            <div><strong>#282828</strong></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1ba305aa7b9e2bba389852900dd8207a4c9b37def.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1ba305aa7b9e2bba389852900dd8207a4c9b37def.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1ba305aa7b9e2bba389852900dd8207a4c9b37def.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1ba305aa7b9e2bba389852900dd8207a4c9b37def.png?width=750&#x26;format=png&#x26;optimize=medium" width="552" height="560">
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h3 id="combine-files">Combine files</h3>
+              <p>Merge multiple files into one PDF.</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/merge-pdf">Try now</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card s-heading xs-body dark no-border footer-align-left">
+          <div>
+            <div><strong>#282828</strong></div>
+          </div>
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1ba305aa7b9e2bba389852900dd8207a4c9b37def.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1ba305aa7b9e2bba389852900dd8207a4c9b37def.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1ba305aa7b9e2bba389852900dd8207a4c9b37def.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1ba305aa7b9e2bba389852900dd8207a4c9b37def.png?width=750&#x26;format=png&#x26;optimize=medium" width="552" height="560">
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h3 id="word-to-pdf">Word to PDF</h3>
+              <p>Convert a Microsoft Word document into a PDF file.</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/word-to-pdf">Try now</a></em></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>Four up, m-spacing, top, xxl spacing bottom</strong></div>
+          </div>
+          <div>
+            <div>background</div>
+            <div><strong>#f5f5f5</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text xl-heading center s-spacing-bottom xxl-spacing-top max-width-6-desktop">
+          <div>
+            <div>
+              <h2 id="get-our-free-mobile-apps">Get our free mobile apps.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="media qr-code xs-heading center">
+          <div>
+            <div></div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/svg/reader.svg">https://main--dc--adobecom.hlx.live/dc-shared/assets/images/product-icons/svg/reader.svg</a></p>
+              <h3 id="acrobat-reader">Acrobat Reader</h3>
+              <p>The free global standard for reliably viewing, annotating, and signing PDFs.</p>
+              <p><a href="/dc-shared/assets/images/shared-images/qr-codes/qr-code-acrobat.svg">https://main--dc--adobecom.hlx.live/dc-shared/assets/images/shared-images/qr-codes/qr-code-acrobat.svg | Acrobat Reader QR Code</a></p>
+              <p><a href="https://play.google.com/store/apps/details?id=com.adobe.reader&#x26;hl=en_US&#x26;gl=US#_blank">Google play</a></p>
+              <p><a href="https://adobeacrobat.app.link/ooe3VYFioeb#_blank">Apple store</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="media qr-code xs-heading center">
+          <div>
+            <div></div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/svg/scan.svg">https://main--dc--adobecom.hlx.live/dc-shared/assets/images/product-icons/svg/scan.svg</a></p>
+              <h3 id="adobe-scan">Adobe Scan</h3>
+              <p>Capture any paper document and turn it into a PDF with searchable text.</p>
+              <p><a href="/dc-shared/assets/images/shared-images/qr-codes/qr-code-scan.svg">https://main--dc--adobecom.hlx.live/dc-shared/assets/images/shared-images/qr-codes/qr-code-scan.svg | Adobe Scan QR Code</a></p>
+              <p><a href="https://play.google.com/store/apps/details?id=com.adobe.scan.android&#x26;hl=en_US&#x26;gl=US#_blank">Google play</a></p>
+              <p><a href="https://adobescan.app.link/GpBqG8Bkoeb#_blank">Apple store</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>two-up, center, xxl spacing bottom, l spacing top, grid-width-6</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/merch/acrobat/personal-document-management/merch-card/merch-card-blade">https://main--dc--adobecom.hlx.live/dc-shared/fragments/merch/acrobat/personal-document-management/merch-card/merch-card-blade</a></p>
+      </div>
+      <div>
+        <div class="icon-block s-body inline m-icon center m-spacing">
+          <div>
+            <div>
+              <p>
+                <picture>
+                  <source type="image/webp" srcset="./media_138f027b63e5a0d881b1b34e04da46b30e5ee4f27.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                  <source type="image/webp" srcset="./media_138f027b63e5a0d881b1b34e04da46b30e5ee4f27.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                  <source type="image/png" srcset="./media_138f027b63e5a0d881b1b34e04da46b30e5ee4f27.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                  <img loading="lazy" alt="Security" src="./media_138f027b63e5a0d881b1b34e04da46b30e5ee4f27.png?width=750&#x26;format=png&#x26;optimize=medium" width="40" height="50">
+                </picture>
+              </p>
+              <p>At Adobe, we’re serious about protecting your personal information. To ensure your account details are safe, we use Secure Sockets Layer (SSL), an industry standard for encrypting private data over the internet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>Grid width 8</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="breadcrumbs">
+          <div>
+            <div>
+              <ul>
+                <li><a href="https://www.adobe.com">Home</a></li>
+                <li><a href="https://www.adobe.com/acrobat.html">Adobe Acrobat</a></li>
+                <li>Personal document management and PDF software</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  <noscript><img src="https://www.adobe.com/akam/13/pixel_36b240a0?a=dD01ZDRkZDE3NjRkZWEyZWQxNDQwODI3YTE2ZjhlYjhkNzU3MTNjZmJjJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF online: From the creator of PDFs | Adobe Acrobat</title>
+    <link rel="canonical" href="https://www.adobe.com/acrobat/online.html">
+    <meta name="description" content="Do your best work online with Adobe Acrobat PDF online services. Use PDF tools in any browser.">
+    <meta property="og:title" content="PDF online: From the creator of PDFs | Adobe Acrobat">
+    <meta property="og:description" content="Do your best work online with Adobe Acrobat PDF online services. Use PDF tools in any browser.">
+    <meta property="og:image" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PDF online: From the creator of PDFs | Adobe Acrobat">
+    <meta name="twitter:description" content="Do your best work online with Adobe Acrobat PDF online services. Use PDF tools in any browser.">
+    <meta name="twitter:image" content="https://www.adobe.com/acrobat/media_19ffda7c7a354052e78ff74137a88658a7a3fd4b5.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="jarvis-chat" content="off">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="checkout-workflow-step" content="commitment">
+    <meta name="gnav-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/globalnav/localnav-acrobat-frictionless">
+    <meta name="footer-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/footer/footer-thin">
+    <meta name="product-entry-cta" content="on">
+    <meta name="-chromeext" content="https://main--da-dc--adobecom.aem.page/dc-shared/fragments/shared-fragments/browser-extension/browser-extension-chrome">
+    <meta name="-edgeext" content="https://main--da-dc--adobecom.aem.page/dc-shared/fragments/shared-fragments/browser-extension/browser-extension-edge">
+    <meta name="comment-threshold" content="5">
+    <meta name="app-prompt" content="on">
+    <meta name="app-prompt-entitlement" content="acrobat-web-usage">
+    <meta name="app-prompt-path" content="https://main--dc--adobecom.aem.live/dc-shared/fragments/acrobat/acrobat-online-pep-card">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://acrobat.adobe.com" crossorigin="">
+    <script src="/acrobat/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+    <script nomodule src="/acrobat/scripts/fallback.js"></script>
+    <script>
+  window.setLibs = (prodLibs, location = window.location) => {
+    const { hostname, search } = location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('milolibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return '/libs';
+    if (branch === 'local') return 'http://localhost:6456/libs';
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--') ? '' : '--milo--adobecom'}.${env}.live/libs`;
+  };
+
+  window.getUnityLibs = (prodLibs = '/unitylibs') => {
+    const { hostname, search } = window.location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('unitylibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return prodLibs;
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--')? '' : '--unity--adobecom'}.${env}.live/unitylibs`;
+  }
+
+  window.extractLocalePrefix = (pathname = window.location.pathname) => {
+    const segments = pathname.split('/').filter(Boolean);
+    if (!segments[0] || segments[0] === 'acrobat') {
+      return '';
+    }
+    return `/${segments[0]}`;
+  }
+
+  window.loadLink = (href, options = {}) => {
+    const { as, callback, crossorigin, rel, fetchpriority } = options;
+    let link = document.head.querySelector(`link[href="${href}"]`);
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', rel);
+      if (as) link.setAttribute('as', as);
+      if (crossorigin) link.setAttribute('crossorigin', crossorigin);
+      if (fetchpriority) link.setAttribute('fetchpriority', fetchpriority);
+      link.setAttribute('href', href);
+      if (callback) {
+        link.onload = (e) => callback(e.type);
+        link.onerror = (e) => callback(e.type);
+      }
+      document.head.appendChild(link);
+    } else if (callback) {
+      callback('noop');
+    }
+    return link;
+  }
+
+  const miloLibs = setLibs('/libs');
+  const unityLibs = getUnityLibs();
+  const localePrefix =  extractLocalePrefix();
+
+
+  const preloads = document.querySelector('meta[name="preloads"]')?.content?.split(',').map(x => x.trim().replace('$MILOLIBS', miloLibs).replace('$UNITYLIBS', unityLibs).replace('$LOCALEPREFIX', localePrefix)) || [];
+  preloads.forEach((link) => {
+    if (link.endsWith('.js')) {
+      loadLink(link, { as: 'script', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (link.endsWith('.css')) {
+      loadLink(link, { as: 'style', rel: 'preload' });
+    } else if (/\.(json|html|svg)$/.test(link)) {
+      loadLink(link, { as: 'fetch', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (/\.(png|jpg|jpeg|gif|webp)$/.test(link)) {
+      loadLink(link, { as: 'image', rel: 'preload', fetchpriority: 'high' });
+    }
+  });
+
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const ssrFlag = document.querySelector('meta[name="head-loaded"]');
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/dc-shared/assets/sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/dc-shared/assets/sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !ssrFlag) {
+      fetchAndParseSitemap();
+    }
+  })();
+  
+  const meta = document.createElement('meta');
+  meta.setAttribute('name', 'head-loaded');
+  document.head.append(meta);
+</script>
+  <script >bazadebezolkohpepadr="917651884"</script><script type="text/javascript" src="https://www.adobe.com/akam/13/36b240a0"  defer></script></head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="hero-marquee center s-min-height xxl-heading xl-button static-links">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_15b7a6068dc750eb65d165f3b72ae93d9beab9a35.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_15b7a6068dc750eb65d165f3b72ae93d9beab9a35.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_15b7a6068dc750eb65d165f3b72ae93d9beab9a35.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_15b7a6068dc750eb65d165f3b72ae93d9beab9a35.png?width=750&#x26;format=png&#x26;optimize=medium" width="3840" height="720">
+              </picture>Bottom, right
+            </div>
+          </div>
+          <div>
+            <div>
+              <h1 id="do-your-best-work-online-with-adobe-acrobat">Do your best work online with Adobe Acrobat</h1>
+              <p>Access free Acrobat online tools to convert, share, fill, and sign documents.</p>
+              <p><strong><a href="https://acrobat.adobe.com/link/home/">Sign in to Adobe Acrobat</a></strong></p>
+              <p><a href="https://milo.adobe.com/tools/ost?osi=-lYm-YaTSZoUgv1gzqCgybgFotLqRsLwf8CgYdvdnsQ&#x26;type=checkoutUrl&#x26;text=start-free-trial&#x26;workflowStep=commitment#_tcl">Start 7-day free trial</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center xl-heading l-spacing">
+          <div>
+            <div>#ffffff</div>
+          </div>
+          <div>
+            <div>
+              <h2 id="try-25-powerful-pdf-and-e-signing-tools-for-free">Try 25+ powerful PDF and e-signing tools for free</h2>
+              <p>Work smarter from anywhere with Acrobat online tools from Adobe, the inventor of the PDF format.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text s-spacing-bottom m-heading">
+          <div>
+            <div>
+              <h3 id="generative-ai">Generative AI</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/aichat.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/aichat.svg | Chat with PDF</a></p>
+              <h4 id="chat-with-pdf">Chat with PDF</h4>
+              <p>Ask a PDF questions and get fast answers using Acrobat AI Assistant</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/ai-chat-pdf">Try for free | Try for free Chat with PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/summary-generator.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/summary-generator.svg | Summary Generator</a></p>
+              <h4 id="summary-generator">Summary Generator</h4>
+              <p>Get concise summaries of your documents with Acrobat AI Assistant</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/ai-summary-generator">Try for free | Try for free Summary Generator</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/pdf-ai.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/pdf-ai.svg | PDF AI</a></p>
+              <h4 id="pdf-ai">PDF AI</h4>
+              <p>Use Acrobat AI Assistant to make your PDFs smart and interactive</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/pdf-ai">Try for free | Try for free PDF AI</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/flashcard-maker.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/product-icons/frictionless-svg/flashcard-maker.svg | Flashcard maker</a></p>
+              <h4 id="flashcard-maker">Flashcard maker</h4>
+              <p>Turn class notes, readings, or files into flashcards for free</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/flashcard-maker">Try for free | Try for free Flashcard maker</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/quiz-maker.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/product-icons/frictionless-svg/quiz-maker.svg | Quiz maker</a></p>
+              <h4 id="quiz-maker">Quiz maker</h4>
+              <p>Create quizzes and practice tests quickly, for  free</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/quiz-maker">Try for free | Try for free Quiz maker</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/mind-map.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/product-icons/frictionless-svg/mind-map.svg | Mind map</a></p>
+              <h4 id="mind-map">Mind map</h4>
+              <p>Create mind maps for free to assist your brainstorm or study session</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/mind-map">Try for free | Try for free Mind map</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/gen-presentation.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/product-icons/frictionless-svg/gen-presentation.svg | Generate presentation</a></p>
+              <h4 id="generate-presentation">Generate Presentation</h4>
+              <p>Start with a PDF or doc and create AI-generated slides with the power of Acrobat and Adobe Express</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="https://www.adobe.com/express/create/ai/presentation">Try for free | Try for free Generate Presentation</a></em></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>Four up</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text s-spacing-bottom m-spacing-top m-heading">
+          <div>
+            <div>
+              <h3 id="convert">Convert</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners footer-align-left click xs-body xs-heading s-icon">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-word.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-word.svg | PDF to Word</a></p>
+              <h4 id="pdf-to-word">PDF to Word</h4>
+              <p>Convert a PDF to a Microsoft Word file</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/pdf-to-word">Try for free | Try for free PDF to Word</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading l-icon">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-excel.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-excel.svg | PDF to Excel</a></p>
+              <h4 id="pdf-to-excel">PDF to Excel</h4>
+              <p>Convert a PDF to a Microsoft Excel file</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/pdf-to-excel">Try for free | Try for free PDF to Excel</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-ppt.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-ppt.svg | PDF to PPT</a></p>
+              <h4 id="pdf-to-ppt">PDF to PPT</h4>
+              <p>Convert a PDF to a Microsoft PowerPoint file</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/pdf-to-ppt">Try for free | Try for free PDF to PPT</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-jpg.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-jpg.svg | PDF to JPG</a></p>
+              <h4 id="pdf-to-jpg">PDF to JPG</h4>
+              <p>Convert a PDF to JPG or other image format</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/pdf-to-jpg">Try for free | Try for free PDF to JPG</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-png.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/pdf-to-png.svg | PDF to PNG</a></p>
+              <h4 id="pdf-to-png">PDF to PNG</h4>
+              <p>Convert a PDF to PNG or other image format</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/pdf-to-png">Try for free | Try for free PDF to PNG</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/word-to-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/word-to-pdf.svg | Word to PDF</a></p>
+              <h4 id="word-to-pdf">Word to PDF</h4>
+              <p>Convert a Microsoft Word file to PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/word-to-pdf">Try for free | Try for free Word to PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/excel-to-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/excel-to-pdf.svg | Excel to PDF</a></p>
+              <h4 id="excel-to-pdf">Excel to PDF</h4>
+              <p>Convert a Microsoft Excel file to PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/excel-to-pdf">Try for free | Try for free Excel to PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/ppt-to-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/ppt-to-pdf.svg | PPT to PDF</a></p>
+              <h4 id="ppt-to-pdf">PPT to PDF</h4>
+              <p>Convert a Microsoft PowerPoint file to PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/ppt-to-pdf">Try for free | Try for free PPT to PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/jpg-to-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/jpg-to-pdf.svg | JPG to PDF</a></p>
+              <h4 id="jpg-to-pdf">JPG to PDF</h4>
+              <p>Convert a JPG or other image file to PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/jpg-to-pdf">Try for free | Try for free JPG to PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/png-to-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/png-to-pdf.svg | PNG to PDF</a></p>
+              <h4 id="png-to-pdf">PNG to PDF</h4>
+              <p>Convert a PNG or other image file to PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/png-to-pdf">Try for free | Try for free PNG to PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/heic-to-pdf.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/product-icons/frictionless-svg/heic-to-pdf.svg | HEIC to PDF</a></p>
+              <h4 id="heic-to-pdf">HEIC to PDF</h4>
+              <p>Convert a HEIC or other image file to PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="https://acrobat.adobe.com/heic-to-pdf#_dnt">Try for free | Try for free HEIC to PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/convert-to-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/convert-to-pdf.svg | PDF converter</a></p>
+              <h4 id="pdf-converter">PDF converter</h4>
+              <p>Convert a file to or from PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/convert-pdf">Try for free | Try for free PDF converter</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/enhance-scans-ocr.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/enhance-scans-ocr.svg | OCR PDF</a></p>
+              <h4 id="ocr-pdf">OCR PDF</h4>
+              <p>Recognize text in a PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/ocr-pdf">Try for free | Try for free OCR PDF</a></em></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>Four up</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text s-spacing-bottom m-spacing-top m-heading">
+          <div>
+            <div>
+              <h3 id="reduce-file-size">Reduce file size</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/compress-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/compress-pdf.svg | Compress PDF</a></p>
+              <h4 id="compress-pdf">Compress PDF</h4>
+              <p>Reduce the size of your PDF for easier sharing</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/compress-pdf">Try for free | Try for free Compress PDF</a></em></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>Four up</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text s-spacing-bottom m-spacing-top m-heading">
+          <div>
+            <div>
+              <h3 id="edit">Edit</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners footer-align-left click xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/edit-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/edit-pdf.svg | Edit PDF</a></p>
+              <h4 id="edit-pdf">Edit PDF</h4>
+              <p>Add text boxes, comments, highlights, and more.</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/pdf-editor">Try for free | Try for free Edit PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/combine-files.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/combine-files.svg | Merge PDFs</a></p>
+              <h4 id="merge-pdfs">Merge PDFs</h4>
+              <p>Merge multiple files into a single PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/merge-pdf">Try for free | Try for free Merge PDFs</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/split-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/split-pdf.svg | Split PDF</a></p>
+              <h4 id="split-pdf">Split PDF</h4>
+              <p>Separate a file into multiple PDFs</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/split-pdf">Try for free | Try for free Split PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/crop-pages.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/crop-pages.svg | Crop PDF</a></p>
+              <h4 id="crop-pdf">Crop PDF</h4>
+              <p>Trim page content, adjust margins, or resize pages</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/crop-pdf">Try for free | Try for free Crop PDF</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/delete-pages.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/delete-pages.svg | Delete PDF pages</a></p>
+              <h4 id="delete-pdf-pages">Delete PDF pages</h4>
+              <p>Remove pages from your PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/delete-pdf-pages">Try for free | Try for free Delete PDF pages</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/rotate-pages.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/rotate-pages.svg | Rotate PDF pages</a></p>
+              <h4 id="rotate-pdf-pages">Rotate PDF pages</h4>
+              <p>Rotate pages left or right</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/rotate-pdf">Try for free | Try for free Rotate PDF pages</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/reorder-pages.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/reorder-pages.svg | Reorder pages</a></p>
+              <h4 id="reorder-pages">Reorder pages</h4>
+              <p>Rearrange pages in your PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/rearrange-pdf">Try for free | Try for free Reorder pages</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/icon-extract.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/icon-extract.svg | Extract PDF pages</a></p>
+              <h4 id="extract-pdf-pages">Extract PDF pages</h4>
+              <p>Create a new PDF of selected pages</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/extract-pdf-pages">Try for free | Try for free Extract PDF pages</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/insert-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/insert-pdf.svg | Insert PDF pages</a></p>
+              <h4 id="insert-pdf-pages">Insert PDF pages</h4>
+              <p>Add pages to your PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/add-pages-to-pdf">Try for free | Try for free Insert PDF pages</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/number-pdf-pages.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/number-pdf-pages.svg | Number PDF pages</a></p>
+              <h4 id="number-pdf-pages">Number PDF pages</h4>
+              <p>Add page numbers to your PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/add-pdf-page-numbers">Try for free | Try for free Number PDF pages</a></em></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>Four up</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text s-spacing-bottom m-spacing-top m-heading">
+          <div>
+            <div>
+              <h3 id="sign--protect">Sign &#x26; protect</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/fill-sign.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/fill-sign.svg | Fill &#x26; Sign</a></p>
+              <h4 id="fill--sign">Fill &#x26; Sign</h4>
+              <p>Complete a form and add your signature</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/sign-pdf">Try for free | Try for free Fill &#x26; Sign</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/request-signatures.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/request-signatures.svg | Request e-signatures</a></p>
+              <h4 id="request-e-signatures">Request e-signatures</h4>
+              <p>Send a document to anyone to e-sign online fast</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/request-signature">Try for free | Try for free Request e-signatures</a></em></div>
+          </div>
+        </div>
+        <div class="editorial-card static-links-copy xs-lockup s-rounded-corners click footer-align-left xs-body xs-heading">
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/frictionless-svg/protect-pdf.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/frictionless-svg/protect-pdf.svg | Protect PDF</a></p>
+              <h4 id="protect-pdf">Protect PDF</h4>
+              <p>Set a password to protect a PDF</p>
+            </div>
+          </div>
+          <div>
+            <div><em><a href="/acrobat/online/password-protect-pdf">Try for free | Try for free Protect PDF</a></em></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>Four up</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>M spacing</strong></div>
+          </div>
+        </div>
+        <div class="breadcrumbs">
+          <div>
+            <div>
+              <ul>
+                <li><a href="https://www.adobe.com">Home</a></li>
+                <li><a href="/acrobat">Acrobat</a></li>
+                <li>Online Tools</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  <noscript><img src="https://www.adobe.com/akam/13/pixel_36b240a0?a=dD01ZDRkZDE3NjRkZWEyZWQxNDQwODI3YTE2ZjhlYjhkNzU3MTNjZmJjJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

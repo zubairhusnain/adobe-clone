@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="_4_Icon_Admin" data-name="4_Icon_Admin" transform="translate(20508 3361)">
+    <rect id="Container" width="32" height="32" transform="translate(-20508 -3361)" fill="none"/>
+    <g id="Decorative_icon" data-name="Decorative icon" transform="translate(-20503 -3356)">
+      <rect id="Placement_Area" data-name="Placement Area" width="22" height="22" fill="red" opacity="0"/>
+      <g id="Icon">
+        <rect id="Canvas" width="22" height="22" fill="#464646" opacity="0"/>
+        <path id="Path_1036448" data-name="Path 1036448" d="M2.551,16.656,9.3,9.9c2.151-2.169.733-5.106,2.774-7.147,1.756-1.753,5.2-1.3,5.983-.809a.086.086,0,0,1-.016.147l-3.7,1.841a.221.221,0,0,0-.121.18l-.172,2.17a.441.441,0,0,0,.2.406l1.831,1.173a.221.221,0,0,0,.217.011l3.732-1.855a.087.087,0,0,1,.126.053A6.331,6.331,0,0,1,18.3,9.6c-1.867,1.866-4.642.926-5.884,2.169L5.809,19.58a2.354,2.354,0,0,1-.235.278,2.2,2.2,0,0,1-3.263-.169,2.285,2.285,0,0,1,.24-3.033Z" transform="translate(-0.003)" fill="none" stroke="#4b4b4b" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

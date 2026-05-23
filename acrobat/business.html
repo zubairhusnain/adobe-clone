@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adobe Acrobat for business: Everything you need for documents &#x26; e-signatures</title>
+    <link rel="canonical" href="https://www.adobe.com/acrobat/business.html">
+    <meta name="description" content="Streamline the way you work with digital documents and electronic signature solutions from Adobe Acrobat for business, so you can innovate and move your business forward.">
+    <meta property="og:title" content="Adobe Acrobat for business: Everything you need for documents &#x26; e-signatures">
+    <meta property="og:description" content="Streamline the way you work with digital documents and electronic signature solutions from Adobe Acrobat for business, so you can innovate and move your business forward.">
+    <meta property="og:image" content="https://www.adobe.com/acrobat/media_1a50552a7bc9133da23abe97e43e16a5ec1ee95df.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/acrobat/media_1a50552a7bc9133da23abe97e43e16a5ec1ee95df.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adobe Acrobat for business: Everything you need for documents &#x26; e-signatures">
+    <meta name="twitter:description" content="Streamline the way you work with digital documents and electronic signature solutions from Adobe Acrobat for business, so you can innovate and move your business forward.">
+    <meta name="twitter:image" content="https://www.adobe.com/acrobat/media_1a50552a7bc9133da23abe97e43e16a5ec1ee95df.jpg?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="target" content="on">
+    <meta name="personalization-v2" content="on">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="jarvis-chat" content="desktop">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="checkout-workflow-step" content="commitment">
+    <meta name="gnav-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/globalnav/localnav-acrobat-business">
+    <meta name="footer-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/footer/footer">
+    <meta name="jarvis-surface-id" content="DocumentCloudsignAcro">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://acrobat.adobe.com" crossorigin="">
+    <script src="/acrobat/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+    <script nomodule src="/acrobat/scripts/fallback.js"></script>
+    <script>
+  window.setLibs = (prodLibs, location = window.location) => {
+    const { hostname, search } = location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('milolibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return '/libs';
+    if (branch === 'local') return 'http://localhost:6456/libs';
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--') ? '' : '--milo--adobecom'}.${env}.live/libs`;
+  };
+
+  window.getUnityLibs = (prodLibs = '/unitylibs') => {
+    const { hostname, search } = window.location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('unitylibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return prodLibs;
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--')? '' : '--unity--adobecom'}.${env}.live/unitylibs`;
+  }
+
+  window.extractLocalePrefix = (pathname = window.location.pathname) => {
+    const segments = pathname.split('/').filter(Boolean);
+    if (!segments[0] || segments[0] === 'acrobat') {
+      return '';
+    }
+    return `/${segments[0]}`;
+  }
+
+  window.loadLink = (href, options = {}) => {
+    const { as, callback, crossorigin, rel, fetchpriority } = options;
+    let link = document.head.querySelector(`link[href="${href}"]`);
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', rel);
+      if (as) link.setAttribute('as', as);
+      if (crossorigin) link.setAttribute('crossorigin', crossorigin);
+      if (fetchpriority) link.setAttribute('fetchpriority', fetchpriority);
+      link.setAttribute('href', href);
+      if (callback) {
+        link.onload = (e) => callback(e.type);
+        link.onerror = (e) => callback(e.type);
+      }
+      document.head.appendChild(link);
+    } else if (callback) {
+      callback('noop');
+    }
+    return link;
+  }
+
+  const miloLibs = setLibs('/libs');
+  const unityLibs = getUnityLibs();
+  const localePrefix =  extractLocalePrefix();
+
+
+  const preloads = document.querySelector('meta[name="preloads"]')?.content?.split(',').map(x => x.trim().replace('$MILOLIBS', miloLibs).replace('$UNITYLIBS', unityLibs).replace('$LOCALEPREFIX', localePrefix)) || [];
+  preloads.forEach((link) => {
+    if (link.endsWith('.js')) {
+      loadLink(link, { as: 'script', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (link.endsWith('.css')) {
+      loadLink(link, { as: 'style', rel: 'preload' });
+    } else if (/\.(json|html|svg)$/.test(link)) {
+      loadLink(link, { as: 'fetch', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (/\.(png|jpg|jpeg|gif|webp)$/.test(link)) {
+      loadLink(link, { as: 'image', rel: 'preload', fetchpriority: 'high' });
+    }
+  });
+
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const ssrFlag = document.querySelector('meta[name="head-loaded"]');
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/dc-shared/assets/sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/dc-shared/assets/sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !ssrFlag) {
+      fetchAndParseSitemap();
+    }
+  })();
+  
+  const meta = document.createElement('meta');
+  meta.setAttribute('name', 'head-loaded');
+  document.head.append(meta);
+</script>
+  <script >bazadebezolkohpepadr="917651884"</script><script type="text/javascript" src="https://www.adobe.com/akam/13/36b240a0"  defer></script></head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="hero-marquee xxxl-heading xl-body xs-lockup center no-min-height">
+          <div>
+            <div>#FFFFFF</div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/business/solutions/adobe-acrobat-lockup-dark.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/business/solutions/adobe-acrobat-lockup-dark.svg | Adobe Acrobat</a></p>
+              <h1 id="solutions-for-businesses-of-all-sizes">Solutions for businesses of all sizes.</h1>
+              <p>Streamline the way you work, communicate, and transact business. Plus, get AI-powered assistance, APIs and integrations, and built-in security tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/promo-banners/acrobat-studio-b2b">https://main--da-dc--adobecom.aem.page/dc-shared/fragments/promo-banners/acrobat-studio-b2b</a></p>
+      </div>
+      <div>
+        <div class="tabs center">
+          <div>
+            <div>
+              <ol>
+                <li>Small businesses</li>
+                <li>Medium &#x26; large businesses</li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <div>active tab</div>
+            <div>1</div>
+          </div>
+          <div>
+            <div>id</div>
+            <div>business-size</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center full-width no-spacing m-heading l-body">
+          <div>
+            <div>
+              <h2 id="ideal-for-organizations-that-need-10-or-fewer-licenses">Ideal for organizations that need 10 or fewer licenses.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body static-links">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_14f44fcb0fccf1e9c6bceb15e4e0ad443c680b51f.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_14f44fcb0fccf1e9c6bceb15e4e0ad443c680b51f.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_14f44fcb0fccf1e9c6bceb15e4e0ad443c680b51f.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_14f44fcb0fccf1e9c6bceb15e4e0ad443c680b51f.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1516" height="756">
+              </picture>
+            </div>
+            <div>
+              <h3 id="get-trusted-pdf-tools-seamless-integrations-and-easy-admin-features">Get trusted PDF tools, seamless integrations, and easy admin features.</h3>
+              <p>Acrobat gives you everything you need to create, edit, sign, share, and manage PDFs, including AI-powered PDF Actions that help you complete top tasks in no time. Streamline workflows by integrating Acrobat with business apps like Microsoft 365. And easily manage licenses and billing from a single admin console.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1c44c7f4a7b812c4efc86478cf88700ce44afb044.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1c44c7f4a7b812c4efc86478cf88700ce44afb044.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1c44c7f4a7b812c4efc86478cf88700ce44afb044.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1c44c7f4a7b812c4efc86478cf88700ce44afb044.png?width=750&#x26;format=png&#x26;optimize=medium" width="758" height="378">
+              </picture>
+            </div>
+            <div>
+              <h3 id="work-smarter-with-ai-and-content-creation-tools">Work smarter with AI and content creation tools.</h3>
+              <p>Transform static documents into PDF Spaces that bring together files, context, audio summaries, and a custom AI Assistant to unlock insights and highlight what matters. Easily create standout reports, infographics, and other content with Adobe Express, and generate presentations with AI.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1d2a24ff159a1ceca68a56e347dfbbeeb463b2ff7.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1d2a24ff159a1ceca68a56e347dfbbeeb463b2ff7.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1d2a24ff159a1ceca68a56e347dfbbeeb463b2ff7.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1d2a24ff159a1ceca68a56e347dfbbeeb463b2ff7.png?width=750&#x26;format=png&#x26;optimize=medium" width="758" height="378">
+              </picture>
+            </div>
+            <div>
+              <h3 id="share-and-collaborate-from-anywhere">Share and collaborate from anywhere.</h3>
+              <p>Share documents and conversations in secure, interactive PDF Spaces that reflect your brand. Use AI assistants, executive summaries, and tailored insights to boost engagement, guide internal and external stakeholders, and drive effective decision-making. And see how stakeholders interact with your shared documents so you can optimize delivery, follow-through, and impact.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text center full-width no-spacing m-body">
+          <div>
+            <div><a href="/acrobat/business/acrobat-studio">Learn more about Acrobat for teams.</a></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Three up, l spacing, static links</div>
+          </div>
+          <div>
+            <div>tab</div>
+            <div>business-size, 1</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#FFFFFF</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center full-width no-spacing m-heading l-body">
+          <div>
+            <div>
+              <h2 id="ideal-for-organizations-that-need-11-or-more-licenses-and-have-complex-needs">Ideal for organizations that need 11 or more licenses and have complex needs.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1bc2191b476e97077ec3f4abb20bf63c7ae010359.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1bc2191b476e97077ec3f4abb20bf63c7ae010359.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1bc2191b476e97077ec3f4abb20bf63c7ae010359.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1bc2191b476e97077ec3f4abb20bf63c7ae010359.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="758" height="378">
+              </picture>
+            </div>
+            <div>
+              <h3 id="work-faster-together-with-powerful-document-solutions">Work faster together with powerful document solutions.</h3>
+              <p>Move business forward with the trusted solution for creating, editing, signing, and sharing PDFs and contracts. Count on automation to streamline workflows and accelerate approvals, and collaborate in powerful AI workspaces.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1335dd3e0425cb8ced7b4602766954cad3c1fc58f.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1335dd3e0425cb8ced7b4602766954cad3c1fc58f.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_1335dd3e0425cb8ced7b4602766954cad3c1fc58f.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1335dd3e0425cb8ced7b4602766954cad3c1fc58f.png?width=750&#x26;format=png&#x26;optimize=medium" width="758" height="378">
+              </picture>
+            </div>
+            <div>
+              <h3 id="work-smarter-with-ai-and-content-creation-tools-1">Work smarter with AI and content creation tools.</h3>
+              <p>Summarize, analyze, and extract key insights from complex documents, and get verifiable citations for audit trails. Share documents as branded, AI-powered PDF Spaces with AI assistants, executive summaries, and tailored insights that guide internal and external stakeholders to what matters. And empower everyone to create on-brand content at scale with Adobe Express.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_11f8ac6d38f4c0a7233a90740bc513d8697e85efa.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_11f8ac6d38f4c0a7233a90740bc513d8697e85efa.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_11f8ac6d38f4c0a7233a90740bc513d8697e85efa.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_11f8ac6d38f4c0a7233a90740bc513d8697e85efa.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1516" height="756">
+              </picture>
+            </div>
+            <div>
+              <h3 id="manage-with-ease-and-stay-secure">Manage with ease and stay secure.</h3>
+              <p>Integrate Acrobat with no downtime or costly re-training. Easily assign and reassign licenses based on individual roles to prevent unauthorized data access. Protect your data with strong security controls, secure cloud collaboration, and secure document storage — your content will never be used to train Adobe’s AI models.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text center l-button full-width no-spacing">
+          <div>
+            <div><a href="https://business.adobe.com/solutions/document-productivity.html">Learn more about Acrobat solutions for medium and large businesses.</a></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Three up, l spacing, static links</div>
+          </div>
+          <div>
+            <div>tab</div>
+            <div>business-size, 2</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#FFFFFF</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center xs-spacing max-width-8-desktop l-button">
+          <div>
+            <div>#f8f8f8</div>
+          </div>
+          <div>
+            <div>
+              <p>With <strong>Adobe Acrobat Pro and AI Assistant</strong>, everyone in your small business has trusted tools to edit and sign PDFs, collaborate better, and unlock insights faster.</p>
+              <p><a href="https://milo.adobe.com/tools/ost?osi=8Lr09qx_PHqAJUwvUNiof4FFFEKjsR1TTbvBUncV2b0,iI9UsOtLtXlD4-zeZd2XDuTCjFI2GV4PwyAgL8MH7Uk&#x26;type=price&#x26;old=true">PRICE - ABM - Acrobat Pro &#x26; AI Assistant for teams</a> for the annual, billed monthly plan.</p>
+              <p><em>Fee applies of half your remaining annual commitment if you cancel 14 days after your free trial ends.</em> <em><span class="icon icon-tooltip"></span>| top | If you cancel 14 days after your free trial ends, your service will only continue until the end of that month’s billing period.</em></p>
+              <p><strong><a href="https://milo.adobe.com/tools/ost?osi=8Lr09qx_PHqAJUwvUNiof4FFFEKjsR1TTbvBUncV2b0,iI9UsOtLtXlD4-zeZd2XDuTCjFI2GV4PwyAgL8MH7Uk&#x26;type=checkoutUrl&#x26;promo=TDAPCC_3LIC_7PT5&#x26;workflowStep=email">Free trial | Free trial Acrobat Pro + AI Assistant</a></strong> <em><a href="/acrobat/pricing/business">See plans and pricing | See plans and pricing Adobe Acrobat for business</a></em></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>xl-spacing, grid-width-10</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#f8f8f8</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center xl-heading xl-spacing-top xl-spacing-bottom">
+          <div>
+            <div>#FFFFFF</div>
+          </div>
+          <div>
+            <div>
+              <h2 id="compare-acrobat-plans-for-business"><strong>Compare Acrobat plans for business.</strong></h2>
+            </div>
+          </div>
+        </div>
+        <div class="table sticky highlight">
+          <div>
+            <div></div>
+            <div></div>
+            <div>Best value</div>
+            <div></div>
+          </div>
+          <div>
+            <div></div>
+            <div>
+              <p><strong>Small businesses</strong></p>
+              <p>Acrobat Pro for teams</p>
+              <p>The highly secure PDF and e-signature solution with advanced tools, plus admin features.</p>
+              <p><em><a href="https://milo.adobe.com/tools/ost?osi=8Lr09qx_PHqAJUwvUNiof4FFFEKjsR1TTbvBUncV2b0&#x26;type=checkoutUrl&#x26;text=free-trial&#x26;workflowStep=segmentation&#x26;cs=t&#x26;modal=crm">CTA {{free-trial}} | Free trial - Acrobat Pro - Business</a></em></p>
+              <p><strong><a href="https://milo.adobe.com/tools/ost?osi=vV01ci-KLH6hYdRfUKMBFx009hdpxZcIRG1-BY_PutE&#x26;type=checkoutUrl&#x26;text=buy-now&#x26;workflowStep=segmentation&#x26;cs=t&#x26;modal=crm">CTA {{buy-now}} | Buy now - Acrobat Pro - Business</a></strong></p>
+            </div>
+            <div>
+              <p><strong>Small businesses</strong></p>
+              <p>Acrobat Studio for teams</p>
+              <p>Everything in Acrobat Pro plus PDF Spaces, Acrobat AI Assistant, Adobe Express Premium, and admin features.</p>
+              <p><em><a href="https://milo.adobe.com/tools/ost?osi=PVhDPYXq4fsy15OdlEE-XyIlvcxaPMxGs73pw39Cx-s&#x26;type=checkoutUrl&#x26;text=free-trial&#x26;workflowStep=segmentation&#x26;cs=t&#x26;modal=crm">{{free-trial}} | Free trial Acrobat Studio for teams</a></em></p>
+              <p><strong><a href="https://milo.adobe.com/tools/ost?osi=SfkorgyrBAsqBVpyKddQQEn6jR0ItBohpXc74sZcKHg&#x26;type=checkoutUrl&#x26;text=buy-now&#x26;workflowStep=segmentation&#x26;cs=t&#x26;modal=crm">{{buy-now}} | Buy now Acrobat Studio for teams</a></strong></p>
+            </div>
+            <div>
+              <p><strong>Medium &#x26; large businesses</strong></p>
+              <p>Acrobat Studio for enterprise</p>
+              <p>Everything in Acrobat Pro plus PDF Spaces, Acrobat AI Assistant, Adobe Express Premium, and enterprise-level control.</p>
+              <p><strong><a href="https://business.adobe.com/products/acrobat-business.html">Learn more | Learn more Acrobat Studio for enterprise</a></strong></p>
+            </div>
+          </div>
+          <div>
+            <div><strong>Team size</strong></div>
+            <div>10 or fewer licenses</div>
+            <div>10 or fewer licenses</div>
+            <div>11 or more licenses</div>
+          </div>
+          <div>
+            <div>
+              <p><strong>Shared user admin functionality</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Manage users at the team and organization level with the Adobe Admin Console.</em></p>
+            </div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>E-sign tools</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Send documents for e-signature — even in bulk to multiple signers — and track responses.</em></p>
+            </div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>PDF productivity tools</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Get everything you need to digitize documents and speed business workflows.</em></p>
+            </div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>Integrations</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Access integrations with third-party apps like Microsoft 365.</em></p>
+            </div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>Acrobat AI Assistant</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Get insights from your documents to create high-impact content and level up your productivity.</em></p>
+            </div>
+            <div>Available as an add-on</div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>PDF Spaces</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Uncover insights across PDFs, Microsoft 365 files, and web links, and easily validate AI responses with citations.</em></p>
+            </div>
+            <div>Available with AI Assistant add-on</div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>Adobe Express Premium</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Create standout content with easy-to-use design tools and professional templates.</em></p>
+            </div>
+            <div></div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>Generate Presentation</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Easily remix your documents and insights into new content like presentations with AI.</em></p>
+            </div>
+            <div></div>
+            <div><span class="icon icon-checkmark"></span></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>APIs</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Embed Adobe document experiences into your own apps and customer experiences.</em></p>
+            </div>
+            <div></div>
+            <div></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+          <div>
+            <div>
+              <p><strong>Single Sign-On (SSO)</strong></p>
+              <p><em><span class="icon icon-tooltip"></span>| top | Access enterprise-level authentications.</em></p>
+            </div>
+            <div></div>
+            <div></div>
+            <div><span class="icon icon-checkmark"></span></div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>static links, xl-spacing</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#FFFFF</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text max-width-8-desktop center xxl-spacing m-button l-title l-heading l-body">
+          <div>
+            <div>
+              <h2 id="get-advanced-e-sign-tools-with-acrobat-sign-solutions">Get advanced e-sign tools with Acrobat Sign Solutions.</h2>
+              <p>Acrobat Sign Solutions is our most powerful eSignature solution, with pre-built integrations to popular business apps like Microsoft, Salesforce, and Workday as well as industry compliance settings and enhanced signer authentication.</p>
+              <p><em><a href="https://business.adobe.com/products/sign-solutions.html">Learn more | learn more Acrobat Sign Solutions</a></em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center xl-heading xxl-spacing-top l-spacing-bottom">
+          <div>
+            <div>
+              <h2 id="explore-acrobat-features">Explore Acrobat features.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>background</div>
+            <div>#F8F8F8</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1412ba0ae56084c044bdd1046a7b95b2cfd68f643.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1412ba0ae56084c044bdd1046a7b95b2cfd68f643.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1412ba0ae56084c044bdd1046a7b95b2cfd68f643.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1412ba0ae56084c044bdd1046a7b95b2cfd68f643.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1104" height="552">
+              </picture>
+            </div>
+            <div>
+              <h3 id="edit-text-and-images">Edit text and images.</h3>
+              <p>Add text, fix typos, drop in new pages, edit images, and more without switching apps.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_12de3f1c9d209c92999436b92a7cd33415f26c962.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_12de3f1c9d209c92999436b92a7cd33415f26c962.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_12de3f1c9d209c92999436b92a7cd33415f26c962.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_12de3f1c9d209c92999436b92a7cd33415f26c962.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1104" height="552">
+              </picture>
+            </div>
+            <div>
+              <h3 id="create-from-templates">Create from templates.</h3>
+              <p>Get a head start by choosing from dozens of PDF templates. Or create your own reusable templates.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1cda5f5454deef0235acf0e5c965385474995b7e3.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1cda5f5454deef0235acf0e5c965385474995b7e3.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1cda5f5454deef0235acf0e5c965385474995b7e3.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1cda5f5454deef0235acf0e5c965385474995b7e3.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="276">
+              </picture>
+            </div>
+            <div>
+              <h3 id="turn-docs-into-knowledge-with-pdf-spaces">Turn docs into knowledge with PDF Spaces.</h3>
+              <p>Chat with customizable AI Assistants for deep insights about your files.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_11a5c2d0c5fa3730dbf494f88d30eea5c8a0979f2.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_11a5c2d0c5fa3730dbf494f88d30eea5c8a0979f2.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_11a5c2d0c5fa3730dbf494f88d30eea5c8a0979f2.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_11a5c2d0c5fa3730dbf494f88d30eea5c8a0979f2.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="1104" height="552">
+              </picture>
+            </div>
+            <div>
+              <h3 id="merge-and-split-pdfs">Merge and split PDFs.</h3>
+              <p>Combine two or more PDFs into a single file, or turn an existing PDF into as many separate files as you want.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Four-up, xl spacing</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div>#f8f8f8</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center xxl-spacing-top xl-heading light">
+          <div>
+            <div>
+              <h2 id="the-adobe-difference">The Adobe difference.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/business/solutions/dc-bso-difference-1.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/business/solutions/dc-bso-difference-1.svg</a></p>
+              <h3 id="were-a-trusted-global-brand">We’re a trusted global brand.</h3>
+              <p>As a leader in digital experiences trusted by Fortune 500 companies and small businesses around the world, Adobe has invented globally renowned solutions from Acrobat to Creative Cloud that transform businesses.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/business/solutions/dc-bso-difference-2.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/business/solutions/dc-bso-difference-2.svg</a></p>
+              <h3 id="we-have-solutions-for-every-business">We have solutions for every business.</h3>
+              <p>From small businesses to the world’s largest enterprises, our customers use our integrated Adobe Creative Cloud, Document Cloud, and Experience Cloud solutions to unleash their creativity, accelerate document productivity, and power their digital businesses.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/business/solutions/dc-bso-difference-3.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/business/solutions/dc-bso-difference-3.svg</a></p>
+              <h3 id="we-have-your-back">We have your back.</h3>
+              <p>We provide our business customers with 24x7x365 support for all their licensing and troubleshooting needs. <a href="https://helpx.adobe.com/support.html">Learn more | Learn more Adobe Help Center</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>three-up, xxl spacing</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text center xl-heading xxl-spacing-top xs-spacing-bottom">
+          <div>
+            <div>
+              <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+            </div>
+          </div>
+        </div>
+        <div class="accordion">
+          <div>
+            <div><strong>What are the differences between the Acrobat for teams and Acrobat for enterprise plans?</strong></div>
+          </div>
+          <div>
+            <div>
+              <p>Acrobat for teams plans are designed for small and midsize teams that need full-feature PDF and e-signature solutions.</p>
+              <p>Acrobat for enterprise plans are designed for large organizations with complex needs. They’re best for customers that need full-feature PDF solutions with enterprise-level control and management — with or without embedded e-signature capabilities.</p>
+            </div>
+          </div>
+          <div>
+            <div><strong>What’s the difference between Acrobat Pro and Acrobat Studio?</strong></div>
+          </div>
+          <div>
+            <div>Acrobat Pro delivers powerful tools for working with PDFs and creating and managing e-signatures. Acrobat Studio is our most advanced Acrobat offering, bringing together productivity and creativity tools in a secure, all-in-one solution. It includes everything in Acrobat Pro as well as Acrobat AI Assistant and PDF Spaces to unlock insights across documents plus Adobe Express Premium, the app that makes content creation quick and easy for everyone in your organization. The latest features in PDF Spaces help you collaborate smarter and easily remix your documents with AI to generate presentations and podcast-style audio.</div>
+          </div>
+          <div>
+            <div><strong>What do I get with the business plan that I don’t get with an individual plan?</strong></div>
+          </div>
+          <div>
+            <div>
+              <p>Acrobat business plans include the Acrobat for teams and Acrobat for enterprise plans. By choosing one of our business plans, you’ll be able to seamlessly add users as your organization grows. With an individual plan, you’ll only have access to a single license for one user.</p>
+              <p>With our business plans, you’ll also get organization-level benefits. These include an Admin Console for simplified license management, 24x7 tech support, and company ownership and access to your critical documents.</p>
+            </div>
+          </div>
+          <div>
+            <div><strong>Where can I learn more about all the integrations you offer with Acrobat solutions?</strong></div>
+          </div>
+          <div>
+            <div>You can learn more on our <a href="/acrobat/business/integrations">integrations page</a>.</div>
+          </div>
+          <div>
+            <div><strong>Where can I learn about your document security standards?</strong></div>
+          </div>
+          <div>
+            <div>Acrobat is backed by Adobe’s security standards. <a href="https://www.adobe.com/trust/document-cloud-security.html">Learn more | Learn more Document Cloud Security</a></div>
+          </div>
+          <div>
+            <div><strong>In what languages is Acrobat available? What languages can I choose from?</strong></div>
+          </div>
+          <div>
+            <div>See the <a href="https://helpx.adobe.com/acrobat/system-requirements.html">Acrobat system requirements page</a> for information.</div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>background</div>
+            <div><strong>#fff</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text l-lockup max-width-8-desktop center xxl-spacing xl-button l-title xl-heading l-body">
+          <div>
+            <div>
+              <h2 id="were-here-to-help">We’re here to help.</h2>
+              <p>Contact us to find out more about plans and pricing for your business or to get support for your existing Acrobat plan.</p>
+              <p><strong><a href="https://www.adobe.com/acrobat/contact.html">Contact Sales | Contact Sales Acrobat</a></strong> <span class="icon icon-device-phone"></span><a href="tel:%7B%7Bphone-business-geo%7D%7D">{{phone-business}}</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="breadcrumbs">
+          <div>
+            <div>
+              <ul>
+                <li><a href="https://www.adobe.com/">Home</a></li>
+                <li><a href="https://www.adobe.com/acrobat.html">Acrobat</a></li>
+                <li>Business Solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  <noscript><img src="https://www.adobe.com/akam/13/pixel_36b240a0?a=dD01ZDRkZDE3NjRkZWEyZWQxNDQwODI3YTE2ZjhlYjhkNzU3MTNjZmJjJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

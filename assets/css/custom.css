@@ -1,0 +1,202 @@
+/* Local clone overrides */
+body {
+  opacity: 1 !important;
+}
+
+/* Header: visible without Milo gnav init */
+header.global-navigation.ready,
+header.global-navigation[data-block-status="loaded"] {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+header.global-navigation.gnav-hide {
+  opacity: 1 !important;
+}
+
+@media (min-width: 900px) {
+  header.global-navigation .feds-nav-wrapper {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    height: auto !important;
+    border-top: none !important;
+  }
+
+  header.global-navigation .feds-nav {
+    flex-direction: row !important;
+  }
+}
+
+header.global-navigation .feds-brand-image.brand-image-only img,
+header.global-navigation .feds-brand-image.brand-image-only svg {
+  display: block !important;
+  height: 36px !important;
+  width: auto !important;
+  min-width: 66px !important;
+}
+
+header.global-navigation .feds-utilities,
+header.global-navigation .universal-nav-container,
+#universal-nav {
+  display: none !important;
+}
+
+header.global-navigation .feds-menu-section:has([daa-lh="Featured products"]),
+header.global-navigation .feds-menu-items[daa-lh="Featured products"],
+header .feds-featuredProducts {
+  display: none !important;
+}
+
+.brand-concierge,
+.bc-floating-button,
+.bc-floating-button-container,
+.bc-floating-input {
+  display: none !important;
+}
+
+/*
+ * Global nav mega menus (all pages): same as homepage — first column only, two links, no promos/CTAs.
+ */
+header.global-navigation .feds-navItem--megaMenu .feds-promo-wrapper,
+header.global-navigation .feds-navItem--megaMenu .feds-promo {
+  display: none !important;
+}
+
+header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content > .feds-menu-column:not(:first-child) {
+  display: none !important;
+}
+
+header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content > .feds-menu-column:first-child .feds-menu-items > ul > li:nth-child(n + 3),
+header.global-navigation .feds-navItem--megaMenu .feds-menu-items > ul > li:has(.feds-cta-wrapper),
+header.global-navigation .feds-navItem--megaMenu .feds-cta-wrapper {
+  display: none !important;
+}
+
+@media (min-width: 900px) {
+  header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content {
+    grid-template-columns: 1fr !important;
+    max-width: 640px !important;
+  }
+
+  header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content > .feds-menu-column:first-child .feds-menu-items > ul {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    gap: 32px !important;
+    align-items: stretch !important;
+  }
+
+  header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content > .feds-menu-column:first-child .feds-menu-items > ul > li {
+    flex: 1 1 50% !important;
+    max-width: 50% !important;
+    min-width: 0 !important;
+  }
+}
+
+/*
+ * Mirrored footer: homepage only (inner pages strip footer in PHP).
+ * Layout rules live in upp/blocks/global-footer/global-footer.css + menu.css.
+ */
+body:not(.cw-homepage) footer.global-footer,
+body:not(.cw-homepage) .feds-footer-icons {
+  display: none !important;
+}
+
+footer.global-footer {
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+/* If Milo appends a second wrapper, hide it (prevents side-by-side duplicate columns). */
+footer.global-footer .feds-footer-wrapper ~ .feds-footer-wrapper {
+  display: none !important;
+}
+
+@media (min-width: 900px) {
+  footer.global-footer .feds-menu-headline + .feds-menu-items {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+  }
+
+  footer.global-footer .feds-menu-headline::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+/* Footer: hide Featured products bar and Change region picker */
+footer.global-footer .feds-featuredProducts,
+footer.global-footer .feds-regionPicker-wrapper,
+footer.global-footer .feds-regionPicker {
+  display: none !important;
+}
+
+/* Footer links/columns to hide (no HTML/JS changes) */
+footer.global-footer .feds-menu-column:has(.feds-menu-items[daa-lh="For medium large business"]) {
+  display: none !important;
+}
+
+/* Same top nav as homepage on all pages — hide per-page local nav chrome */
+body:not(.cw-homepage) header.global-navigation .feds-localnav,
+body:not(.cw-homepage) header.global-navigation .feds-breadcrumbs,
+body:not(.cw-homepage) .feds-localnav-wrapper,
+body:not(.cw-homepage) header.global-navigation .feds-topnav-aside {
+  display: none !important;
+}
+
+/* Hide Marketing & Commerce on every page (homepage nav set) */
+header.global-navigation .feds-navItem[daa-lh="Marketing Commerce"] {
+  display: none !important;
+}
+
+/* Homepage: Adobe for Business pod — no external link */
+body.cw-homepage #it-starts-with-adobe,
+body.cw-homepage #it-starts-with-adobe ~ *,
+body.cw-homepage .homepage-brick:has(#it-starts-with-adobe) .foreground {
+  cursor: default !important;
+  pointer-events: none !important;
+}
+
+body.cw-homepage .homepage-brick:has(#it-starts-with-adobe) .click-link {
+  text-decoration: none !important;
+}
+
+/* Homepage: Learn is a direct link, not a mega menu */
+body.cw-homepage header.global-navigation .feds-navItem[daa-lh="Learn Support"].feds-navItem--megaMenu .feds-popup,
+body.cw-homepage header.global-navigation .feds-navItem[daa-lh="Learn Support"] .feds-navLink--hoverCaret::after {
+  display: none !important;
+}
+
+/* Homepage Creative Cloud brick: hide any remaining external links */
+body.cw-homepage .body-xs:has(#creative-cloud) a[href^="http://"],
+body.cw-homepage .body-xs:has(#creative-cloud) a[href^="https://"],
+body.cw-homepage .body-xs:has(#creative-cloud) a[href^="//"] {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+footer.global-footer li:has([daa-ll*="Design and illustration"]),
+footer.global-footer li:has([daa-ll*="Video and animation"]),
+footer.global-footer li:has([daa-ll*="PDF-"]),
+footer.global-footer li:has([daa-ll*="3D-"]),
+footer.global-footer li:has([daa-ll*="Elements Family"]),
+footer.global-footer li:has([daa-ll*="Stock images and video"]),
+footer.global-footer li:has([daa-ll*="Help Center"]),
+footer.global-footer li:has([daa-ll*="Download and install"]),
+footer.global-footer li:has([daa-ll*="Medium and large business supp"]),
+footer.global-footer li:has([daa-ll*="Request information"]),
+footer.global-footer li:has([daa-ll*="Log into your account"]),
+footer.global-footer li:has([daa-ll*="Newsroom"]),
+footer.global-footer li:has([daa-ll*="Adobe Blog"]),
+footer.global-footer li:has([daa-ll*="Events-"]),
+footer.global-footer li:has([daa-ll*="Corporate responsibility"]),
+footer.global-footer li:has([daa-ll*="Investor Relations"]),
+footer.global-footer li:has([daa-ll*="Supply chain"]),
+footer.global-footer li:has([daa-ll*="Trust Center"]),
+footer.global-footer li:has([daa-ll*="Integrity-"]),
+footer.global-footer li:has([daa-ll*="Adobe for All"]),
+footer.global-footer li:has([daa-ll*="Government-"]) {
+  display: none !important;
+}

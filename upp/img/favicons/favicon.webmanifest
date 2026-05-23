@@ -1,0 +1,7 @@
+{
+  "name": "Adobe",
+  "short_name": "Adobe",
+  "icons": [],
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,52 @@
+RewriteEngine On
+
+# Apache file(1) mis-detects gnav JS (HTML template strings) as text/html
+<FilesMatch "global-navigation\.js$">
+  ForceType application/javascript
+</FilesMatch>
+
+DirectoryIndex index.php
+
+# Legacy static homepage → PHP entry
+RewriteRule ^index\.html$ index.php [L,R=301]
+
+# Legacy mirrored asset prefix → site root
+RewriteRule ^assets/www\.adobe\.com/(.*)$ /$1 [L,R=302]
+
+# Legacy URLs when CW_BASE_URL incorrectly included /public_html
+RewriteRule ^public_html/(.*)$ /$1 [R=301,L]
+
+# Gnav source: inject install base URL into Learn link (subdir-safe)
+RewriteCond %{REQUEST_URI} /upp-shared/gnav\.plain\.html$
+RewriteRule .* router.php [L,QSA]
+
+# libs + upp gnav JS via router (correct MIME; never serve live upp gnav offline)
+RewriteCond %{REQUEST_URI} global-navigation/global-navigation\.js$ [NC]
+RewriteRule .* router.php [L,QSA]
+
+# libs/*.js via router (correct application/javascript MIME)
+RewriteCond %{REQUEST_URI} \.(js|mjs)$ [NC]
+RewriteCond %{REQUEST_URI} /libs/ [NC]
+RewriteRule .* router.php [L,QSA]
+
+# Milo config + other dot-path assets
+RewriteCond %{REQUEST_URI} (^|/)\.milo/ [NC]
+RewriteRule .* router.php [L,QSA]
+
+# Serve real files (CSS, JS, images, JSON, etc.) — except libs JS (handled above)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} !/libs/.*\.(js|mjs)$ [NC]
+RewriteRule ^ - [L]
+
+# Directories with their own index — serve as-is
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index\.php -f [OR]
+RewriteCond %{REQUEST_FILENAME}/index\.html -f
+RewriteRule ^ - [L]
+
+# Asset-only folders (no index) must not show Apache directory listings
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ router.php [L,QSA]
+
+# Everything else → front controller
+RewriteRule ^ router.php [L,QSA]

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>For organizations</title>
+    <link rel="canonical" href="https://www.adobe.com/federal/footer/fragments/footer-acom-column-3">
+    <meta property="og:title" content="For organizations">
+    <meta property="og:url" content="https://www.adobe.com/federal/footer/fragments/footer-acom-column-3">
+    <meta property="og:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="For organizations">
+    <meta name="twitter:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium"><!-- Modifying this file will impact your performance -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/scripts/fallback.js" nomodule></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <h2 id="for-organizations">For organizations</h2>
+        <ul>
+          <li><a href="https://www.adobe.com/education.html">Education</a></li>
+          <li><a href="https://www.adobe.com/nonprofits.html">Nonprofits</a></li>
+          <li><a href="https://www.adobe.com/howtobuy/buying-programs/government.html">Government</a></li>
+        </ul>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

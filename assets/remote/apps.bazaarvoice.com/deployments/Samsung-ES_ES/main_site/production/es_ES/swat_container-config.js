@@ -1,0 +1,10 @@
+/*!
+ * Bazaarvoice swat_container 1.6.0 config
+ * Fri, 24 Apr 2026 12:20:15 GMT
+ *
+ * http://bazaarvoice.com/
+ *
+ * Copyright 2026 Bazaarvoice. All rights reserved.
+ *
+ */
+window.performance && window.performance.mark && window.performance.mark('bv_loader_configure_swat_container_start');BV["swat_container"].configure({"locale":"es_ES","apiKey":"caZ8VhNsAx89XmhPbcmAV96aPJSjQ6tFRNLeuQakM1Ix0","displayCode":"20558","domains":[{"allowSubdomain":true,"domainAddress":"bazaarvoice.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"samsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true},{"allowSubdomain":true,"domainAddress":"experiencesamsung.com","thirdPartyCookieEnabled":false,"firstPartyCookieEnabled":true}],"containerUrl":"","homePageURL":"http://www.samsung.com/es","features":{"allowCssOverrides":false,"useProductPagesForSubmissionFlag":false},"messages":{"unsubscribe_success":"Se ha dado de baja correctamente.","unsubscribe_failure":"Se ha producido un error. Vuelva a intentarlo más tarde.","userVerified":"{Gender, select, other {¡Gracias! Se ha autenticado correctamente su contenido.} }","userAlreadyVerified":"Ya se ha verificado esta dirección de correo electrónico.","unsubscribe_unknownError":"Se ha producido un error. Vuelva a intentarlo más tarde.","display_deeplink_common_error":"Se ha producido un error inesperado. Inténtelo de nuevo más tarde.","close_modal_screen_reader_message":"Cerrar ventana modal. Pulse Intro para cerrar la ventana modal."},"labelStyles":{"familyID":"sniffedFontFamily326698143","size":13,"color":"#363636","lineHeight":19.5,"characterStyles":[],"family":"SamsungOne, arial","sampleBackgroundColor":"white","textTransform":"none"},"homePageUrl":"http://www.samsung.com/es"});

@@ -1,0 +1,72 @@
+Kept pages (64): linked directly from homepage (index.php)
+
+  /about-adobe/
+  /about-adobe/integrity/
+  /acrobat/
+  /acrobat/acrobat-express/
+  /acrobat/acrobat-pro/
+  /acrobat/acrobat-studio/
+  /acrobat/business/
+  /acrobat/business/industries/government/
+  /acrobat/free-trial-download/
+  /acrobat/generative-ai-pdf/
+  /acrobat/online/
+  /acrobat/online/ai-chat-pdf/
+  /acrobat/online/compress-pdf/
+  /acrobat/online/merge-pdf/
+  /acrobat/online/pdf-editor/
+  /acrobat/online/pdf-to-word/
+  /acrobat/online/word-to-pdf/
+  /acrobat/pdf-reader/
+  /acrobat/personal-document-management/
+  /acrobat/pricing/
+  /careers/
+  /community/
+  /corporate-responsibility/
+  /corporate-responsibility/supply-chain/
+  /creativecloud/
+  /creativecloud/all-apps/
+  /creativecloud/business/
+  /creativecloud/buy/students/
+  /creativecloud/design/
+  /creativecloud/photography/
+  /creativecloud/photography/apps/
+  /creativecloud/plan-recommender/quiz/
+  /creativecloud/plans/
+  /creativecloud/video/
+  /diversity/
+  /education/
+  /events/
+  /express/
+  /express/feature/image/remove-background/
+  /howtobuy/buying-programs/government/
+  /investor-relations/
+  /learn/
+  /legal/terms/
+  /nonprofits/
+  /nonprofits/acrobat/
+  /offer-terms/cc_full_special_offer/
+  /privacy/
+  /privacy/location-specific-notice/
+  /privacy/opt-out/
+  /products/catalog/
+  /products/elements-family/
+  /products/firefly/
+  /products/firefly/features/ai-art-generator/
+  /products/firefly/features/ai-photo-editor/
+  /products/firefly/features/ai-video-generator/
+  /products/firefly/features/text-to-image/
+  /products/illustrator/
+  /products/photoshop/
+  /products/photoshop-lightroom/
+  /products/photoshop/free-trial-download/
+  /products/premiere/
+  /products/substance3d/
+  /sign/
+  /trust/
+
+Removed pages (1): not linked from homepage
+
+  /express/learn/tutorials/
+
+Homepage: index.php (not in pages/)

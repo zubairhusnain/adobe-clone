@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="101.02" height="115.609" viewBox="0 0 101.02 115.609">
+  <defs>
+    <clipPath id="clip-_6-3D_AR_ICON">
+      <rect width="101.02" height="115.61"/>
+    </clipPath>
+  </defs>
+  <g id="_6-3D_AR_ICON" data-name="6-3D/AR ICON" clip-path="url(#clip-_6-3D_AR_ICON)">
+    <rect width="101.02" height="115.61" fill="rgba(255,255,255,0)"/>
+    <path id="S_3DAndAR_18_N" d="M49.825.784,2.684,28A3.367,3.367,0,0,0,1,30.927V85.355a3.367,3.367,0,0,0,1.684,2.916l47.141,27.221a3.367,3.367,0,0,0,3.367,0l47.141-27.221a3.367,3.367,0,0,0,1.684-2.916V30.927a3.367,3.367,0,0,0-1.684-2.916L53.192.784A3.367,3.367,0,0,0,49.825.784Zm1.684,6.8L91.915,30.914,51.508,54.255,11.1,30.921ZM7.734,83.415V36.759L48.141,60.047V106.71Z" transform="translate(-1 -0.334)" fill="#5fb200"/>
+  </g>
+</svg>

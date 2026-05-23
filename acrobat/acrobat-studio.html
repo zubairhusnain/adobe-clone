@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adobe Acrobat Studio — The AI-powered PDF and design solution</title>
+    <link rel="canonical" href="https://www.adobe.com/acrobat/acrobat-studio.html">
+    <meta name="description" content="Meet Adobe Acrobat Studio. The all-in-one PDF and design solution for business workflows — create, edit, sign, and collaborate with powerful AI-powered tools.">
+    <meta property="og:title" content="Adobe Acrobat Studio — The AI-powered PDF and design solution">
+    <meta property="og:description" content="Meet Adobe Acrobat Studio. The all-in-one PDF and design solution for business workflows — create, edit, sign, and collaborate with powerful AI-powered tools.">
+    <meta property="og:image" content="https://www.adobe.com/acrobat/media_1aed67c6942c998c0ec1c9a6bfe5d59e1f4b69025.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/acrobat/media_1aed67c6942c998c0ec1c9a6bfe5d59e1f4b69025.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adobe Acrobat Studio — The AI-powered PDF and design solution">
+    <meta name="twitter:description" content="Meet Adobe Acrobat Studio. The all-in-one PDF and design solution for business workflows — create, edit, sign, and collaborate with powerful AI-powered tools.">
+    <meta name="twitter:image" content="https://www.adobe.com/acrobat/media_1aed67c6942c998c0ec1c9a6bfe5d59e1f4b69025.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="jarvis-chat" content="desktop">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="checkout-workflow-step" content="commitment">
+    <meta name="gnav-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/globalnav/localnav-acrobat">
+    <meta name="footer-source" content="https://main--da-dc--adobecom.aem.page/dc-shared/navigation/footer/footer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://acrobat.adobe.com" crossorigin="">
+    <script src="/acrobat/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+    <script nomodule src="/acrobat/scripts/fallback.js"></script>
+    <script>
+  window.setLibs = (prodLibs, location = window.location) => {
+    const { hostname, search } = location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('milolibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return '/libs';
+    if (branch === 'local') return 'http://localhost:6456/libs';
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--') ? '' : '--milo--adobecom'}.${env}.live/libs`;
+  };
+
+  window.getUnityLibs = (prodLibs = '/unitylibs') => {
+    const { hostname, search } = window.location;
+    if (!['.aem.', '.hlx.', '.stage.', 'local', '.da.'].some((i) => hostname.includes(i))) return prodLibs;
+    const branch = new URLSearchParams(search).get('unitylibs') || 'main';
+    if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
+    if (branch === 'main' && hostname === 'www.stage.adobe.com') return prodLibs;
+    const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
+    return `https://${branch}${branch.includes('--')? '' : '--unity--adobecom'}.${env}.live/unitylibs`;
+  }
+
+  window.extractLocalePrefix = (pathname = window.location.pathname) => {
+    const segments = pathname.split('/').filter(Boolean);
+    if (!segments[0] || segments[0] === 'acrobat') {
+      return '';
+    }
+    return `/${segments[0]}`;
+  }
+
+  window.loadLink = (href, options = {}) => {
+    const { as, callback, crossorigin, rel, fetchpriority } = options;
+    let link = document.head.querySelector(`link[href="${href}"]`);
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', rel);
+      if (as) link.setAttribute('as', as);
+      if (crossorigin) link.setAttribute('crossorigin', crossorigin);
+      if (fetchpriority) link.setAttribute('fetchpriority', fetchpriority);
+      link.setAttribute('href', href);
+      if (callback) {
+        link.onload = (e) => callback(e.type);
+        link.onerror = (e) => callback(e.type);
+      }
+      document.head.appendChild(link);
+    } else if (callback) {
+      callback('noop');
+    }
+    return link;
+  }
+
+  const miloLibs = setLibs('/libs');
+  const unityLibs = getUnityLibs();
+  const localePrefix =  extractLocalePrefix();
+
+
+  const preloads = document.querySelector('meta[name="preloads"]')?.content?.split(',').map(x => x.trim().replace('$MILOLIBS', miloLibs).replace('$UNITYLIBS', unityLibs).replace('$LOCALEPREFIX', localePrefix)) || [];
+  preloads.forEach((link) => {
+    if (link.endsWith('.js')) {
+      loadLink(link, { as: 'script', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (link.endsWith('.css')) {
+      loadLink(link, { as: 'style', rel: 'preload' });
+    } else if (/\.(json|html|svg)$/.test(link)) {
+      loadLink(link, { as: 'fetch', rel: 'preload', crossorigin: 'anonymous' });
+    } else if (/\.(png|jpg|jpeg|gif|webp)$/.test(link)) {
+      loadLink(link, { as: 'image', rel: 'preload', fetchpriority: 'high' });
+    }
+  });
+
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const ssrFlag = document.querySelector('meta[name="head-loaded"]');
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/dc-shared/assets/sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/dc-shared/assets/sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !ssrFlag) {
+      fetchAndParseSitemap();
+    }
+  })();
+  
+  const meta = document.createElement('meta');
+  meta.setAttribute('name', 'head-loaded');
+  document.head.append(meta);
+</script>
+  <script >bazadebezolkohpepadr="917651884"</script><script type="text/javascript" src="https://www.adobe.com/akam/13/36b240a0"  defer></script></head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="hero-marquee static-links xl-heading media-bottom-tablet media-bottom-mobile media-cover">
+          <div>
+            <div>#F8F8F8</div>
+            <div>#F8F8F8</div>
+            <div>#F8F8F8</div>
+          </div>
+          <div>
+            <div>con-block-row-lockup (m-icon)</div>
+            <div><a href="/dc-shared/assets/images/product-icons/svg/acrobat-pro-40.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/svg/acrobat-pro-40.svg</a> <strong>Adobe Acrobat Studio</strong></div>
+          </div>
+          <div>
+            <div>
+              <h1 id="all-in-one-pdf-and-design-solution-powered-by-ai">All-in-one PDF and design solution. Powered by AI.</h1>
+            </div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_184edce50b676e645da9f22015dfb6ab2106d8694.png?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_184edce50b676e645da9f22015dfb6ab2106d8694.png?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/png" srcset="./media_184edce50b676e645da9f22015dfb6ab2106d8694.png?width=2000&#x26;format=png&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_184edce50b676e645da9f22015dfb6ab2106d8694.png?width=750&#x26;format=png&#x26;optimize=medium" width="1920" height="1120">
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>con-block-row-text (order-0-desktop, xs-spacing-bottom)</div>
+            <div>Level up productivity with 70+ PDF tools and powerful AI. Easily make edits, unlock insights, share guided experiences, and create content — all in one place.</div>
+          </div>
+          <div>
+            <div>con-block-row-text (order-1-desktop)</div>
+            <div><strong><a href="https://milo.adobe.com/tools/ost?osi=x0LkInr7lGkqK8dcTFS_Pc6oHauo_g7N_4yWT_gLn20&#x26;type=checkoutUrl&#x26;text=free-trial">Free trial | Free trial Acrobat Studio</a></strong> <em><a href="#compare-acrobat-plans">See all plans | See all plans Adobe Acrobat</a></em></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="notification ribbon space-between inline dark xl-icon delay">
+          <div>
+            <div><strong>#000b1d</strong></div>
+          </div>
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/product-icons/svg/acrobat-pro-64.svg">https://main--dc--adobecom.aem.live/dc-shared/assets/images/product-icons/svg/acrobat-pro-64.svg</a></p>
+              <h2 id="adobe-acrobat-studio">Adobe Acrobat Studio</h2>
+              <p>Browse all <a href="/acrobat/pricing">Acrobat plans</a>.</p>
+              <p><em><a href="https://milo.adobe.com/tools/ost?osi=V3W0kzf4e6M2Ht1hP9ZAt3dQNmhuDFrmYmEPlE2SlG0&#x26;type=checkoutUrl&#x26;text=buy-now">Buy now | Buy now Acrobat Studio</a></em> <strong><a href="https://milo.adobe.com/tools/ost?osi=x0LkInr7lGkqK8dcTFS_Pc6oHauo_g7N_4yWT_gLn20&#x26;type=checkoutUrl&#x26;text=free-trial">Free trial | Free trial Acrobat Studio</a></strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div><strong>sticky-bottom, promo-sticky-section</strong></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text max-width-8-desktop center xl-spacing-top l-heading">
+          <div>
+            <div>
+              <h2 id="speed-up-your-workflows-with-acrobat-studio">Speed up your workflows with Acrobat Studio.</h2>
+              <p>See how Acrobat Studio combines PDF tools with AI to help you work smarter and faster.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="media s-heading no-spacing m-body l-rounded-corners-image">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_10b0dbcd8483757f9a333f09e9d8e1f73d1ab8760.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_10b0dbcd8483757f9a333f09e9d8e1f73d1ab8760.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_10b0dbcd8483757f9a333f09e9d8e1f73d1ab8760.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_10b0dbcd8483757f9a333f09e9d8e1f73d1ab8760.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="758" height="504">
+              </picture>
+            </div>
+            <div>
+              <h3 id="handle-pdf-tasks-quickly-with-ai">Handle PDF tasks quickly with AI.</h3>
+              <p>Ask Acrobat AI Assistant to edit, organize, and sign your PDFs so you can save time for the work that matters.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body l-rounded-corners-image">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1cef11dd3d73e4b08a4bb3ffc1f365d5143224586.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1cef11dd3d73e4b08a4bb3ffc1f365d5143224586.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1cef11dd3d73e4b08a4bb3ffc1f365d5143224586.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1cef11dd3d73e4b08a4bb3ffc1f365d5143224586.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="758" height="504">
+              </picture>
+            </div>
+            <div>
+              <h3 id="uncover-meaningful-insights">Uncover meaningful insights.</h3>
+              <p>Bring all your files into one PDF Space and ask AI Assistant to find deeper insights with precise citations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body l-rounded-corners-image">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_123f83dcd7ef958245e728ff1a44ea17a16ef5fb6.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_123f83dcd7ef958245e728ff1a44ea17a16ef5fb6.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_123f83dcd7ef958245e728ff1a44ea17a16ef5fb6.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_123f83dcd7ef958245e728ff1a44ea17a16ef5fb6.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="758" height="504">
+              </picture>
+            </div>
+            <div>
+              <h3 id="turn-docs-into-polished-content">Turn docs into polished content.</h3>
+              <p>Transform your files into on-brand presentations, flyers, social content, and more with easy-to-use design tools.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Three up, xl spacing</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1cf9e509a6e6e2dfcae13cc0d07b66a0774dba8e9.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1cf9e509a6e6e2dfcae13cc0d07b66a0774dba8e9.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1cf9e509a6e6e2dfcae13cc0d07b66a0774dba8e9.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1cf9e509a6e6e2dfcae13cc0d07b66a0774dba8e9.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="276">
+              </picture>
+            </div>
+            <div>
+              <h3 id="scale-your-marketing-content-with-templates">Scale your marketing content with templates.</h3>
+              <p>Quickly edit and resize content to scale it for any channel with customizable templates.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_132812790c41f88407ad6770dc79f1540f15d2a23.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_132812790c41f88407ad6770dc79f1540f15d2a23.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_132812790c41f88407ad6770dc79f1540f15d2a23.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_132812790c41f88407ad6770dc79f1540f15d2a23.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="276">
+              </picture>
+            </div>
+            <div>
+              <h3 id="share-pdfs-as-an-interactive-experience">Share PDFs as an interactive experience.</h3>
+              <p>Turn multiple docs into a PDF Space with an intro, audio overview, logo, and custom AI Assistant that guides recipients through your content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_14f225fed17a8f068d687cbf2f5d937669c3aab9d.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_14f225fed17a8f068d687cbf2f5d937669c3aab9d.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_14f225fed17a8f068d687cbf2f5d937669c3aab9d.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_14f225fed17a8f068d687cbf2f5d937669c3aab9d.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="276">
+              </picture>
+            </div>
+            <div>
+              <h3 id="guide-your-message-with-an-ai-assistant">Guide your message with an AI Assistant.</h3>
+              <p>Share proposals or presentations as a PDF Space with an AI Assistant you can personalize to set the tone of your content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="media s-heading no-spacing m-body">
+          <div>
+            <div>
+              <picture>
+                <source type="image/webp" srcset="./media_1a0fc6b9bbc0f57a06d5ebe106b051923e478d203.jpg?width=2000&#x26;format=webply&#x26;optimize=medium" media="(min-width: 600px)">
+                <source type="image/webp" srcset="./media_1a0fc6b9bbc0f57a06d5ebe106b051923e478d203.jpg?width=750&#x26;format=webply&#x26;optimize=medium">
+                <source type="image/jpeg" srcset="./media_1a0fc6b9bbc0f57a06d5ebe106b051923e478d203.jpg?width=2000&#x26;format=jpg&#x26;optimize=medium" media="(min-width: 600px)">
+                <img loading="lazy" alt="" src="./media_1a0fc6b9bbc0f57a06d5ebe106b051923e478d203.jpg?width=750&#x26;format=jpg&#x26;optimize=medium" width="552" height="276">
+              </picture>
+            </div>
+            <div>
+              <h3 id="manage-your-workflows-in-one-place">Manage your workflows in one place.</h3>
+              <p>Take care of your business workflows, from pitch to e-signature, all in one powerful platform.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>Four-up</div>
+          </div>
+          <div>
+            <div>background</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/merch-cards/compare-acrobat-plans">https://main--da-dc--adobecom.aem.page/dc-shared/fragments/merch-cards/compare-acrobat-plans</a></p>
+      </div>
+      <div>
+        <div class="text max-width-8-desktop center xxl-spacing-top m-heading">
+          <div>
+            <div>
+              <h2 id="theres-even-more-to-your-acrobat-plan">There’s even more to your Acrobat plan.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/acrobat-studio/icon-desktop-mobile.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/acrobat-studio/icon-desktop-mobile.svg</a></p>
+              <h3 id="multi-device-access">Multi-device access</h3>
+              <p>Use Acrobat wherever you are — on desktop, mobile, or in your web browser.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/acrobat-studio/icon-settings.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/acrobat-studio/icon-settings.svg</a></p>
+              <h3 id="built-in-integrations">Built-in integrations</h3>
+              <p>Work seamlessly across your favorite apps like Microsoft 365 and Dropbox.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/acrobat-studio/icon-acrobat-pdf-protect.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/acrobat-studio/icon-acrobat-pdf-protect.svg</a></p>
+              <h3 id="security">Security</h3>
+              <p>Acrobat includes SLL security so you can work and share with confidence.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/acrobat-studio/icon-aisparkles.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/acrobat-studio/icon-aisparkles.svg</a></p>
+              <h3 id="generative-credits">Generative credits</h3>
+              <p>Generate images, remove objects, and more with commercially-safe AI models in Adobe Firefly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/acrobat-studio/icon-acrobat-signatureadd.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/acrobat-studio/icon-acrobat-signatureadd.svg</a></p>
+              <h3 id="e-signatures">E-signatures</h3>
+              <p>Request, track, and manage e-signatures.</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon-block vertical small s-spacing-bottom">
+          <div>
+            <div>
+              <p><a href="/dc-shared/assets/images/acrobat-studio/icon-device-phone.svg">https://main--da-dc--adobecom.aem.page/dc-shared/assets/images/acrobat-studio/icon-device-phone.svg</a></p>
+              <h3 id="mobile-apps">Mobile apps</h3>
+              <p>Keep work moving on the go with Adobe Scan and Acrobat Reader mobile apps.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-metadata">
+          <div>
+            <div>style</div>
+            <div>three-up, l spacing</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/faq/acrobat-studio-faq">https://main--da-dc--adobecom.aem.page/dc-shared/fragments/faq/acrobat-studio-faq</a></p>
+      </div>
+      <div>
+        <p><a href="/dc-shared/fragments/acrobat/get-acrobat-support">https://main--dc--adobecom.aem.live/dc-shared/fragments/acrobat/get-acrobat-support</a></p>
+        <div class="breadcrumbs">
+          <div>
+            <div>
+              <ul>
+                <li><a href="https://www.adobe.com">Home</a></li>
+                <li><a href="https://www.adobe.com/acrobat">Adobe Acrobat</a></li>
+                <li>Acrobat Studio</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  <noscript><img src="https://www.adobe.com/akam/13/pixel_36b240a0?a=dD01ZDRkZDE3NjRkZWEyZWQxNDQwODI3YTE2ZjhlYjhkNzU3MTNjZmJjJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

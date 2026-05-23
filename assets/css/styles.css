@@ -1,0 +1,248 @@
+:root {
+  /* Headings (Consonant) */
+  --type-heading-xxxxl-weight: 900;
+  --type-heading-all-weight: 800;
+  --type-heading-xxxxl-size: calc(var(--font-size-multiplier, 1) * 44px);
+  --type-heading-xxxxl-lh: 1.10;
+  --type-heading-xxxxl-ls: -0.04em;
+  --type-heading-xxxl-size: calc(var(--font-size-multiplier, 1) * 36px);
+  --type-heading-xxxl-lh: 1.10;
+  --type-heading-xxxl-ls: -0.04em;
+  --type-heading-xxl-size: calc(var(--font-size-multiplier, 1) * 32px);
+  --type-heading-xxl-lh: 1.10;
+  --type-heading-xxl-ls: -0.04em;
+  --type-heading-xl-size: calc(var(--font-size-multiplier, 1) * 28px);
+  --type-heading-xl-lh: 1.10;
+  --type-heading-xl-ls: -0.03em;
+  --type-heading-l-size: calc(var(--font-size-multiplier, 1) * 24px);
+  --type-heading-l-lh: 1.25;
+  --type-heading-l-ls: -0.03em;
+  /* m-xxs not defined by Design */
+  --type-heading-m-size: calc(var(--font-size-multiplier, 1) * 24px);
+  --type-heading-m-lh: 1.25;
+  --type-heading-m-ls: -0.03em;
+  --type-heading-s-size: calc(var(--font-size-multiplier, 1) * 20px);
+  --type-heading-s-lh: 1.25;
+  --type-heading-xs-size: calc(var(--font-size-multiplier, 1) * 18px);
+  --type-heading-xs-lh: 1.25;
+  --type-heading-xxs-size: calc(var(--font-size-multiplier, 1) * 16px);
+  --type-heading-xxs-lh: 1.25;
+
+  .heading-xxxxl {
+    font-weight: var(--type-heading-xxxxl-weight);
+    font-size: var(--type-heading-xxxxl-size);
+    letter-spacing: var(--type-heading-xxxxl-ls);
+    line-height: var(--type-heading-xxxxl-lh);
+
+    /* Override mweb */
+    strong {
+      font-weight: var(--type-heading-xxxxl-weight);
+    }
+  }
+
+  .heading-xxxl, .heading-xxl, .heading-xl, .heading-l, .heading-m, .heading-s, .heading-xs, .heading-xxs {
+    font-weight: var(--type-heading-all-weight);
+  }
+
+  .heading-xxxl {
+    font-size: var(--type-heading-xxxl-size);
+    letter-spacing: var(--type-heading-xxxl-ls);
+    line-height: var(--type-heading-xxxl-lh);
+  }
+
+  .heading-xxl {
+    font-size: var(--type-heading-xxl-size);
+    letter-spacing: var(--type-heading-xxl-ls);
+    line-height: var(--type-heading-xxl-lh);
+  }
+
+  .heading-xl {
+    font-size: var(--type-heading-xl-size);
+    letter-spacing: var(--type-heading-xl-ls);
+    line-height: var(--type-heading-xl-lh);
+  }
+
+  .heading-l {
+    font-size: var(--type-heading-l-size);
+    letter-spacing: var(--type-heading-l-ls);
+    line-height: var(--type-heading-l-lh);
+  }
+
+  .heading-m {
+    font-size: var(--type-heading-m-size);
+    letter-spacing: var(--type-heading-m-ls);
+    line-height: var(--type-heading-m-lh);
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1199px) {
+    --type-heading-xxxxl-weight: 900;
+    --type-heading-all-weight: 800;
+    --type-heading-xxxxl-size: calc(var(--font-size-multiplier, 1) * 64px);
+    --type-heading-xxxxl-lh: 0.98;
+    --type-heading-xxxxl-ls: -0.045em;
+    /* hide all tabet for now except for the special 4xl header. Design still
+       working on whether to use this or not.
+    --type-heading-xxxl-size: calc(var(--font-size-multiplier, 1) * 42px);
+    --type-heading-xxl-size: calc(var(--font-size-multiplier, 1) * 32px);
+    --type-heading-xl-size: calc(var(--font-size-multiplier, 1) * 24px);
+    --type-heading-l-size: calc(var(--font-size-multiplier, 1) * 24px);
+    --type-heading-m-size: calc(var(--font-size-multiplier, 1) * 24px);
+    --type-heading-s-size: calc(var(--font-size-multiplier, 1) * 20px);
+    --type-heading-xs-size: calc(var(--font-size-multiplier, 1) * 18px);
+    --type-heading-xxs-size: calc(var(--font-size-multiplier, 1) * 16px); */
+  }
+
+  @media screen and (min-width: 1200px) {
+    --type-heading-xxxxl-weight: 900;
+    --type-heading-all-weight: 800;
+    --type-heading-xxxxl-lh: 0.98;
+    --type-heading-xxxxl-ls: -0.045em;
+    --type-heading-xxxxl-size: calc(var(--font-size-multiplier, 1) * 96px);
+    --type-heading-xxxl-size: calc(var(--font-size-multiplier, 1) * 64px);
+    --type-heading-xxxl-lh: 0.98;
+    --type-heading-xxxl-ls: -0.04em;
+    --type-heading-xxl-size: calc(var(--font-size-multiplier, 1) * 42px);
+    --type-heading-xxl-lh: 1.10;
+    --type-heading-xxl-ls: -0.03em;
+    --type-heading-xl-size: calc(var(--font-size-multiplier, 1) * 36px);
+    --type-heading-xl-lh: 1.10;
+    --type-heading-xl-ls: -0.03em;
+    --type-heading-l-size: calc(var(--font-size-multiplier, 1) * 28px);
+    --type-heading-l-lh: 1.25;
+    --type-heading-l-ls: -0.03em;
+    --type-heading-m-size: calc(var(--font-size-multiplier, 1) * 28px);
+    --type-heading-m-lh: 1.25;
+    --type-heading-m-ls: -0.03em;
+    --type-heading-s-size: calc(var(--font-size-multiplier, 1) * 24px);
+    --type-heading-xs-size: calc(var(--font-size-multiplier, 1) * 20px);
+    --type-heading-xxs-size: calc(var(--font-size-multiplier, 1) * 18px);
+  }
+}
+
+/* Override tab block due to typography changes */
+@media screen and (max-width: 1199px) {
+  .tabs.quiet {
+    .tabList, .paddle {
+      height: 51px;
+    }
+  }
+}
+
+/* Override Quote block */
+.quote .quote-wrapper blockquote .quote-copy {
+  font-weight: var(--type-heading-all-weight);
+}
+
+/* Add to Quote block */
+.quote.xsmall blockquote .quote-copy {
+  letter-spacing: var(--type-heading-xs-ls);
+}
+
+.quote.small blockquote .quote-copy {
+  letter-spacing: var(--type-heading-s-ls);
+}
+
+.quote.large blockquote .quote-copy {
+  letter-spacing: var(--type-heading-l-ls);
+}
+
+.quote.xlarge blockquote .quote-copy {
+  letter-spacing: var(--type-heading-xl-ls);
+}
+
+.quote.xxlarge blockquote .quote-copy {
+  letter-spacing: var(--type-heading-xxl-ls);
+}
+
+/* Blank author: text when not link */
+.article-header .article-byline-info > p:first-child {
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+/* override da-bacom-blog */
+.article-header .article-title h1 {
+  font-size: var(--type-heading-xl-size);
+  letter-spacing: var(--type-heading-xl-ls);
+  font-weight: var(--type-heading-all-weight);
+}
+
+/* Copied from da-bacom-blog */
+.article-header {
+  --featured-media-height: 440px;
+}
+
+.article-header .article-feature-image,
+.article-header .article-feature-video {
+  padding: 0;
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.article-header .article-feature-image .figure-feature img {
+  width: 100%;
+  max-height: var(--featured-media-height);
+  object-fit: cover;
+}
+
+.article-feed .article-card-date,
+.gnav-search-results .article-card-date,
+.recommended-articles .article-card-date,
+.featured-article .featured-article-card-date {
+  display: none;
+}
+
+.quote {
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+}
+
+.recommended-articles-small-content-wrapper .article-card .article-card-body {
+  padding: 1.5rem;
+}
+
+.recommended-articles-small-content-wrapper .article-card .article-card-body h3 {
+  margin-bottom: 0;
+}
+
+main .article-header {
+  margin: 0;
+  padding-top: var(--spacing-xxl);
+}
+
+main .article-header .article-category div,
+main .article-header .article-category p {
+  margin: 0;
+}
+
+/* revert da-bacom-blog back to milo width */
+@media screen and (min-width: 700px) {
+  main .article-header .article-category,
+  main .article-header .article-title,
+  main .article-header .article-byline {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main .article-feature-video .milo-video,
+  main .article-feature-video .embed-vimeo {
+    padding-bottom: var(--featured-media-height);
+  }
+
+  main .article-feature-video lite-vimeo,
+  main .article-feature-video video {
+    height: var(--featured-media-height);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .recommended-articles-small-content-wrapper .article-card .article-card-body {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gnav Brand (logo, brand image only)</title>
+    <link rel="canonical" href="https://www.adobe.com/cc-shared/gnav/localnav-corporate-responsibility.html">
+    <meta property="og:title" content="Gnav Brand (logo, brand image only)">
+    <meta property="og:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gnav Brand (logo, brand image only)">
+    <meta name="twitter:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="mobile-gnav-v2" content="on">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="universal-nav" content="profile, appswitcher, notifications, cart">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="m7-pa-code" content="ccsn_direct_individual">
+    <meta name="m7-checkout-client-id" content="acom_biz">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="head-loaded" content="false">
+    <style>
+  body {
+    display: none;
+  }
+  .reading-width {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .reading-width-footer-tag {
+    max-width: 800px;
+    margin: -20px auto;
+    padding: 0 20px 20px;
+  }
+
+  .reading-width-footer-tag > .content {
+    max-width: var(--grid-container-width);
+    margin: 0 auto;
+  }
+  /* TODO: Remove once style is handled in merch */
+  :root:has(meta[name='theme'][content='max25']) {
+    @media screen and (max-width: 767px) {
+      .two-merch-cards.mini-compare-chart,
+      .three-merch-cards.mini-compare-chart,
+      .four-merch-cards.mini-compare-chart {
+        grid-template-columns: 310px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .three-merch-cards.mini-compare-chart,
+      .four-merch-cards.mini-compare-chart {
+        grid-template-columns: repeat(2, 310px);
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .three-merch-cards.mini-compare-chart,
+      .four-merch-cards.mini-compare-chart {
+        grid-template-columns: repeat(3, 310px);
+      }
+    }
+
+    @media screen and (min-width: 1600px) {
+      .four-merch-cards.mini-compare-chart {
+        grid-template-columns: repeat(4, 336px);
+      }
+    }
+  }
+</style>
+    <script src="/creativecloud/scripts/fallback.js" nomodule></script>
+    <script type="module">
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const flagMeta = document.querySelector('meta[name="head-loaded"]');
+  const headAlreadyLoaded = flagMeta.content === 'true';
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/cc-shared/assets/sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/cc-shared/assets/sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !headAlreadyLoaded) {
+      fetchAndParseSitemap();
+    }
+  })();
+
+  import { scriptInit } from '/creativecloud/scripts/utils.js';
+  scriptInit();
+
+  flagMeta.content = 'true';
+</script>
+    <link rel="icon" href="data:,">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="gnav-brand logo brand-image-only">
+          <div>
+            <div><a href="/federal/assets/svgs/adobe-logo.svg">https://main--federal--adobecom.aem.live/federal/assets/svgs/adobe-logo.svg|Adobe, Inc.</a> <a href="https://www.adobe.com/">Adobe</a></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="large-menu section">
+          <div>
+            <div>
+              <h2 id="about-adobe"><a href="/federal/globalnav/about-adobe/sections/section-menu-about-adobe">About Adobe</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="corporate-responsibility"><a href="https://www.adobe.com/corporate-responsibility.html">Corporate Responsibility</a></h2>
+      </div>
+      <div>
+        <h2 id="creativity">Creativity</h2>
+        <ul>
+          <li><a href="https://www.adobe.com/corporate-responsibility/creativity-for-all.html">Overview</a></li>
+          <li><a href="https://www.adobe.com/corporate-responsibility/creativity/scholarship-programs.html">Scholarship Programs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 id="community">Community</h2>
+        <ul>
+          <li><a href="https://www.adobe.com/corporate-responsibility/community.html">Overview</a></li>
+          <li><a href="https://www.adobe.com/corporate-responsibility/community/changemakers.html">Changemakers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 id="sustainability">Sustainability</h2>
+        <ul>
+          <li><a href="https://www.adobe.com/corporate-responsibility/sustainability.html">Overview</a></li>
+          <li><a href="https://www.adobe.com/corporate-responsibility/sustainability/product-innovation.html">Product Innovation</a></li>
+          <li><a href="https://www.adobe.com/corporate-responsibility/sustainability/operations.html">Operations</a></li>
+          <li><a href="https://www.adobe.com/corporate-responsibility/sustainability/partnerships.html">Partnerships</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 id="awards"><a href="https://www.adobe.com/corporate-responsibility/awards.html">Awards</a></h2>
+      </div>
+      <div>
+        <h2 id="reports"><a href="https://www.adobe.com/corporate-responsibility/corporate-responsibility-reports.html">Reports</a></h2>
+      </div>
+      <div>
+        <div class="profile">
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

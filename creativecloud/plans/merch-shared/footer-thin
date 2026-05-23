@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Region Selector (popup)</title>
+    <link rel="canonical" href="https://www.adobe.com/creativecloud/plans/merch-shared/footer-thin.html">
+    <meta property="og:title" content="Region Selector (popup)">
+    <meta property="og:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Region Selector (popup)">
+    <meta name="twitter:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="schedule" content=", test | 2026-01-12T13:30:00 | 2026-01-13T13:30:00 | https://main--cc--adobecom.aem.page/cc-shared/fragments/promos/2026/global/test-promo/test.json | us |  | , free-trial-brick-rollout | 2026-02-23T08:00:00 | 2030-12-31T00:00:00 | https://main--cc--adobecom.aem.page/cc-shared/fragments/promos/2026/global/free-trial-brick-rollout.json | us; ar; br; ca; ca_fr; cl; co; cr; ec; gt; la; mx; pe; pr; au; hk_en; hk_zh; id_en; id_id; in; in_hi; kr; my_en; my_ms; nz; ph_en; ph_fil; sg; th_en; th_th; tw; vn_en; vn_vi;ae_en; ae_ar; africa; at; be_en; be_fr; be_nl; bg; ch_de; ch_fr; ch_it; cz; de; dk; ee; eg_ar; eg_en; es; fi; fr; gr_el; gr_en; hu; ie; il_en; il_he; it; kw_ar; kw_en; lt; lu_de; lu_en; lu_fr; lv; mena_ar; mena_en; ng; nl; no; pl; pt; qa_ar; qa_en; ro; ru; sa_en; sa_ar; se; si; sk; tr; ua; uk; za; jp |  | , unlimited-go-big | 2026-04-01T07:00:00 | 2026-05-20T00:00:00 | https://main--cc--adobecom.aem.page/cc-shared/fragments/promos/2026/global/products/firefly/unlimited-go-big/compare-plans/unlimited-go-big.json | us; ar; br; ca; ca_fr; cl; co; cr; ec; gt; la; mx; pe; pr; au; hk_en; hk_zh; id_en; id_id; in; in_hi; kr; my_en; my_ms; nz; ph_en; ph_fil; sg; th_en; th_th; tw; vn_en; vn_vi;ae_en; ae_ar; africa; at; be_en; be_fr; be_nl; bg; ch_de; ch_fr; ch_it; cz; de; dk; ee; eg_ar; eg_en; es; fi; fr; gr_el; gr_en; hu; ie; il_en; il_he; it; kw_ar; kw_en; lt; lu_de; lu_en; lu_fr; lv; mena_ar; mena_en; ng; nl; no; pl; pt; qa_ar; qa_en; ro; ru; sa_en; sa_ar; se; si; sk; tr; ua; uk; za; jp |  | , catalog-acrobat-ai-and-studio-card-removal | 2026-04-01T07:00:00 | 2026-05-20T00:00:00 | https://main--cc--adobecom.aem.page/creativecloud/plans/merch-shared/fragments/promos/2026/global/catalog-acrobat-ai-and-studio-card-removal.json | bg |  | , firefly-50-percent-off-fr | 2026-04-01T07:00:00 | 2026-05-21T11:30:00 | https://main--cc--adobecom.aem.page/creativecloud/plans/merch-shared/fragments/promos/2026/global/firefly-50-off/firefly-50-percent-off-fr.json | fr; be_fr; ca_fr; ch_fr; lu_fr |  | , firefly-50-percent-off-br | 2026-04-01T07:00:00 | 2026-05-21T11:30:00 | https://main--cc--adobecom.aem.page/creativecloud/plans/merch-shared/fragments/promos/2026/global/firefly-50-off/firefly-50-percent-off-br.json | br |  | , firefly-50-percent-off-ca | 2026-04-01T07:00:00 | 2026-05-21T11:30:00 | https://main--cc--adobecom.aem.page/creativecloud/plans/merch-shared/fragments/promos/2026/global/firefly-50-off/firefly-50-percent-off-ca.json | ca |  | , firefly-50-percent-off-be-lu | 2026-04-01T07:00:00 | 2026-05-21T11:30:00 | https://main--cc--adobecom.aem.page/creativecloud/plans/merch-shared/fragments/promos/2026/global/firefly-50-off/firefly-50-percent-off-be-en-be-nl-lu-de-lu-en.json | be_en; be_nl; lu_de; lu_en |  |">
+    <meta name="hreflinksuseragents" content="Googlebot, Tokowaka, ChatGPT-User, Google-InspectionTool">
+    <meta name="mobile-gnav-v2" content="on">
+    <meta name="footer" content="global-footer">
+    <meta name="header" content="global-navigation">
+    <meta name="universal-nav" content="profile">
+    <meta name="adobe-home-redirect" content="on">
+    <meta name="m7-pa-code" content="ccsn_direct_individual">
+    <meta name="m7-checkout-client-id" content="acom_biz">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="serp-content-type" content="product">
+    <meta name="jarvis-chat" content="desktop">
+    <meta name="checkout-workflow-step" content="commitment">
+    <meta name="gnav-source" content="/creativecloud/plans/merch-shared/gnav/localnav-creativecloud-plans">
+    <meta name="footer-source" content="/creativecloud/plans/merch-shared/footer-thin">
+    <meta name="jarvis-surface-id" content="CreativeCloudPlansWeb1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+  body {
+    display: none;
+  }
+  .reading-width {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .reading-width-footer-tag {
+    max-width: 800px;
+    margin: -20px auto;
+    padding: 0 20px 20px;
+  }
+
+  .reading-width-footer-tag > .content {
+    max-width: var(--grid-container-width);
+    margin: 0 auto;
+  }
+  /* TODO: Remove once style is handled in merch */
+  :root:has(meta[name='theme'][content='max25']) {
+    @media screen and (max-width: 767px) {
+      .two-merch-cards.mini-compare-chart,
+      .three-merch-cards.mini-compare-chart,
+      .four-merch-cards.mini-compare-chart {
+        grid-template-columns: 310px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .three-merch-cards.mini-compare-chart,
+      .four-merch-cards.mini-compare-chart {
+        grid-template-columns: repeat(2, 310px);
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .three-merch-cards.mini-compare-chart,
+      .four-merch-cards.mini-compare-chart {
+        grid-template-columns: repeat(3, 310px);
+      }
+    }
+
+    @media screen and (min-width: 1600px) {
+      .four-merch-cards.mini-compare-chart {
+        grid-template-columns: repeat(4, 336px);
+      }
+    }
+  }
+</style>
+    <meta name="head-loaded" content="false">
+    <script>
+  const flagMeta = document.querySelector('meta[name="head-loaded"]');
+  const headAlreadyLoaded = flagMeta.content === 'true';
+
+  const HOME_LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca', 'ca_fr', 'ch_de', 'ch_fr', 'ch_it', 'cis_en', 'cis_ru', 'cl', 'cn', 'co', 'cr', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in', 'in_hi', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+  const PLANS_LOCALES = [...HOME_LOCALES.filter((l) => l !== 'cn' && l !== 'ru'), 'cy_en', 'mt', 'sea'];
+
+  if (!headAlreadyLoaded) {
+    (async () => {
+      const HREFLANG_ORIGIN = 'https://www.adobe.com';
+      const HOME_SITEMAP = `${HREFLANG_ORIGIN}/home-sitemap.xml`;
+      const PLANS_SITEMAP = `${HREFLANG_ORIGIN}/plans-catalog-sitemap.xml`;
+      const PLANS_PATHS = ['/creativecloud/plans', '/products/catalog'];
+      const HREFLANG_CACHE_PREFIX = 'hreflang-';
+      const HREFLANG_TIMEOUT_MS = 5000;
+
+      function buildHreflangMap(xmlDoc) {
+        const map = {};
+        xmlDoc.querySelectorAll('url').forEach((urlEl) => {
+          const loc = urlEl.querySelector('loc')?.textContent;
+          if (!loc) return;
+          const links = [...urlEl.querySelectorAll('link[rel="alternate"]')]
+            .map((el) => ({ hreflang: el.getAttribute('hreflang'), href: el.getAttribute('href') }))
+            .filter((l) => l.hreflang && l.href);
+          if (links.length) map[loc] = links;
+        });
+        return map;
+      }
+
+      function getCachedMap(cacheKey) {
+        try { return JSON.parse(sessionStorage.getItem(cacheKey)); } catch { return null; }
+      }
+
+      function setCachedMap(cacheKey, map) {
+        try {
+          Object.keys(sessionStorage)
+            .filter((k) => k.startsWith(HREFLANG_CACHE_PREFIX) && k !== cacheKey)
+            .forEach((k) => sessionStorage.removeItem(k));
+          sessionStorage.setItem(cacheKey, JSON.stringify(map));
+        } catch {
+          window.lana?.log('hreflang: sessionStorage quota exceeded', { tags: 'hreflang', severity: 'warning' });
+        }
+      }
+
+      async function fetchSitemapMap(sitemapUrl) {
+        const ctrl = new AbortController();
+        const tid = setTimeout(() => ctrl.abort(), HREFLANG_TIMEOUT_MS);
+        try {
+          const res = await fetch(sitemapUrl, { signal: ctrl.signal });
+          if (!res.ok) {
+            window.lana?.log(`hreflang: fetch failed (${res.status}) ${sitemapUrl}`, { tags: 'hreflang', severity: 'error' });
+            return null;
+          }
+          const xmlDoc = new DOMParser().parseFromString(await res.text(), 'text/xml');
+          if (xmlDoc.querySelector('parsererror')) {
+            window.lana?.log(`hreflang: parse failed ${sitemapUrl}`, { tags: 'hreflang', severity: 'error' });
+            return null;
+          }
+          return buildHreflangMap(xmlDoc);
+        } catch (e) {
+          const msg = e.name === 'AbortError'
+            ? `hreflang: timeout fetching ${sitemapUrl}`
+            : `hreflang: error fetching ${sitemapUrl} - ${e.message}`;
+          window.lana?.log(msg, { tags: 'hreflang', severity: 'error' });
+          return null;
+        } finally {
+          clearTimeout(tid);
+        }
+      }
+
+      function getPageUrl(pathname) {
+        if (pathname.endsWith('/')) return `${HREFLANG_ORIGIN}${pathname}`;
+        const withoutHtml = pathname.replace(/\.html$/, '');
+        return `${HREFLANG_ORIGIN}${withoutHtml}.html`;
+      }
+
+      function injectHreflangLinks(links) {
+        const titleEl = document.head.querySelector('title');
+        if (!titleEl) return;
+        titleEl.after(...links.map(({ hreflang, href }) => {
+          const el = document.createElement('link');
+          el.setAttribute('rel', 'alternate');
+          el.setAttribute('hreflang', hreflang);
+          el.setAttribute('href', href);
+          return el;
+        }));
+      }
+
+      const uaMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+      if (!uaMeta?.content) return;
+      if (!uaMeta.content.split(',').some((a) => navigator.userAgent.includes(a.trim()))) return;
+
+      const { pathname } = window.location;
+      const firstSegment = pathname.split('/')[1];
+
+      const isHomePage = pathname === '/' || (HOME_LOCALES.includes(firstSegment) && pathname === `/${firstSegment}/`);
+      const isPlansPage = PLANS_PATHS.some((p) => pathname.includes(p))
+        && (!HOME_LOCALES.includes(firstSegment) || PLANS_LOCALES.includes(firstSegment));
+
+      let sitemapUrl;
+      if (isHomePage) {
+        sitemapUrl = HOME_SITEMAP;
+      } else if (isPlansPage) {
+        sitemapUrl = PLANS_SITEMAP;
+      } else {
+        return;
+      }
+
+      const cacheKey = HREFLANG_CACHE_PREFIX + sitemapUrl;
+      let map = getCachedMap(cacheKey);
+      if (!map) {
+        map = await fetchSitemapMap(sitemapUrl);
+        if (!map) return;
+        setCachedMap(cacheKey, map);
+      }
+
+      const pageUrl = getPageUrl(pathname);
+      const links = map[pageUrl] ?? map[pageUrl.replace(/\/$/, '')];
+      if (links?.length) injectHreflangLinks(links);
+    })();
+  }
+
+  flagMeta.content = 'true';
+</script>
+    <script src="/creativecloud/plans/scripts/fallback.js" nomodule></script>
+    <script type="module">
+  const userAgentMeta = document.querySelector('meta[name="hreflinksuseragents"]');
+  const allowedAgents = userAgentMeta && userAgentMeta.content.split(',');
+  const userAgentString = window.navigator.userAgent;
+  const isAllowedAgent = allowedAgents && allowedAgents.some((agent) => userAgentString.includes(agent.trim()));
+
+  const ssrFlag = document.querySelector('meta[name="head-loaded"]');
+  const LOCALES = ['ae_ar', 'ae_en', 'africa', 'ar', 'at', 'au', 'be_en', 'be_fr', 'be_nl', 'bg', 'br', 'ca_fr', 'ca', 'ch_de', 'ch_fr', 'ch_it', 'cl', 'cn', 'co', 'cr', 'cy_en', 'cz', 'de', 'dk', 'ec', 'ee', 'eg_ar', 'eg_en', 'el', 'es', 'fi', 'fr', 'gr_el', 'gr_en', 'gt', 'hk_en', 'hk_zh', 'hu', 'id_en', 'id_id', 'ie', 'il_en', 'il_he', 'in_hi', 'in', 'it', 'jp', 'kr', 'kw_ar', 'kw_en', 'la', 'lt', 'lu_de', 'lu_en', 'lu_fr', 'lv', 'mena_ar', 'mena_en', 'mt', 'mx', 'my_en', 'my_ms', 'ng', 'nl', 'no', 'nz', 'pe', 'ph_en', 'ph_fil', 'pl', 'pr', 'pt', 'qa_ar', 'qa_en', 'ro', 'ru', 'sa_ar', 'sa_en', 'se', 'sg', 'si', 'sk', 'th_en', 'th_th', 'tr', 'tw', 'ua', 'uk', 'vn_en', 'vn_vi', 'za'];
+
+  (() => {
+    function buildLink(language, url) {
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'alternate');
+      link.setAttribute('hreflang', language);
+      link.setAttribute('href', url);
+      return link;
+    }
+
+    async function fetchAndParseSitemap() {
+      const sitemapOrigin = 'https://www.adobe.com';
+      const { origin, pathname } = window.location;
+
+      let sitemapPath = '/plans-catalog-sitemap.xml';
+      const localeMatch = LOCALES.find(locale => pathname.startsWith(`/${locale}/`));
+
+      if (localeMatch) {
+        sitemapPath = `/${localeMatch}/plans-catalog-sitemap.xml`;
+      }
+      
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+        let response;
+        try {
+          response = await fetch(`${origin}${sitemapPath}`, { signal: controller.signal });
+        } finally {
+          clearTimeout(timeoutId);
+        }
+        if (!response.ok) {
+          console.warn('Failed to fetch sitemap:', response.status);
+          return;
+        }
+        
+        const xmlText = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const parseError = xmlDoc.querySelector('parsererror');
+        if (parseError) {
+          return;
+        }
+        
+        const urlElements = xmlDoc.querySelectorAll('url');
+        let currentUrlElement = null;
+        const correctedPath = pathname.endsWith('.html') ? pathname : `${pathname}.html`;
+        const isLocalRoot = localeMatch && `${sitemapOrigin}/${localeMatch}/` === `${sitemapOrigin}${pathname}`;
+        const rootPage = isLocalRoot ? `${sitemapOrigin}/${localeMatch}/` : `${sitemapOrigin}/`; 
+        const currentPageUrl = pathname !== '/' && pathname !== `/${localeMatch}/` ? `${sitemapOrigin}${correctedPath}` : `${rootPage}`;
+
+        for (const urlElement of urlElements) {
+          const loc = urlElement.querySelector('loc')?.textContent;
+          if (loc === currentPageUrl || loc === currentPageUrl.replace(/\/$/, '')) {
+            currentUrlElement = urlElement;
+            break;
+          }
+        }
+        
+        if (!currentUrlElement) {
+          console.warn('Current page not found in sitemap');
+          return;
+        }
+        
+        const alternateLinks = currentUrlElement.querySelectorAll('link[rel="alternate"]');
+        const linkElements = [];
+
+        alternateLinks.forEach(altLink => {
+          const hreflang = altLink.getAttribute('hreflang');
+          const href = altLink.getAttribute('href');
+          
+          if (hreflang && href) {
+            linkElements.push(buildLink(hreflang, href));
+          }
+        });
+        
+        const titleElement = document.head.querySelector('title');
+        if (linkElements.length > 0 && titleElement) {
+          titleElement.after(...linkElements);
+        }
+      } catch (error) {
+        console.error('Error fetching or parsing sitemap:', error);
+      }
+    } 
+
+    if (isAllowedAgent && !ssrFlag) {
+      fetchAndParseSitemap();
+    }
+  })();
+  
+  const meta = document.createElement('meta');
+  meta.setAttribute('name', 'head-loaded');
+  document.head.append(meta);
+
+  const cwBase = (window.__CW_ASSET_ROOT || document.getElementById('cw-base')?.href || '/clon-adobe-website').replace(/\/$/, '');
+  import(cwBase + '/creativecloud/plans/scripts/utils.js').then((m) => m.scriptInit());
+</script>
+    <link rel="icon" href="data:,">
+</head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <div class="region-selector popup">
+          <div>
+            <div><a href="/creativecloud/plans/merch-shared/fragments/regions#langnav">{{change-region}}</a></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p><a href="/federal/footer/fragments/footer-social-media#_inline">https://main--federal--adobecom.hlx.page/federal/footer/fragments/footer-social-media#_inline</a></p>
+      </div>
+      <div>
+        <p><a href="/federal/footer/fragments/footer-copyright#_inline">https://main--federal--adobecom.hlx.page/federal/footer/fragments/footer-copyright#_inline</a></p>
+      </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="109.95" height="110" viewBox="0 0 109.95 110">
+  <defs>
+    <clipPath id="clip-_3-Design_ICON">
+      <rect width="109.95" height="110"/>
+    </clipPath>
+  </defs>
+  <g id="_3-Design_ICON" data-name="3-Design ICON" clip-path="url(#clip-_3-Design_ICON)">
+    <rect width="109.95" height="110" fill="rgba(255,255,255,0)"/>
+    <path id="Path_356462" data-name="Path 356462" d="M107.093,44.006H77.158V2.1A1.6,1.6,0,0,0,75.616.444H75.5a1.644,1.644,0,0,0-1.164.488L.961,74.387a1.661,1.661,0,0,0,1.177,2.837h29.4a26.488,26.488,0,0,0,48.584,19.93h26.975a3.324,3.324,0,0,0,3.326-3.322v-46.5A3.324,3.324,0,0,0,107.093,44.006ZM13.39,70.58,70.506,13.54V44.006H60.528A3.324,3.324,0,0,0,57.2,47.328v9.965A26.505,26.505,0,0,0,34.282,70.58ZM57.2,103.8a19.93,19.93,0,1,1,19.957-19.93A19.943,19.943,0,0,1,57.2,103.8Z" transform="translate(-0.47 -0.443)" fill="#e8307a"/>
+  </g>
+</svg>

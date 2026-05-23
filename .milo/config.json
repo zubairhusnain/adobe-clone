@@ -1,0 +1,8 @@
+{
+  "configs": {
+    "data": [
+      { "key": "prod.blocknotifications.url", "value": "consonant.json" },
+      { "key": "prod.blocknotifications.enabled", "value": "false" }
+    ]
+  }
+}

@@ -1,0 +1,1131 @@
+{
+    "missing": {
+        "\/acrobat\/$%7Bhref%7D": [
+            1
+        ],
+        "\/acrobat\/about-adobe-pdf": [
+            1
+        ],
+        "\/acrobat\/acrobat-express": [
+            1
+        ],
+        "\/acrobat\/acrobat-pro": [
+            1
+        ],
+        "\/acrobat\/acrobat-standard": [
+            1
+        ],
+        "\/acrobat\/acrobat-studio": [
+            1
+        ],
+        "\/acrobat\/business": [
+            1
+        ],
+        "\/acrobat\/business\/acrobat-studio": [
+            1
+        ],
+        "\/acrobat\/business\/compliance\/electronic-signature-legality": [
+            1
+        ],
+        "\/acrobat\/business\/contact": [
+            1
+        ],
+        "\/acrobat\/business\/enterprise": [
+            1
+        ],
+        "\/acrobat\/business\/features\/document-workflows": [
+            1
+        ],
+        "\/acrobat\/business\/for-admins": [
+            1
+        ],
+        "\/acrobat\/business\/industries": [
+            1
+        ],
+        "\/acrobat\/business\/industries\/$%7Bhref%7D": [
+            1
+        ],
+        "\/acrobat\/business\/industries\/government": [
+            1
+        ],
+        "\/acrobat\/business\/integrations": [
+            1
+        ],
+        "\/acrobat\/business\/pricing-plans": [
+            1
+        ],
+        "\/acrobat\/business\/pricing\/plans": [
+            1
+        ],
+        "\/acrobat\/business\/resources\/compliance": [
+            1
+        ],
+        "\/acrobat\/business\/sign": [
+            1
+        ],
+        "\/acrobat\/business\/webinars": [
+            1
+        ],
+        "\/acrobat\/contact": [
+            1
+        ],
+        "\/acrobat\/export-pdf-online-pricing": [
+            1
+        ],
+        "\/acrobat\/features": [
+            1
+        ],
+        "\/acrobat\/features\/create-pdf": [
+            1
+        ],
+        "\/acrobat\/features\/modify-pdfs": [
+            1
+        ],
+        "\/acrobat\/features\/organize-pdf": [
+            1
+        ],
+        "\/acrobat\/features\/share-and-review-pdfs": [
+            1
+        ],
+        "\/acrobat\/features\/sign-fillable-pdf-forms": [
+            1
+        ],
+        "\/acrobat\/free-trial-download": [
+            1
+        ],
+        "\/acrobat\/generative-ai-pdf": [
+            1
+        ],
+        "\/acrobat\/generative-ai-pdf\/ai-prompts": [
+            1
+        ],
+        "\/acrobat\/generative-ai-pdf\/how-to-videos": [
+            1
+        ],
+        "\/acrobat\/generative-ai-pdf\/pdf-spaces": [
+            1
+        ],
+        "\/acrobat\/generative-ai-pdf\/students": [
+            1
+        ],
+        "\/acrobat\/how-to\/compare-two-pdf-files": [
+            1
+        ],
+        "\/acrobat\/how-to\/convert-html-to-pdf": [
+            1
+        ],
+        "\/acrobat\/how-to\/convert-jpeg-tiff-scan-to-pdf": [
+            1
+        ],
+        "\/acrobat\/how-to\/convert-word-to-pdf": [
+            1
+        ],
+        "\/acrobat\/how-to\/create-pdf": [
+            1
+        ],
+        "\/acrobat\/how-to\/electronic-signatures-online-e-signatures": [
+            1
+        ],
+        "\/acrobat\/how-to\/fill-sign-pdf-forms-electronically": [
+            1
+        ],
+        "\/acrobat\/how-to\/merge-combine-pdf-files-online": [
+            1
+        ],
+        "\/acrobat\/how-to\/pdf-editor-pdf-files": [
+            1
+        ],
+        "\/acrobat\/how-to\/pdf-file-password-permissions": [
+            1
+        ],
+        "\/acrobat\/how-to\/print-to-pdf": [
+            1
+        ],
+        "\/acrobat\/how-to\/share-pdf-online": [
+            1
+        ],
+        "\/acrobat\/how-to\/split-pdf-pages": [
+            1
+        ],
+        "\/acrobat\/mobile": [
+            1
+        ],
+        "\/acrobat\/mobile\/acrobat-reader": [
+            1
+        ],
+        "\/acrobat\/mobile\/scanner-app": [
+            1
+        ],
+        "\/acrobat\/online": [
+            1
+        ],
+        "\/acrobat\/online\/$%7Bhref%7D": [
+            1
+        ],
+        "\/acrobat\/online\/add-pages-to-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/add-pdf-page-numbers": [
+            1
+        ],
+        "\/acrobat\/online\/ai-chat-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/ai-summary-generator": [
+            1
+        ],
+        "\/acrobat\/online\/compress-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/convert-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/crop-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/delete-pdf-pages": [
+            1
+        ],
+        "\/acrobat\/online\/excel-to-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/extract-pdf-pages": [
+            1
+        ],
+        "\/acrobat\/online\/flashcard-maker": [
+            1
+        ],
+        "\/acrobat\/online\/jpg-to-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/merge-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/mind-map": [
+            1
+        ],
+        "\/acrobat\/online\/ocr-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/password-protect-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/pdf-ai": [
+            1
+        ],
+        "\/acrobat\/online\/pdf-editor": [
+            1
+        ],
+        "\/acrobat\/online\/pdf-to-excel": [
+            1
+        ],
+        "\/acrobat\/online\/pdf-to-jpg": [
+            1
+        ],
+        "\/acrobat\/online\/pdf-to-png": [
+            1
+        ],
+        "\/acrobat\/online\/pdf-to-ppt": [
+            1
+        ],
+        "\/acrobat\/online\/pdf-to-word": [
+            1
+        ],
+        "\/acrobat\/online\/png-to-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/ppt-to-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/pricing": [
+            1
+        ],
+        "\/acrobat\/online\/quiz-maker": [
+            1
+        ],
+        "\/acrobat\/online\/rearrange-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/request-signature": [
+            1
+        ],
+        "\/acrobat\/online\/rotate-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/sign-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/split-pdf": [
+            1
+        ],
+        "\/acrobat\/online\/word-to-pdf": [
+            1
+        ],
+        "\/acrobat\/pdf-pack-pricing": [
+            1
+        ],
+        "\/acrobat\/pdf-reader": [
+            1
+        ],
+        "\/acrobat\/pdf-reader\/volume-distribution": [
+            1
+        ],
+        "\/acrobat\/pdf-viewer-extension": [
+            1
+        ],
+        "\/acrobat\/personal-document-management": [
+            1
+        ],
+        "\/acrobat\/pricing": [
+            1
+        ],
+        "\/acrobat\/pricing\/business": [
+            1
+        ],
+        "\/acrobat\/pricing\/compare-versions": [
+            1
+        ],
+        "\/acrobat\/pricing\/students": [
+            1
+        ],
+        "\/acrobat\/resources": [
+            1
+        ],
+        "\/acrobat\/student-spaces": [
+            1
+        ],
+        "\/acrobat\/students": [
+            1
+        ],
+        "\/cc-shared\/fragments\/about-adobe\/timeline-tabs-2011-2020": [
+            1
+        ],
+        "\/cc-shared\/fragments\/about-adobe\/timeline-tabs-2021-2024": [
+            1
+        ],
+        "\/cc-shared\/fragments\/cco\/personalization\/modals\/switch-modal-single-app-upgrade": [
+            1
+        ],
+        "\/cc-shared\/fragments\/cco\/q1-2026\/tabs\/all": [
+            1
+        ],
+        "\/cc-shared\/fragments\/cco\/q1-2026\/tabs\/design": [
+            1
+        ],
+        "\/cc-shared\/fragments\/cco\/q1-2026\/tabs\/most-popular": [
+            1
+        ],
+        "\/cc-shared\/fragments\/cco\/q1-2026\/tabs\/photo": [
+            1
+        ],
+        "\/cc-shared\/fragments\/cco\/q1-2026\/tabs\/video": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/design\/faq": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/design\/quick-actions": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/design\/take-your-designs-further": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/pro\/tabs\/all": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/pro\/tabs\/illustration": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/pro\/tabs\/social-media": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/video\/video-editing-animation-apps": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/video\/video-faq": [
+            1
+        ],
+        "\/cc-shared\/fragments\/creativecloud\/video\/video-quick-actions": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/design\/mini-compare\/creativecloud\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/design\/mini-compare\/creativecloud\/individual\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/design\/mini-compare\/edu\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/design\/mini-compare\/single-app\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/design\/mini-compare\/single-app\/individual\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/mini-compare\/creativecloud\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/mini-compare\/creativecloud\/edu\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/mini-compare\/creativecloud\/individual\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/mini-compare\/single-app\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/mini-compare\/single-app\/individual\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/video\/mini-compare\/creativecloud\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/video\/mini-compare\/creativecloud\/edu\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/creativecloud\/video\/mini-compare\/single-app\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/illustrator\/mini-compare\/segment-blade": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/lightroom\/mini-compare\/creativecloud\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/lightroom\/mini-compare\/creativecloud\/edu\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/lightroom\/mini-compare\/lightroom\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/lightroom\/mini-compare\/lightroom\/individual\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/lightroom\/mini-compare\/photography\/individual\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/photoshop\/mini-compare\/creativecloud\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/photoshop\/mini-compare\/creativecloud\/edu\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/photoshop\/mini-compare\/photoshop\/business\/default": [
+            1
+        ],
+        "\/cc-shared\/fragments\/merch\/products\/premiere\/mini-compare\/segment-blade": [
+            1
+        ],
+        "\/cc-shared\/fragments\/modals\/see-whats-included\/3d-see-whats-included": [
+            1
+        ],
+        "\/cc-shared\/fragments\/modals\/see-whats-included\/cc-all-apps-see-whats-included-edu": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/adobe-express\/adobe-express-premiere-edit-faster-edit-easier": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/elements\/2026-pepe-pse-pre-merch-segment": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/elements\/family\/2026-family-footer": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/elements\/photoshop-elements-premiere-elements\/2026-pepe-faq": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/elements\/photoshop-elements-premiere-elements\/2026-pepe-trial-speedbump": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/firefly\/create-consistent-images-at-scale-aside": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/firefly\/drive-business-results-aside": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/firefly\/editorial-carousel-firefly": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/firefly\/firefly-ai-assistant-blade": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/firefly\/firefly-select-june-promo.plain": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/firefly\/segment-blade": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/illustrator\/ai-gorgeous-graphics-designed-by-you": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/illustrator\/illustrator-faq": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/illustrator\/try-beta": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/photoshop-lightroom\/personalization\/unity-widgets\/remove.plain": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/photoshop\/free-trial-download\/editorial-cards.plain": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/premiere\/app\/youtube": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/premiere\/discover-your-best-work": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/premiere\/explore-pr-features": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/premiere\/features\/download-beta-app": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/premiere\/firefly-blade\/firefly": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/premiere\/pr-mobile": [
+            1
+        ],
+        "\/cc-shared\/fragments\/products\/premiere\/premiere-faq": [
+            1
+        ],
+        "\/cc-shared\/fragments\/promos\/2026\/americas\/cc-pro-intro-us\/creativecloud\/design\/intro-marquee.plain": [
+            1
+        ],
+        "\/cc-shared\/fragments\/promos\/2026\/americas\/cc-pro-intro-us\/creativecloud\/intro-marquee.plain": [
+            1
+        ],
+        "\/cc-shared\/fragments\/promos\/2026\/americas\/cc-pro-intro-us\/creativecloud\/photography\/apps\/intro-marquee.plain": [
+            1
+        ],
+        "\/cc-shared\/fragments\/promos\/2026\/americas\/cc-pro-intro-us\/creativecloud\/pro\/intro-marquee.plain": [
+            1
+        ],
+        "\/cc-shared\/fragments\/promos\/2026\/americas\/cc-pro-intro-us\/creativecloud\/video\/intro-marquee.plain": [
+            1
+        ],
+        "\/cc-shared\/fragments\/promos\/2026\/americas\/cc-pro-intro-us\/products\/photoshop-lightroom\/individual\/intro-merch-card": [
+            1
+        ],
+        "\/cc-shared\/fragments\/uar\/quiz-footerFragment\/q1": [
+            1
+        ],
+        "\/creativecloud\/3d-ar": [
+            1
+        ],
+        "\/creativecloud\/adobe-versus-affinity": [
+            1
+        ],
+        "\/creativecloud\/all-apps": [
+            1
+        ],
+        "\/creativecloud\/blocks\/unity\/unity.css": [
+            1
+        ],
+        "\/creativecloud\/business": [
+            1
+        ],
+        "\/creativecloud\/business-plans": [
+            1
+        ],
+        "\/creativecloud\/business\/acrobat-pro": [
+            1
+        ],
+        "\/creativecloud\/business\/enterprise\/features": [
+            1
+        ],
+        "\/creativecloud\/business\/frameio": [
+            1
+        ],
+        "\/creativecloud\/business\/pro-plus": [
+            1
+        ],
+        "\/creativecloud\/business\/teams": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/firefly": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/for-admins": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/free-trial-download": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/illustrator": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/photoshop": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/plans": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/premiere-pro": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/request-information": [
+            1
+        ],
+        "\/creativecloud\/business\/teams\/resources\/main": [
+            1
+        ],
+        "\/creativecloud\/buy\/education": [
+            1
+        ],
+        "\/creativecloud\/buy\/media_1fc23e0451fc80a199b26bd451ebc366567dc7d8e.png": [
+            1
+        ],
+        "\/creativecloud\/buy\/students": [
+            1
+        ],
+        "\/creativecloud\/buy\/students\/express": [
+            1
+        ],
+        "\/creativecloud\/buy\/students\/illustrator": [
+            1
+        ],
+        "\/creativecloud\/buy\/students\/lightroom": [
+            1
+        ],
+        "\/creativecloud\/buy\/students\/photoshop": [
+            1
+        ],
+        "\/creativecloud\/buy\/students\/premiere-pro": [
+            1
+        ],
+        "\/creativecloud\/collaboration": [
+            1
+        ],
+        "\/creativecloud\/design": [
+            1
+        ],
+        "\/creativecloud\/design\/discover": [
+            1
+        ],
+        "\/creativecloud\/features": [
+            1
+        ],
+        "\/creativecloud\/free-trial-download": [
+            1
+        ],
+        "\/creativecloud\/libraries": [
+            1
+        ],
+        "\/creativecloud\/photography": [
+            1
+        ],
+        "\/creativecloud\/photography\/apps": [
+            1
+        ],
+        "\/creativecloud\/photography\/compare-plans": [
+            1
+        ],
+        "\/creativecloud\/photography\/discover": [
+            1
+        ],
+        "\/creativecloud\/photography\/explore": [
+            1
+        ],
+        "\/creativecloud\/photography\/lightroom-vs-photoshop": [
+            1
+        ],
+        "\/creativecloud\/photography\/lightroom-vs-photoshop-express": [
+            1
+        ],
+        "\/creativecloud\/photography\/photoshop-vs-photoshop-express": [
+            1
+        ],
+        "\/creativecloud\/photography\/type": [
+            1
+        ],
+        "\/creativecloud\/plan-recommender\/quiz": [
+            1
+        ],
+        "\/creativecloud\/plans": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/business-tab-features": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/business-tab-footer": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/business-tab-header": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/individual-tab-callout-1-block": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/individual-tab-footer": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/individual-tab-unlock-ai": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/schools-tab-footer": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/schools-tab-header": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/students-tab-card": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/students-tab-footer": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/footer\/credit-card": [
+            1
+        ],
+        "\/creativecloud\/plans\/merch-shared\/fragments\/promos\/2026\/americas\/cc-pro-intro-us\/products\/catalog\/banner.plain": [
+            1
+        ],
+        "\/creativecloud\/pro": [
+            1
+        ],
+        "\/creativecloud\/stock": [
+            1
+        ],
+        "\/creativecloud\/upskill": [
+            1
+        ],
+        "\/creativecloud\/video": [
+            1
+        ],
+        "\/creativecloud\/video\/customer-stories": [
+            1
+        ],
+        "\/creativecloud\/video\/discover": [
+            1
+        ],
+        "\/federal\/media_1586fe36b5914a3481287a25197e05fbebfc9acd6.png": [
+            1
+        ],
+        "\/federal\/media_1af073e5a0cd7dec058e62d473269d930634a83a9.png": [
+            1
+        ],
+        "\/federal\/media_1b13b2cac9ea433ec77dd517cc3f70487f43942f5.png": [
+            1
+        ],
+        "\/learn\/acrobat": [
+            1
+        ],
+        "\/learn\/acrobat\/beginner\/graphic-design\/edit-a-pdf\/extract-pages-from-pdf": [
+            1
+        ],
+        "\/learn\/acrobat\/beginner\/graphic-design\/edit-pdf-quick-start\/gather-feedback-pdf-comments": [
+            1
+        ],
+        "\/learn\/acrobat\/beginner\/graphic-design\/fundamentals\/edit-text-images-pdf-files": [
+            1
+        ],
+        "\/learn\/after-effects": [
+            1
+        ],
+        "\/learn\/animate": [
+            1
+        ],
+        "\/learn\/dreamweaver": [
+            1
+        ],
+        "\/learn\/express": [
+            1
+        ],
+        "\/learn\/express\/web\/add-animations": [
+            1
+        ],
+        "\/learn\/express\/web\/add-audio-to-videos-express": [
+            1
+        ],
+        "\/learn\/express\/web\/add-font-in-express": [
+            1
+        ],
+        "\/learn\/express\/web\/add-media-to-template": [
+            1
+        ],
+        "\/learn\/express\/web\/add-photo-express": [
+            1
+        ],
+        "\/learn\/express\/web\/add-text-to-video": [
+            1
+        ],
+        "\/learn\/express\/web\/add-video-effects-in-express": [
+            1
+        ],
+        "\/learn\/express\/web\/adjust-video-timing": [
+            1
+        ],
+        "\/learn\/express\/web\/ai-image-generator-prompts": [
+            1
+        ],
+        "\/learn\/express\/web\/ai-image-generator-workflows": [
+            1
+        ],
+        "\/learn\/express\/web\/apply-brand-colors": [
+            1
+        ],
+        "\/learn\/express\/web\/branding-tips": [
+            1
+        ],
+        "\/learn\/express\/web\/build-a-brand": [
+            1
+        ],
+        "\/learn\/express\/web\/collaborate-share-content": [
+            1
+        ],
+        "\/learn\/express\/web\/copy-based-social-media-content": [
+            1
+        ],
+        "\/learn\/express\/web\/create-a-video-with-express": [
+            1
+        ],
+        "\/learn\/express\/web\/create-authentic-content": [
+            1
+        ],
+        "\/learn\/express\/web\/create-brand-kit": [
+            1
+        ],
+        "\/learn\/express\/web\/create-food-backgrounds": [
+            1
+        ],
+        "\/learn\/express\/web\/create-headline-with-text-effects": [
+            1
+        ],
+        "\/learn\/express\/web\/create-video-from-template": [
+            1
+        ],
+        "\/learn\/express\/web\/create-webpage-with-adobe-express": [
+            1
+        ],
+        "\/learn\/express\/web\/customize-a-template": [
+            1
+        ],
+        "\/learn\/express\/web\/design-social-media-video-template": [
+            1
+        ],
+        "\/learn\/express\/web\/download-videos-express": [
+            1
+        ],
+        "\/learn\/express\/web\/drive-scale-social-media-content": [
+            1
+        ],
+        "\/learn\/express\/web\/edit-enhance-pdf": [
+            1
+        ],
+        "\/learn\/express\/web\/edit-images-generative-ai": [
+            1
+        ],
+        "\/learn\/express\/web\/edit-photoshop-and-illustrator-files": [
+            1
+        ],
+        "\/learn\/express\/web\/edit-text-express": [
+            1
+        ],
+        "\/learn\/express\/web\/edit-video-clips-and-scenes": [
+            1
+        ],
+        "\/learn\/express\/web\/edit-videos-in-express": [
+            1
+        ],
+        "\/learn\/express\/web\/express-content-scheduler": [
+            1
+        ],
+        "\/learn\/express\/web\/flip-image": [
+            1
+        ],
+        "\/learn\/express\/web\/font-pairing-guide": [
+            1
+        ],
+        "\/learn\/express\/web\/generative-ai-course": [
+            1
+        ],
+        "\/learn\/express\/web\/generative-ai-glossary": [
+            1
+        ],
+        "\/learn\/express\/web\/generative-ai-text-effects-express": [
+            1
+        ],
+        "\/learn\/express\/web\/generative-ai-text-effects-guide": [
+            1
+        ],
+        "\/learn\/express\/web\/generative-ai-text-prompt-examples": [
+            1
+        ],
+        "\/learn\/express\/web\/get-more-youtube-views": [
+            1
+        ],
+        "\/learn\/express\/web\/get-verified": [
+            1
+        ],
+        "\/learn\/express\/web\/get-verified-on-instagram": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-andy-lambert": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-connie-jobling": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-daisy-morris": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-elfried-samba": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-hannah-walker": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-kim-darragon": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-lucy-werner": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-maynard-wheaton": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-olivia-hanlon": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-sophie-miller": [
+            1
+        ],
+        "\/learn\/express\/web\/go-one-better-steven-bartlett": [
+            1
+        ],
+        "\/learn\/express\/web\/graphic-design-basics": [
+            1
+        ],
+        "\/learn\/express\/web\/graphic-design-guide": [
+            1
+        ],
+        "\/learn\/express\/web\/graphic-design-process": [
+            1
+        ],
+        "\/learn\/express\/web\/grow-brand": [
+            1
+        ],
+        "\/learn\/express\/web\/grow-facebook-group": [
+            1
+        ],
+        "\/learn\/express\/web\/guide-to-quality-social-media-content": [
+            1
+        ],
+        "\/learn\/express\/web\/improve-product-photos-ai-assistant": [
+            1
+        ],
+        "\/learn\/express\/web\/improve-social-media-reach": [
+            1
+        ],
+        "\/learn\/express\/web\/increase-instagram-engagement-rate": [
+            1
+        ],
+        "\/learn\/express\/web\/increase-linkedin-engagement": [
+            1
+        ],
+        "\/learn\/express\/web\/increase-social-media-followers": [
+            1
+        ],
+        "\/learn\/express\/web\/increase-social-media-visibility": [
+            1
+        ],
+        "\/learn\/express\/web\/instagram-captions": [
+            1
+        ],
+        "\/learn\/express\/web\/instagram-questions": [
+            1
+        ],
+        "\/learn\/express\/web\/invoice-templates": [
+            1
+        ],
+        "\/learn\/express\/web\/logo-design": [
+            1
+        ],
+        "\/learn\/express\/web\/logo-design-guide": [
+            1
+        ],
+        "\/learn\/express\/web\/long-form-content-creation-guide": [
+            1
+        ],
+        "\/learn\/express\/web\/make-brand-stand-out-with-generative-ai": [
+            1
+        ],
+        "\/learn\/express\/web\/make-social-posts-pop-ai-assistant": [
+            1
+        ],
+        "\/learn\/express\/web\/make-text-stand-out": [
+            1
+        ],
+        "\/learn\/express\/web\/manage-instagram-with-meta-business-suite": [
+            1
+        ],
+        "\/learn\/express\/web\/move-edit-layers-express": [
+            1
+        ],
+        "\/learn\/express\/web\/pairing-fonts": [
+            1
+        ],
+        "\/learn\/express\/web\/photo-editing-image-curation-guide": [
+            1
+        ],
+        "\/learn\/express\/web\/photo-effects-express": [
+            1
+        ],
+        "\/learn\/express\/web\/photoshoot-best-practices": [
+            1
+        ],
+        "\/learn\/express\/web\/plan-schedule-social-media-content": [
+            1
+        ],
+        "\/learn\/express\/web\/preview-social-media-posts": [
+            1
+        ],
+        "\/learn\/express\/web\/publish-to-multiple-social-media-accounts": [
+            1
+        ],
+        "\/learn\/express\/web\/real-estate-social-media-strategies": [
+            1
+        ],
+        "\/learn\/express\/web\/remove-background": [
+            1
+        ],
+        "\/learn\/express\/web\/sharpen-blur-photos-express": [
+            1
+        ],
+        "\/learn\/express\/web\/small-business-social-media": [
+            1
+        ],
+        "\/learn\/express\/web\/social-media-captions": [
+            1
+        ],
+        "\/learn\/express\/web\/social-media-content-ideas": [
+            1
+        ],
+        "\/learn\/express\/web\/social-media-engagement-rates": [
+            1
+        ],
+        "\/learn\/express\/web\/social-media-influencer": [
+            1
+        ],
+        "\/learn\/express\/web\/social-media-monetization": [
+            1
+        ],
+        "\/learn\/express\/web\/social-media-small-communities": [
+            1
+        ],
+        "\/learn\/express\/web\/social-media-toolkit": [
+            1
+        ],
+        "\/learn\/express\/web\/speed-up-slow-down-videos": [
+            1
+        ],
+        "\/learn\/express\/web\/the-unlock-how-to-quickly-resize-images-for-social": [
+            1
+        ],
+        "\/learn\/express\/web\/the-unlock-how-to-schedule-a-social-post": [
+            1
+        ],
+        "\/learn\/express\/web\/tiktok-algorithm-explained": [
+            1
+        ],
+        "\/learn\/express\/web\/upgrade-short-form-social-media-videos": [
+            1
+        ],
+        "\/learn\/express\/web\/use-color-to-evoke-emotion": [
+            1
+        ],
+        "\/learn\/express\/web\/video-storytelling": [
+            1
+        ],
+        "\/learn\/express\/web\/when-to-post-to-social-media": [
+            1
+        ],
+        "\/learn\/firefly": [
+            1
+        ],
+        "\/learn\/illustrator": [
+            1
+        ],
+        "\/learn\/indesign": [
+            1
+        ],
+        "\/learn\/lightroom-cc": [
+            1
+        ],
+        "\/learn\/lightroom-classic": [
+            1
+        ],
+        "\/learn\/photoshop": [
+            1
+        ],
+        "\/learn\/premiere-pro": [
+            1
+        ],
+        "\/learn\/premiere-rush": [
+            1
+        ],
+        "\/learn\/students": [
+            1
+        ],
+        "\/learn\/substance-3d": [
+            1
+        ]
+    },
+    "remote": [
+        "\/acrobat\/acrobat-express.html",
+        "\/acrobat\/acrobat-pro.html",
+        "\/acrobat\/free-trial-download.html",
+        "\/acrobat\/pdf-reader.html",
+        "\/creativecloud.html",
+        "\/dc-shared\/fragments\/acrobat\/acrobat-online-pep-card",
+        "\/dc-shared\/fragments\/acrobat\/acrobat-product-pep-card",
+        "\/dc-shared\/fragments\/modals\/videos\/frictionless\/how-to-chat-with-pdf-files",
+        "\/dc-shared\/fragments\/modals\/videos\/frictionless\/how-to-compress-a-pdf",
+        "\/dc-shared\/fragments\/modals\/videos\/frictionless\/how-to-convert-pdf-to-word",
+        "\/dc-shared\/fragments\/modals\/videos\/frictionless\/how-to-convert-word-to-pdf",
+        "\/dc-shared\/fragments\/modals\/videos\/frictionless\/how-to-edit-a-pdf",
+        "\/dc-shared\/fragments\/modals\/videos\/frictionless\/how-to-merge-pdfs",
+        "\/dc-shared\/fragments\/shared-fragments\/browser-extension\/browser-extension-chrome",
+        "\/dc-shared\/fragments\/shared-fragments\/browser-extension\/browser-extension-edge",
+        "\/dc-shared\/navigation\/footer\/footer",
+        "\/dc-shared\/navigation\/footer\/footer-thin",
+        "\/education.html",
+        "\/events\/footer",
+        "\/express\/",
+        "\/express\/feature\/image\/remove-background",
+        "\/express\/footer\/footer-express",
+        "\/express\/fragments\/express-pep-card-1",
+        "\/learn\/express",
+        "\/offer-terms\/cc_full_special_offer.html",
+        "\/products\/catalog.html",
+        "\/products\/firefly.html",
+        "\/products\/illustrator.html",
+        "\/products\/photoshop-lightroom.html",
+        "\/products\/photoshop.html",
+        "\/products\/photoshop\/free-trial-download.html",
+        "\/products\/premiere.html",
+        "\/sign.html",
+        "\/uk\/homepage\/fragments\/loggedout\/tests\/2024\/q1\/intl0046\/intl0046-pakistan.plain.html",
+        "\/uk\/learn",
+        "adobe.com\/acrobat\/acrobat-express.html",
+        "adobe.com\/acrobat\/acrobat-pro.html",
+        "adobe.com\/acrobat\/free-trial-download.html",
+        "adobe.com\/acrobat\/pdf-reader.html",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/business-tab-features",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/business-tab-footer",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/business-tab-header",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/individual-tab-callout-1-block",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/individual-tab-footer",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/individual-tab-unlock-ai",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/schools-tab-footer",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/schools-tab-header",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/students-tab-card",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/features\/students-tab-footer",
+        "adobe.com\/creativecloud\/plans\/merch-shared\/fragments\/merch\/creativecloud\/plans\/footer\/credit-card",
+        "adobe.com\/learn\/express"
+    ]
+}

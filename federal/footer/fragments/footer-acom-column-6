@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adobe</title>
+    <link rel="canonical" href="https://www.adobe.com/federal/footer/fragments/footer-acom-column-6">
+    <meta property="og:title" content="Adobe">
+    <meta property="og:url" content="https://www.adobe.com/federal/footer/fragments/footer-acom-column-6">
+    <meta property="og:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta property="og:image:secure_url" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adobe">
+    <meta name="twitter:image" content="https://www.adobe.com/default-meta-image.png?width=1200&#x26;format=pjpg&#x26;optimize=medium"><!-- Modifying this file will impact your performance -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/scripts/fallback.js" nomodule></script>
+    <script src="/scripts/scripts.js" type="module"></script>
+    <style>body { display: none; }</style>
+    <link rel="icon" href="data:,">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div>
+        <h2 id="adobe">Adobe</h2>
+        <ul>
+          <li><a href="https://account.adobe.com/">Log into your account</a></li>
+          <li><a href="https://www.adobe.com/about-adobe.html">About</a></li>
+          <li><a href="https://www.adobe.com/careers.html">Careers</a></li>
+          <li><a href="https://www.adobe.com/events.html">Events</a></li>
+          <li><a href="https://news.adobe.com/">Newsroom</a></li>
+          <li><a href="https://www.adobe.com/corporate-responsibility.html">Corporate responsibility</a></li>
+          <li><a href="https://www.adobe.com/investor-relations.html">Investor Relations</a></li>
+          <li><a href="https://www.adobe.com/corporate-responsibility/supply-chain.html">Supply chain</a></li>
+          <li><a href="https://www.adobe.com/trust.html">Trust Center</a></li>
+          <li><a href="https://www.adobe.com/about-adobe/integrity.html">Integrity</a></li>
+          <li><a href="https://www.adobe.com/diversity.html">Adobe for All</a></li>
+          <li><a href="https://blog.adobe.com/">Adobe Blog</a></li>
+        </ul>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
