@@ -6,6 +6,7 @@ cw_start_asset_url_rewrite();
 <html lang="en-US" dir="ltr">
 
 <head>
+    <script>window.__CW_OFFLINE=true;window.__CW_ASSET_ROOT=<?php echo json_encode(CW_BASE_URL); ?>;document.documentElement.classList.add("cw-offline");</script>
     <title>Adobe: Creative, marketing and document management solutions</title>
     <link rel="canonical" href="https://www.adobe.com/">
     <meta name="description"
@@ -24,7 +25,7 @@ cw_start_asset_url_rewrite();
     <meta name="twitter:image"
         content="homepage/assets/product-icons/jpg/default.jpg?width=1200&amp;format=pjpg&amp;optimize=medium">
     <meta name="target" content="on">
-    <meta name="personalization-v2" content="on">
+    <meta name="personalization-v2" content="off">
     <meta name="footer" content="global-footer">
     <meta name="header" content="global-navigation">
     <meta name="universal-nav" content="appswitcher,notifications,cart">
@@ -42,17 +43,6 @@ cw_start_asset_url_rewrite();
     <meta name="pageperf-rate" content="1"><!-- Modifying this file will impact your performance -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="head-loaded" content="true">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     <script>
         const flagMeta = document.querySelector('meta[name="head-loaded"]');
@@ -193,20 +183,7 @@ cw_start_asset_url_rewrite();
             document.getElementById('ims-body-style')?.remove();
         }, 5000);
     </script>
-    <script>bazadebezolkohpepadr = "917651884"</script>
-    <script type="text/javascript" src="akam/13/36b2413c" defer=""></script>
     <link rel="stylesheet" href="upp/styles/styles.css">
-    <link rel="preload" as="script" crossorigin="anonymous" href="upp/scripts/helpers.js">
-    <script src="upp/scripts/imslib.min.js" data-loaded="true"></script>
-    <link rel="preload" as="fetch" crossorigin="anonymous"
-        href="homepage/fragments/mep/hp-05-11-26-hp-post-acrobatl1-psnlz.json">
-    <link rel="preload" as="fetch" crossorigin="anonymous"
-        href="federal/assets/data/mep-xlg-tags.json?sheet=prod">
-    <script src="content/dam/cc/optimization/pzn/fixPodHeightUSOnlyPostMax.js?v1"
-        data-loaded="true"></script>
-    <link rel="preload" as="fetch" crossorigin="anonymous"
-        href="https://www.adobe.com/uk/homepage/fragments/loggedout/tests/2024/q1/intl0046/intl0046-pakistan.plain.html">
-    <link rel="preload" as="script" crossorigin="anonymous" href="libs/blocks/fragment/fragment.js">
     <style>
         @media (max-width: 1199px) {
             .homepage-brick.link.split-background {
@@ -214,130 +191,19 @@ cw_start_asset_url_rewrite();
             }
         }
     </style>
-    <link rel="preload" as="script" crossorigin="anonymous" href="upp/blocks/text/text.js">
     <link rel="stylesheet" href="upp/blocks/text/text.css">
-    <link rel="preload" as="script" crossorigin="anonymous"
-        href="upp/mep/ace0861/section-metadata/section-metadata.js">
     <link rel="stylesheet" href="upp/mep/ace0861/section-metadata/section-metadata.css">
     <link rel="stylesheet" href="upp/blocks/global-navigation/global-navigation.css">
-    <link rel="preload" as="script" href="marketingtech/d4d114c60e50/a0e989131fd5/launch-5dd5dd2177e6.min.js">
-    <script src="marketingtech/main.standard.min.js" data-loaded="true"></script>
-    <script src="marketingtech/d4d114c60e50/a0e989131fd5/launch-5dd5dd2177e6.min.js" async=""></script>
-    <link rel="stylesheet" href="https://use.typekit.net/hah7vzn.css">
-    <link rel="preload" as="script" crossorigin="anonymous" href="upp/blocks/merch/merch.js">
     <link rel="stylesheet" href="upp/blocks/merch/merch.css">
     <link rel="stylesheet" href="upp/blocks/global-navigation/base.css">
-    <script src="marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC04a927fa157f40a4a07fd03fc446f6f4-file.min.js"
-        async=""></script>
-    
-    <link rel="stylesheet" href="https://prod.adobeccstatic.com/unav/1.5/UniversalNav.css"><mas-commerce-service
-        locale="en_US" language="en" country="US"></mas-commerce-service>
     <link rel="stylesheet" href="libs/blocks/hero-marquee/hero-marquee.css">
     <link rel="stylesheet" href="libs/styles/breakpoint-theme.css">
-    <link rel="preload" as="script" crossorigin="anonymous"
-        href="upp/blocks/homepage-brick/homepage-brick.js">
     <link rel="stylesheet" href="upp/blocks/homepage-brick/homepage-brick.css">
-    <link rel="stylesheet" type="text/css" href="https://prod.adobeccstatic.com/unav/1.5/layout.bundle.css">
-    <link rel="stylesheet" type="text/css" href="https://prod.adobeccstatic.com/unav/1.5/popover.bundle.css">
-    <link rel="stylesheet" type="text/css" href="https://prod.adobeccstatic.com/unav/1.5/profile.bundle.css">
     <link rel="stylesheet" href="libs/blocks/global-navigation/utilities/menu/menu.css">
-    <link rel="preload" as="script" crossorigin="anonymous" href="upp/blocks/brand-concierge/brand-concierge.js">
     <link rel="stylesheet" href="upp/blocks/brand-concierge/brand-concierge.css">
     <link rel="stylesheet" href="upp/blocks/global-footer/global-footer.css">
-    
-    <script src="etc.clientlibs/globalnav/clientlibs/base/privacy-standalone.js"
-        data-loaded="true"></script>
-    <link rel="stylesheet" href="https://client.messaging.adobe.com/latest/AdobeMessagingClient.css">
-    
     <link rel="stylesheet" href="upp/blocks/modal/modal.css">
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC4818282d9d91472cbcccfc96f28ac4c7-file.min.js"
-        async="" class="marketingtech-contentSquare"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC1ad630888d99429e83dc02b5f88b4d56-file.min.js"
-        async="" class="marketingtech-demandbase"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC42df32478c9c475cab623ad2bdcc019d-file.min.js"
-        async="" class="marketingtech-zoominfo"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC3e890330b95a4566a42613aefca8034b-file.min.js"
-        async="" class="marketingtech-qualtrics"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC91ad29886abe4fb9abcce022c24f858d-file.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCcaaaa703d1b749fcb52fc1472297526c-source.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCdea93e39c30a4b24879e60748c23836e-source.min.js"
-        async=""></script>
     
-    
-    
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC8722390a97bd426097a66955d99253cb-source.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC5679b21f26594d058ee38e60abd47995-source.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCffb9405072cb43d6ba42ced37990f814-file.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCdb12981b688345fabee14405bb8c80f8-file.min.js"
-        async="" class="marketingtech-ttd"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC3233aaa91e6645da92331448f88664ad-file.min.js"
-        async="" class="marketingtech-naver"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC9f0fc558cb3349dd97ca40cda122cf25-file.min.js"
-        async="" class="marketingtech-mobon"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC79fb1f98c5864a10931261f4e2a6efd2-file.min.js"
-        async="" class="marketingtech-facebook"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC8285adacedcd466cb1554f69b360a9cc-file.min.js"
-        async="" class="marketingtech-bing"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC16af5e1dced048e3b0c5eec243557497-file.min.js"
-        async="" class="marketingtech-linkedin"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCe5e322f64bfa4907b3e37ccfbeb0d980-file.min.js"
-        async="" class="marketingtech-tiktok"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC5ba2eb7bf1bc461b945a85a3ae2ffaba-file.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC002745611fcc4e9c83b7e337f6d2337d-file.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCc5a4e0eb967143b584903d06a7198f66-file.min.js"
-        async="" class="marketingtech-teads"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCd742d6adc4a14dc5bcfb2ae395160ba9-file.min.js"
-        async="" class="marketingtech-mathtag"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC9636d50a631a497b9ec8583ab39f2932-file.min.js"
-        async="" class="marketingtech-listenloop-integrate"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC79ee818ecd8d41eaa4d786718d826c00-file.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC50e22fb441344a19bbbb534a630dd92c-file.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCff6fcd46bd3e4edfb245500f941dc3c4-file.min.js"
-        async="" class="marketingtech-amoEverresttech"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC0ac65061eb4442ecaf280011885d1074-file.min.js"
-        async="" class="marketingtech-kakao"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC1932b4a75c7d4d8d97a7ab3f394d7498-file.min.js"
-        async="" class="marketingtech-iSpot"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC93770e077bcb42b5a9f364b32929c986-file.min.js"
-        async="" class="marketingtech-snapchat"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCa1ae92193a6b48988ee706b333f9ffd6-file.min.js"
-        async="" class="marketingtech-flashtalking"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC32a4eeff111142f4975991d5362d2e10-file.min.js"
-        async="" class="marketingtech-podsight"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCdcca344ebf644baebf1153f9856b3d94-file.min.js"
-        async="" class="marketingtech-quora"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCf5ceca60379c48f6abd617fc0817597a-file.min.js"
-        async=""></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RCf6f4c94f48314e0083709268e3d89b95-file.min.js"
-        async="" class="marketingtech-quantcast"></script>
-    <script src="upp/marketingtech/d4d114c60e50/a0e989131fd5/9fa9425e8cf4/RC43e4352801ff471abb4b3de43bf4e92a-file.min.js"
-        async=""></script>
-    
-    <meta http-equiv="origin-trial"
-        content="A7JYkbIvWKmS8mWYjXO12SIIsfPdI7twY91Y3LWOV/YbZmN1ZhYv8O+Zs6/IPCfBE99aV9tIC8sWZSCN09vf7gkAAACWeyJvcmlnaW4iOiJodHRwczovL2N0LnBpbnRlcmVzdC5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZzIiLCJleHBpcnkiOjE3NDIzNDIzOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <link rel="stylesheet" type="text/css" href="https://prod.adobeccstatic.com/unav/1.5/app-switcher.bundle.css">
 </head>
 
 <body>
@@ -359,7 +225,6 @@ cw_start_asset_url_rewrite();
                 </div>
 
                 <div class="feds-nav-wrapper" id="feds-nav-wrapper">
-
 
                     <div class="feds-nav" role="list">
                         <section role="listitem" class="feds-navItem feds-navItem--section feds-navItem--megaMenu"
@@ -1089,10 +954,6 @@ cw_start_asset_url_rewrite();
 
                 </div>
 
-
-
-
-
                 <div class="feds-utilities" style="min-width: calc(124px + 0.25rem);">
                     <div class="universal-nav-container">
                         <div id="universal-nav" data-test-id="unav-main"
@@ -1161,7 +1022,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Adobe Express"
                                                         data-analytics-url="https://new.express.adobe.com/?promoid=D8F91NS&amp;mv=other&amp;mv2=unav&amp;locale=en-US"
                                                         data-analytics-app="Adobe Express:0|0"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/adobeexpress_appicon_noshadow_128.png"><span>Adobe
                                                             Express</span></a></li>
                                                 <li data-test-id="unav-app-switcher--adobe-firefly-app-tile"><a
                                                         aria-label="Adobe Firefly" target="_blank" rel="noopener"
@@ -1170,7 +1030,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Adobe Firefly"
                                                         data-analytics-url="https://firefly.adobe.com/?promoid=DDSB1DXR&amp;mv=other&amp;mv2=unav&amp;locale=en-US"
                                                         data-analytics-app="Adobe Firefly:0|1"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/firefly_appicon_noshadow_v2_128.png"><span>Adobe
                                                             Firefly</span></a></li>
                                                 <li data-test-id="unav-app-switcher--acrobat-app-tile"><a
                                                         aria-label="Acrobat" target="_blank" rel="noopener" tabindex="0"
@@ -1178,7 +1037,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Acrobat"
                                                         data-analytics-url="https://acrobat.adobe.com?promoid=DRCFIIQN&amp;mv=other&amp;mv2=unav&amp;locale=en-US"
                                                         data-analytics-app="Acrobat:0|2"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/acrobat_reader_appicon_noshadow_128.png"><span>Acrobat</span></a>
                                                 </li>
                                                 <li data-test-id="unav-app-switcher--photoshop-app-tile"><a
                                                         aria-label="Photoshop" target="_blank" rel="noopener"
@@ -1187,7 +1045,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Photoshop"
                                                         data-analytics-url="https://photoshop.adobe.com?promoid=DZTGZS8L&amp;mv=other&amp;mv2=unav&amp;lang=en"
                                                         data-analytics-app="Photoshop:1|0"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/ps_appicon_noshadow_128.png"><span>Photoshop</span></a>
                                                 </li>
                                                 <li data-test-id="unav-app-switcher--lightroom-app-tile"><a
                                                         aria-label="Lightroom" target="_blank" rel="noopener"
@@ -1196,7 +1053,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Lightroom"
                                                         data-analytics-url="https://lightroom.adobe.com/?promoid=DMMD15GP&amp;mv=other&amp;mv2=unav&amp;locale=en-US"
                                                         data-analytics-app="Lightroom:1|1"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/lr_appicon_noshadow_128.png"><span>Lightroom</span></a>
                                                 </li>
                                                 <li data-test-id="unav-app-switcher--stock-app-tile"><a
                                                         aria-label="Stock" target="_blank" rel="noopener" tabindex="0"
@@ -1204,7 +1060,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Stock"
                                                         data-analytics-url="https://stock.adobe.com/?&amp;as_channel=adobe_com&amp;as_source=homepage_milo&amp;as_campclass=brand&amp;as_audience=users&amp;as_content=topnav&amp;promoid=FAKHZNJK&amp;mv=other&amp;mv2=unav"
                                                         data-analytics-app="Stock:1|2"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/st_appicon_noshadow_128.png"><span>Stock</span></a>
                                                 </li>
                                                 <li data-test-id="unav-app-switcher--acrobat-sign-app-tile"><a
                                                         aria-label="Acrobat Sign" target="_blank" rel="noopener"
@@ -1213,7 +1068,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Acrobat Sign"
                                                         data-analytics-url="https://adobe.na1.adobesign.com/account/homeJS?promoid=BWBX2WJT&amp;mv=other&amp;mv2=unav"
                                                         data-analytics-app="Acrobat Sign:2|0"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/adobe_sign_appicon_noshadow_128.png"><span>Acrobat
                                                             Sign</span></a></li>
                                                 <li data-test-id="unav-app-switcher--fonts-app-tile"><a
                                                         aria-label="Fonts" target="_blank" rel="noopener" tabindex="0"
@@ -1221,7 +1075,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Fonts"
                                                         data-analytics-url="https://fonts.adobe.com/?promoid=DHWC196Q&amp;mv=other&amp;mv2=unav&amp;locale=en-US"
                                                         data-analytics-app="Fonts:2|1"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/adobe_fonts_appicons_noshadow_128.png"><span>Fonts</span></a>
                                                 </li>
                                                 <li data-test-id="unav-app-switcher--behance-app-tile"><a
                                                         aria-label="Behance" target="_blank" rel="noopener" tabindex="0"
@@ -1229,7 +1082,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Behance"
                                                         data-analytics-url="https://www.behance.net/?promoid=PGRQQ65X&amp;mv=other&amp;mv2=unav&amp;locale=en-US"
                                                         data-analytics-app="Behance:2|2"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/be_appicon_128.png"><span>Behance</span></a>
                                                 </li>
                                                 <li data-test-id="unav-app-switcher--frame.io-app-tile"><a
                                                         aria-label="Frame.io" target="_blank" rel="noopener"
@@ -1238,7 +1090,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Frame.io"
                                                         data-analytics-url="https://accounts.frame.io/adobe-login?promoid=TPQVKWSV&amp;mv=other&amp;mv2=unav"
                                                         data-analytics-app="Frame.io:3|0"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/frameio_appicon_128.png"><span>Frame.io</span></a>
                                                 </li>
                                                 <li data-test-id="unav-app-switcher--experience-cloud-app-tile"><a
                                                         aria-label="Experience Cloud" target="_blank" rel="noopener"
@@ -1247,7 +1098,6 @@ cw_start_asset_url_rewrite();
                                                         data-analytics-event="AppLauncher.appClick.Experience Cloud"
                                                         data-analytics-url="https://experience.adobe.com/?promoid=F89JZJSJ&amp;mv=other&amp;mv2=unav"
                                                         data-analytics-app="Experience Cloud:3|1"><img alt=""
-                                                            src="https://prod.adobeccstatic.com/unav/assets/ec_appicon_noshadow_128.png"><span>Experience
                                                             Cloud</span></a></li>
                                                 <li role="none" class="hiddenTile"></li>
                                             </ul>
@@ -1287,8 +1137,6 @@ cw_start_asset_url_rewrite();
                         </div>
                     </div>
                 </div>
-
-
 
             </nav>
 
@@ -1395,7 +1243,6 @@ cw_start_asset_url_rewrite();
 
                     </div>
                 </div>
-
 
                 <div class="foreground-media">
                     <picture style="--media-cover-position: bottom;">
@@ -1844,10 +1691,6 @@ cw_start_asset_url_rewrite();
                     <div class="section">
                         <div class="brand-concierge floating-button-only" data-block-status="loaded"
                             daa-lh="b1|brand-concierge|intl0046-pakist--all--var1|intl0046pzn--hp-05-11-26-hp---ace1165v2">
-
-
-
-
 
                             <section class="bc-floating-button floating-show" style="bottom: 0px;"><button
                                     class="bc-floating-button-container no-track"
@@ -2344,64 +2187,6 @@ cw_start_asset_url_rewrite();
             </div>
         </div>
     </footer>
-    <noscript><img
-            src="akam/13/pixel_36b2413c?a=dD01ZDRkZDE3NjRkZWEyZWQxNDQwODI3YTE2ZjhlYjhkNzU3MTNjZmJjJmpzPW9mZg=="
-            style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript>
-
-    <div data-adobe-target-testid="INTL0046 - PZN - Direct Commerce Sites Banner XT">
-        <style>
-            [data-path*="intl0046"] .text-block div> :last-child {
-                margin-top: 0
-            }
-        </style>
-    </div>
-    <div id="page-load-ok-milo" style="display: none;"></div><iframe
-        src="https://commerce.adobe.com/store/iframe/preload-optimized.html"
-        style="visibility: hidden; height: 0px; width: 0px; position: absolute; border: 0px;"></iframe>
-    <script>_satellite["_runScript1"](function (event, target, Promise) {
-            !function () { function e() { const e = document.createElement("script"); e.type = "text/javascript", e.defer = !0, e.src = "munchkin.marketo.net/munchkin.js", e.onload = e.onreadystatechange = function () { this.readyState && "complete" !== this.readyState || t() }; const n = document.getElementsByTagName("head")[0]; n.parentNode.insertBefore(e, n) } function t() { const e = [{ name: "MCZ", code: "360-KCI-804" }, { name: "OURKETO", code: "460-TDH-945" }, { name: "MAGENTO", code: "585-GGD-959" }, { name: "CC", code: "176-XKN-523" }, { name: "PARTNERS", code: "608-DHV-915" }, { name: "SIGN", code: "345-TTI-184" }, { name: "WORKFRONT", code: "606-ZRO-825" }, { name: "DYNAMICSTG", code: "371-GBU-660" }], { hostname: t, pathname: n } = window.top.location; let o = "MCZ"; const c = new Set(["MCZ"]); "www.adobe.com" === t && n.includes("/acrobat") ? o = "SIGN" : "www.adobe.com" === t && l.some((e => n.includes(e))) ? o = "MCZ" : t.includes("blog.adobe.com") && n.includes("en/publish/2021/06/14/the-new-ai-powered-commerce") && (o = "MAGENTO"), (t.includes("business.adobe") || t.includes("summit.adobe")) && (c.add("OURKETO"), c.add("MAGENTO"), c.add("PARTNERS")), (n.includes("/summit") || n.includes("/events/")) && (c.add("OURKETO"), c.add("MAGENTO"), c.add("PARTNERS")), "MCZ" !== o && c.add("MCZ"); const a = e.find((e => e.name === o)).code, s = Array.from(c).filter((e => e !== o)).map((t => { const n = e.find((e => e.name === t)); return n ? n.code : null })).filter(Boolean); let m = a; s.forEach((e => { m += "|" + e })), Munchkin.init(a, { altIds: s, asyncOnly: !0, useBeaconAPI: !0 }); let u = 0; const r = setInterval((function () { if (u += 1, u > 20) clearInterval(r); else if (i.cookie.includes("_mkto_trk=")) { clearInterval(r); try { let e = ""; const t = i.cookie.split("_mkto_trk=")[1].split(";")[0]; e = t.slice(t.lastIndexOf("-", t.lastIndexOf("-") - 2) + 1); let n = ""; if (i.cookie.includes("MCMID%7C") && i.cookie.includes("MCAAMLH-")) { const e = /MCAAMLH-[^%]+%7C([0-9]+)/.exec(i.cookie), t = /MCMID%7C([^(;|%)]+)/.exec(i.cookie); e && t && (n = e[1] + ":" + t[1]) } let o = ""; if ("object" == typeof d) try { o = d.get("data._adobe_corpnew.digitalData.primaryUser.primaryProfile.profileInfo.profileID") || "" } catch (e) { } const c = m + "|" + e + "|" + n + "|" + o; if (window.top.location.href.split("?")[1] || "" || null === localStorage.getItem("munchRun") || c !== localStorage.getItem("munchRun")) { let t = ""; if (n && (t += "&ECID=" + n), o && (t += "&GUID=" + o), i.cookie.includes("aam_uuid=")) { const e = /aam_uuid=([^;]+)/.exec(i.cookie); e && (t += "&AAM=" + e[1]) } if (Munchkin.munchkinFunction("clickLink", { href: "#syncIds?MKTO=" + e + t }), localStorage.setItem("munchRun", c), "object" == typeof d) try { d.set("data._adobe_corpnew.digitalData.page.pageInfo.munchkinId", e) } catch (e) { } } } catch (e) { } } }), 250) } const { location: n } = window, { pathname: o, hostname: c } = n, a = window, i = document, d = a.alloy_all, s = a._satellite && a._satellite.getVar ? a._satellite.getVar("_loadScript") : null, l = ["/products/adobeconnect", "/products/captivate", "/products/coldfusion-family", "/products/adobe-embedded-print-engine"]; ("www.adobe.com" === c && (o.includes("/acrobat") || l.some((e => o.includes(e)))) || "blog.adobe.com" === c || "business.adobe.com" === c) && setTimeout((function () { s ? s("https://munchkin.marketo.net/munchkin.js", (function () { t() }), { className: "marketing-MunchkinTagCombined" }) : e() }), "business.adobe.com" === c ? 100 : 5e3) }();
-        });</script>
-    
-    <div id="ZN_3n5vYIa1VY8b4LY"></div>
-    <script class="marketingtech-pinterest">_satellite["_runScript2"](function (event, target, Promise) {
-            !function () { function e(e) { n && (n.className = d), m("https://s.pinimg.com/ct/core.js", (function () { t.pintrk || (t.pintrk = function () { t.pintrk.queue.push(Array.prototype.slice.call(arguments)) }, t.pintrk.queue = [], t.pintrk.version = "3.0"), t.pintrk("load", e, { external_id: c ? l(c) : i ? l(i) : "" }), t.pintrk("page"), t.pintrk("track", "pagevisit", { event_id: g }) }), { className: d }) } var t = window, a = t.location, o = a.hostname, r = a.pathname, s = t.alloy_all, p = (e, t) => -1 !== e.indexOf(t), c = s.get("data._adobe_corpnew.digitalData.primaryUser.primaryProfile.profileInfo.profileID"), i = _satellite.getVar("adobe_ecid")(), l = _satellite.getVar("sha256"); if (!(p(o, "acrobat.adobe.com") && (p(r, "/discover/") || p(r, "/dc-acrobat-pages/")) || p(o, "podcast.stage.adobe.com") || p(o, "podcast.adobe.com") || p(o, "express.adobe.com") || p(o, "projectx") || p(o, "localhost.adobe.com"))) { var d = "marketingtech-pinterest", n = document.currentScript, m = t._satellite.getVar("_loadScript"), g = s.get("xdm.eventMergeId"); if (e("2612763853687"), p(o, "www.adobe.com") || p(o, "stage.adobe.com") || p(o, "firefly.adobe.com") || p(o, "firefly-stage.corp.adobe.com") || p(o, "helpx.adobe.com") || p(o, "helpx.stage.adobe.com") || p(o, "business.adobe.com") || p(o, "business.stage.adobe.com") || p(o, "stage.projectx.corp.adobe.com") || p(o, "acrobat.adobe.com") || p(o, "stage.acrobat.adobe.com") || p(o, "stock.adobe.com") || p(o, "primary.stock.stage.adobe.com") || p(o, "commerce.adobe.com") || p(o, "commerce-stg.adobe.com")) { var h = localStorage.getItem("engagedVisit"); if (h) { h = JSON.parse(h); var u = h?.pageViews ? h?.pageViews : "", b = 18e5; Date.now() - h.lastUpdated >= b ? (s.set("data._adobe_corpnew.marketingTags.pinterest.engagedUser", !1), localStorage.setItem("engagedVisit", JSON.stringify(h))) : u && (s.set("data._adobe_corpnew.marketingTags.engagedVisit.visitNumber", u), u > 1 ? s.set("data._adobe_corpnew.marketingTags.pinterest.engagedUser", !0) : s.set("data._adobe_corpnew.marketingTags.pinterest.engagedUser", !1)) } else _satellite.getVar("engagedUser").then((function (e) { e && e.pageViews && (s.set("data._adobe_corpnew.marketingTags.engagedVisit.visitNumber", e.pageViews), e.pageViews > 1 ? s.set("data._adobe_corpnew.marketingTags.pinterest.engagedUser", !0) : s.set("data._adobe_corpnew.marketingTags.pinterest.engagedUser", !1)) })) } (p(r, "/products/elements-family") || p(r, "/products/premiere-elements") || p(r, "/products/photoshop-premiere-elements") || p(r, "/products/photoshop-elements")) && e("2613047885022"), (p(r, "/au/creativecloud.html") || p(r, "/au/creativecloud/all-apps.html") || p(r, "/au/creativecloud/buy/students.html") || p(r, "/au/products/photoshop.html") || p(r, "/au/products/photoshop/landpa.html") || p(r, "/au/products/photoshop-lightroom.html") || p(r, "/au/creativecloud/photography/apps.html") || p(r, "/au/products/illustrator.html") || p(r, "/au/products/premiere.html") || p(r, "/au/creativecloud/plans.html") || p(r, "/kr/creativecloud.html") || p(r, "/kr/creativecloud/all-apps.html") || p(r, "/kr/creativecloud/buy/students.html") || p(r, "/kr/products/photoshop.html") || p(r, "/kr/products/photoshop/landpa.html") || p(r, "/kr/products/photoshop-lightroom.html") || p(r, "/kr/creativecloud/photography/apps.html") || p(r, "/kr/products/illustrator.html") || p(r, "/kr/products/premiere.html") || p(r, "/kr/creativecloud/plans.html") || p(r, "/in/creativecloud.html") || p(r, "/in/creativecloud/all-apps.html") || p(r, "/in/creativecloud/buy/students.html") || p(r, "/in/products/photoshop.html") || p(r, "/in/products/photoshop/landpa.html") || p(r, "/in/products/photoshop-lightroom.html") || p(r, "/in/creativecloud/photography/apps.html") || p(r, "/in/products/illustrator.html") || p(r, "/in/products/premiere.html") || p(r, "/in/creativecloud/plans.html")) && e("2612397757800") } }();
-        });</script>
-    
-    <script>_satellite["_runScript3"](function (event, target, Promise) {
-            !function () { var e, s, t = window, r = t.location.hostname, o = t.location.pathname, i = "marketingtech-demanscience", a = document, c = a.currentScript, u = t._satellite.getVar("_loadScript"), d = { "business.adobe.com": ["/", "/customer-success-stories/owen-jones-and-partners-case-study.html", "/customer-success-stories/dentsu-case-study.html", "/products/express-business.html", "/products/firefly-business/firefly-services.html", "/products/frameio-business.html", "/products/creativecloud-business.html", "/resources/guides/adobe-firefly-services-product-guide.html", "/resources/guides/express-marketing-use-cases.html", "/resources/guides/fast-content-creation.html", "/resources/guides/supercharge-content-production.html", "/resources/guides/create-on-brand-content-with-adobe-express.html", "/resources/sdk/forrester-total-economic-impact-of-adobe-creative-solutions-for-enterprise.html", "/resources/sdk/bcg-adobe-infographic.html", "/resources/sdk/creative-productivity.html", "/resources/sdk/navigating-the-age-of-content-abundance.html", "/resources/sdk/idc-future-of-creative-content-with-gen-ai-inside.html", "/resources/sdk/adobe-express-product-guide.html", "/blog/abb-empowers-global-teams-create-faster-adobe-express", "/blog/how-adobe-express-helped-red-hat-marketing-ibm-company-achieve-10x-time-savings", "/blog/seven-west-media-increases-audience-engagement-creating-social-media-adobe-express", "/blog/gatorade-fuels-creative-self-expression-with-customizable-squeeze-bottles-powered-adobe-firefly-services-generative-ai"], "www.adobe.com": ["/creativecloud/business/teams/resources/whitepapers-ebooks/express-marketing-use-cases-sdk.html", "/creativecloud/business/teams/resources/whitepapers-ebooks/max-2024-report-sdk.html", "/creativecloud/business/teams/resources/whitepapers-ebooks/frame-io-pfeiffer-report-sdk.html", "/creativecloud/business/teams/resources/solution-briefs/firefly-product-guide-sdk.html", "/creativecloud/business/teams/resources/solution-briefs/frameio-v4-product-guide-sdk.html"], "blog.adobe.com": ["/en/publish/2024/10/11/how-adobe-express-helped-red-hat-marketing-ibm-company-achieve-10x-time-savings"] }; !d[r] || -1 === d[r].indexOf(o) || (c && (c.className = i), u("https://cdn.webexperiences.com/v2/JXJJBB5S.js", null, { className: i }), e = "term-e7e5d07437489", s = "https://wec-assets.terminus.services/a2bde558-ff03-44ae-9c7e-e456541350f2/t.js", a.getElementById(e) || u(s, null, { className: i, defer: !0 }, { id: e })) }();
-        });</script><cs-native-frame-holder hidden=""><template shadowrootmode="closed"><iframe id="cs-native-frame"
-                hidden="" title="Intentionally blank"
-                sandbox="allow-same-origin"></iframe></template></cs-native-frame-holder>
-    <script>_satellite["_runScript4"](function (event, target, Promise) {
-            !function () { var a = window, e = a.location, t = e.hostname, o = e.pathname, n = (a, e) => -1 !== a.indexOf(e); if (!(n(t, "acrobat.adobe.com") && (n(o, "/discover/") || n(o, "/dc-acrobat-pages/")) || n(o, "/acrobat/online/") || n(t, "podcast.stage.adobe.com") || n(t, "podcast.adobe.com"))) { var c = "marketingtech-amazon", m = document.currentScript, s = a._satellite.getVar("_loadScript"); (n(o, "/products/elements-family") || n(o, "/products/premiere-elements") || n(o, "/products/photoshop-premiere-elements") || n(o, "/products/photoshop-elements")) && (m && (m.className = c), amzn = a.amzn = function () { a.amzn.q.push([arguments, (new Date).getTime()]) }, amzn.q = [], s("https://c.amazon-adsystem.com/aat/amzn.js", (function () { amzn("setRegion", "NA"), amzn("addTag", "8109fb1a-c217-4f04-834d-716fef298b2d"), amzn("trackEvent", "PageView") }), { className: c })) } }();
-        });</script>
-    
-    
-    <script src="//www.everestjs.net/static/st.v3.js" async=""></script><iframe
-        src="https://servedby.flashtalking.com/container/13539;99030;10307;iframe/?ftXRef=&amp;ftXValue=&amp;ftXType=&amp;ftXName=&amp;ftXNumItems=&amp;ftXCurrency=&amp;U1=&amp;U2=&amp;U3=74993277064626231618009021516423961341&amp;U4=adobe.com&amp;U5=&amp;U6=&amp;U7=&amp;U8=&amp;U9=&amp;U10=&amp;U11=&amp;U12=&amp;U13=&amp;U14=&amp;U15=&amp;U16=&amp;U17=&amp;U18=&amp;U19=&amp;U20=&amp;ft_referrer=https%3A%2F%2Fwww.adobe.com%2F&amp;ns=&amp;cb=498470.85540232906"
-        class="marketingtech-flashtalking" credentialless="" style="position: absolute; display: none;"></iframe>
-    
-    <img
-        src="https://pt.ispot.tv/v2/TC-4078-1.gif?app=web&amp;type=visit&amp;customdata=new_user&amp;uid=&amp;cid=74993277064626231618009021516423961341&amp;refid="
-        alt="" height="1" width="1" border="0" style="display: none;"><img
-        src="https://pt.ispot.tv/v2/TC-4078-1.gif?app=web&amp;type=visit_Home&amp;uid=&amp;cid=74993277064626231618009021516423961341&amp;refid="
-        alt="" height="1" width="1" border="0" style="display: none;">
-    
-    
-    <iframe
-        src="https://pixel.everesttech.net/3085/gr?ev_gb=0&amp;url=https%3A%2F%2Fwww.everestjs.net%2Fstatic%2Fpixel_details.html%23google%3D__EFGCK__%26gsurfer%3D__EFGSURFER__%26imsId%3D__EFIMSORGID__%26optout%3D__EFOPTOUT__%26throttleCookie%3D__EFSYNC__%26time%3D__EFTIME__"
-        height="0" width="0" style="display: none;"></iframe>
-    <div id="batBeacon947649143727" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img
-            id="batBeacon989931765302" width="0" height="0" alt=""
-            src="https://bat.bing.com/action/0?ti=5190105&amp;Ver=2&amp;mid=a44e6ab7-51f2-42d4-93d9-47931d039b82&amp;bo=2&amp;sid=74d4b9d054dc11f197b7cb88e882bdb9&amp;vid=74d4b22054dc11f1996da13d1079ee5f&amp;vids=1&amp;msclkid=N&amp;pi=918639831&amp;lg=en-GB&amp;sw=1680&amp;sh=1050&amp;sc=30&amp;tl=Adobe%3A%20Creative,%20marketing%20and%20document%20management%20solutions&amp;p=https%3A%2F%2Fwww.adobe.com%2F&amp;r=&amp;lt=1364&amp;evt=pageLoad&amp;sv=2&amp;asc=G&amp;cdb=AQAQ&amp;rn=459368"
-            style="width: 0px; height: 0px; display: none; visibility: hidden;"></div>
-    <img height="1" width="1"
-        src="https://pixel.everesttech.net/3085/t?ecvid=74993277064626231618009021516423961341&amp;ev_Site_Visit_AMS=1&amp;ev_transid=&amp;linkId=414480401779344126"
-        style="display: none;"><iframe height="0" width="0"
-        src="https://9212252.fls.doubleclick.net/activityi;src=9212252;type=invmedia;cat=gtag_004;rcb=18;ord=5802278686263;npa=0;auiddc=1600533457.1779344126;u14=https%3A%2F%2Fwww.adobe.com%2F;u19=www.adobe.com%2F;u23=adobe.com;uaa=arm;uab=64;uafvl=Chromium%3B148.0.7778.168%7CGoogle%2520Chrome%3B148.0.7778.168%7CNot%252FA)Brand%3B99.0.0.0;uamb=0;uam=;uap=macOS;uapv=26.2.0;uaw=0;pscdl=noapi;frm=0;_tu=IFA;gtm=45fe65j1v9180772808za200zb877906940zd877906940xec;gcs=G110;gcd=13t3p3Z3t5l1;dma=0;dc_fmt=2;tag_exp=0~115938466~115938468~118131810~118689382;epver=2;dc_random=1779344126_VK-yQQFD9CrQnm1NTG3a0GwdV_FGp8AhfA;_dc_test=1;~oref=https%3A%2F%2Fwww.adobe.com%2F?"
-        style="display: none; visibility: hidden;"></iframe><img height="1" width="1"
-        src="https://cm.everesttech.net/cm" style="display: none;"><iframe name="Adobe Alloy"
-        style="display: none; width: 0px; height: 0px;"></iframe>
 </body>
 
 </html>

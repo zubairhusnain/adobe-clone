@@ -1980,6 +1980,7 @@ export const getMepEnablement = (mdKey, paramKey = false) => {
 
 let imsLoaded;
 export async function loadIms() {
+  if (typeof window !== 'undefined' && window.__CW_OFFLINE) return;
   imsLoaded = imsLoaded || (async () => {
     const lingoRegion = lingoActive() ? await getLingoRegion() : null;
     return new Promise((resolve, reject) => {
@@ -2703,6 +2704,11 @@ function loadLingoIndexes(area = document) {
 }
 
 export async function loadArea(area = document) {
+  if (typeof window !== 'undefined' && window.__CW_OFFLINE && area === document) {
+    document.getElementById('ims-body-style')?.remove();
+    document.body.style.opacity = '1';
+    return;
+  }
   const isDoc = area === document;
   if (isDoc) {
     if (document.getElementById('page-load-ok-milo')) return;

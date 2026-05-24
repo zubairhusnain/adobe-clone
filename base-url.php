@@ -90,17 +90,18 @@ if (!defined('CW_BASE_URL')) {
 
 function cw_inject_after_head_open(string $html, string $insertion): string
 {
-    $pos = stripos($html, '<head');
-    if ($pos === false) {
+    if ($insertion === '') {
         return $html;
     }
 
-    $gt = strpos($html, '>', $pos);
-    if ($gt === false) {
-        return $html;
+    // Must match <head> only — stripos('<head') wrongly hits <header> first.
+    if (preg_match('/<head\b[^>]*>/i', $html, $m, PREG_OFFSET_CAPTURE)) {
+        $gt = (int) $m[0][1] + strlen($m[0][0]);
+
+        return substr($html, 0, $gt) . $insertion . substr($html, $gt);
     }
 
-    return substr($html, 0, $gt + 1) . $insertion . substr($html, $gt + 1);
+    return $html;
 }
 
 function cw_rewrite_asset_urls_in_html(string $html): string
@@ -120,6 +121,14 @@ function cw_rewrite_asset_urls_in_html(string $html): string
     $path = cw_normalize_request_path($path);
 
     $headInsert = '';
+    if (!str_contains($html, 'id="cw-offline-boot"')) {
+        $headInsert .= '<script id="cw-offline-boot">window.__CW_OFFLINE=true;window.__CW_ASSET_ROOT='
+            . json_encode($base)
+            . ';document.documentElement.classList.add("cw-offline");'
+            . '(function(){function b(){try{document.getElementById("ims-body-style")?.remove();'
+            . 'document.body&&(document.body.style.opacity="1",document.body.style.display="block");}catch(e){}}'
+            . 'b();document.addEventListener("DOMContentLoaded",b);})();</script>';
+    }
     if (!str_contains($html, 'id="cw-gnav-lock"')) {
         $headInsert .= '<script id="cw-gnav-lock">window.__CW_GNAV_LOCK__=1;</script>';
     }
@@ -214,8 +223,11 @@ function cw_rewrite_asset_urls_in_html(string $html): string
             'var emptyJson=function(){return Promise.resolve({ok:true,status:200,json:function(){return Promise.resolve({});},text:function(){return Promise.resolve("{}");}});};' .
             'function fixMiloOrigin(u){if(typeof u!=="string")return u;var R=window.__CW_ASSET_ROOT||"";if(!R)return u;try{var o=window.location.origin,m=o+"/.milo/";if(u.indexOf(m)===0)return R+"/.milo/"+u.slice(m.length);if(u===o+"/.milo/config.json")return R+"/.milo/config.json";}catch(e){}return u;}' .
             'var _fetch=window.fetch;window.fetch=function(i,n){var u=typeof i==="string"?i:(i&&i.url?i.url:"");u=fixMiloOrigin(u);if(blocked(u)||/adobeid|services\\.adobe\\.com\\/ims/i.test(u))return emptyJson();if(typeof i==="string"){i=fixMiloOrigin(fixRoot(i));}else if(i&&i.url){try{i=new Request(fixMiloOrigin(fixRoot(i.url)),i);}catch(e){}}return _fetch.call(this,i,n);};' .
-            'window._satellite=window._satellite||{};var _rs=function(cb){try{if(typeof cb==="function")cb({},{},window.Promise||{resolve:function(){}});}catch(e){}};for(var i=1;i<=20;i++){(function(n){window._satellite["_runScript"+n]=_rs;})(i);}' .
-            'window._satellite.getVar=window._satellite.getVar||function(){return "";};window._satellite.setVar=window._satellite.setVar||function(){};window._satellite.track=window._satellite.track||function(){};window._satellite.pageBottom=function(){};window._satellite.pageTop=function(){};' .
+            'window._satellite=window._satellite||{};var _noop=function(){};for(var i=1;i<=80;i++){window._satellite["_runScript"+i]=_noop;}' .
+            'window._satellite._runScript=_noop;window._satellite.getVar=window._satellite.getVar||function(){return "";};' .
+            'window._satellite.setVar=window._satellite.setVar||function(){};window._satellite.track=window._satellite.track||function(){};window._satellite.pageBottom=function(){};window._satellite.pageTop=function(){};' .
+            'window.alloy_all=window.alloy_all||{get:function(){return Promise.resolve("");},set:function(){return Promise.resolve();}};' .
+            'window.Munchkin=window.Munchkin||{init:_noop,munchkinFunction:_noop};' .
             'window.fbq=window.fbq||function(){};window.fbq.queue=window.fbq.queue||[];window.fbq.loaded=true;window._fbq=window._fbq||window.fbq;' .
             'window.__beusablerumclient__=window.__beusablerumclient__||{load:function(){}};' .
             'window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};' .

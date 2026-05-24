@@ -92,7 +92,7 @@ if (str_starts_with($path, '/v6/')) {
     $ch = curl_init($remoteUrl);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
     curl_setopt($ch, CURLOPT_USERAGENT, 'copy-website-local');
     curl_setopt($ch, CURLOPT_FAILONERROR, false);
     curl_setopt($ch, CURLOPT_HEADER, false);
@@ -197,7 +197,7 @@ if (str_starts_with($path, '/content/') && !is_file(__DIR__ . $path)) {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 45);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
         curl_setopt($ch, CURLOPT_USERAGENT, 'copy-website-local');
         $data = curl_exec($ch);
         $httpCode = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -401,7 +401,7 @@ if (str_starts_with($path, '/is/image/') || str_starts_with($path, '/is/content/
                     curl_setopt($ch, CURLOPT_FILE, $fh);
                     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
                     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-                    curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+                    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
                     curl_setopt($ch, CURLOPT_USERAGENT, 'copy-website-local');
                     curl_setopt($ch, CURLOPT_FAILONERROR, false);
                     curl_setopt($ch, CURLOPT_HEADER, false);
@@ -430,7 +430,7 @@ if (str_starts_with($path, '/is/image/') || str_starts_with($path, '/is/content/
             $ch = curl_init($remoteUrl);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 5);
             curl_setopt($ch, CURLOPT_USERAGENT, 'copy-website-local');
             curl_setopt($ch, CURLOPT_FAILONERROR, false);
             curl_setopt($ch, CURLOPT_HEADER, false);

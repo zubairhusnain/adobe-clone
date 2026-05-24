@@ -44,8 +44,8 @@ function cw_remote_asset_fetch(string $path, string $localFs): bool
         $ch = curl_init($remoteUrl);
         curl_setopt($ch, CURLOPT_FILE, $fh);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
         if (defined('CURLOPT_USER_AGENT')) {
             curl_setopt($ch, CURLOPT_USER_AGENT, 'Mozilla/5.0 (compatible; adobe-clon-local/1.0)');
         }
@@ -112,7 +112,9 @@ function cw_remote_asset_serve(string $path): bool
         return true;
     }
 
-    if (function_exists('curl_init') && cw_remote_asset_fetch($path, $localFs) && is_file($localFs)) {
+    // Never block page load on live Adobe fetches (fragments/MEP JSON preloads, etc.).
+    if (defined('CW_ALLOW_REMOTE_ASSET_FETCH') && CW_ALLOW_REMOTE_ASSET_FETCH
+        && function_exists('curl_init') && cw_remote_asset_fetch($path, $localFs) && is_file($localFs)) {
         return cw_remote_asset_serve($path);
     }
 

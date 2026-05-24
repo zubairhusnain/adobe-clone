@@ -244,10 +244,19 @@ const getCookie = (name) => document.cookie
     .find((row) => row.startsWith(`${name}=`))
     ?.split('=')[1];
 
+function isRealAdobeHost(host) {
+  host = String(host || '').toLowerCase();
+  if (host === 'adobe.com' || host === 'www.adobe.com') return true;
+  if (!host.endsWith('.adobe.com')) return false;
+  const parts = host.split('.');
+  return parts.length >= 2 && parts.slice(-2).join('.') === 'adobe.com';
+}
+
 async function imsCheck() {
+  if (window.__CW_OFFLINE) return false;
   const { host, pathname } = window.location;
-  // no need to check IMS for these cases:
-  if (!host.includes('adobe.com') || pathname.split('/').at(-1).startsWith('media_')) return false;
+  // no need to check IMS for these cases (clones like adobe.com.pk must skip):
+  if (!isRealAdobeHost(host) || pathname.split('/').at(-1).startsWith('media_')) return false;
 
   const libs = getLibs();
   const { loadIms, setConfig } = await import(`${libs}/utils/utils.js`);
@@ -307,7 +316,12 @@ function loadStyles() {
 
 async function loadPage() {
   document.getElementById('ims-body-style')?.remove();
+  document.body.style.opacity = '1';
   loadStyles();
+  if (window.__CW_OFFLINE) {
+    document.querySelectorAll('[data-path]').forEach((el) => el.removeAttribute('data-path'));
+    return;
+  }
   const libs = getLibs();
   const { loadArea, setConfig, loadLana } = await import(`${libs}/utils/utils.js`);
   setConfig({ ...CONFIG, ...miloConfigExtras(libs) });

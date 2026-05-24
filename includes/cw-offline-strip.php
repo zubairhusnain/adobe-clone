@@ -21,13 +21,25 @@ function cw_strip_adbmsg_client(string $html): string
 function cw_strip_offline_breaking_assets(string $html): string
 {
     $html = cw_strip_adbmsg_client($html);
+    // Line-based pass is faster/safer than huge PCRE on multi-MB HTML.
+    $html = preg_replace('/^.*marketingtech.*\r?\n/mi', '', $html) ?? $html;
+    $html = preg_replace('/^.*\bakam\/13\/.*\r?\n/mi', '', $html) ?? $html;
+    $html = preg_replace('/^.*bazadebezolkohpepadr.*\r?\n/mi', '', $html) ?? $html;
+    // Strip broken script tails left when marketing <script> opening lines were removed.
+    $html = preg_replace('/^\s*async=""[^>]*>\s*<\/script>\s*\r?\n/mi', '', $html) ?? $html;
+    $html = preg_replace('/^\s*data-loaded="true">\s*<\/script>\s*\r?\n/mi', '', $html) ?? $html;
+    $html = preg_replace('/^\s*locale="[^"]*"[^>]*><\/mas-commerce-service>\s*\r?\n/mi', '', $html) ?? $html;
+    $html = preg_replace('/^\s*content="A7JYkbIv[^"]*">\s*\r?\n/mi', '', $html) ?? $html;
 
     $patterns = [
         '~<meta\\s+name=["\']target["\']\\s+content=["\']on["\']\\s*/?>~i',
+        '~<meta\\s+name=["\']personalization-v2["\']\\s+content=["\']on["\']\\s*/?>~i',
+        '~<meta\\s+name=["\']personalization["\'][^>]*>~i',
         '~<meta\\s+name=["\']schedule["\'][^>]*>~i',
         '~<script\\b[^>]*fixPodHeight[^>]*>\\s*</script>~is',
         '~<script\\b[^>]*\\bsrc=["\'][^"\']*fixPodHeight[^"\']*["\'][^>]*>\\s*</script>~is',
-        '~<link\\s+rel=["\']preload["\'][^>]*>~i',
+        '~<link\\s+rel=["\']preload["\'][\\s\\S]*?>~i',
+        '~<link\\b[^>]*\\bhref=["\']https?://use\\.typekit\\.net/[^"\']*["\'][^>]*>~i',
         '~<div\\s+id=["\']page-load-ok-milo["\'][^>]*>\\s*</div>~i',
         '~<script\\b[^>]*\\bmarketingtech[^>]*>.*?</script>~is',
         '~<script\\b[^>]*\\bsrc=["\'][^"\']*marketingtech[^"\']*["\'][^>]*>\\s*</script>~is',
@@ -43,9 +55,11 @@ function cw_strip_offline_breaking_assets(string $html): string
         '~<script\\s+type=["\']module["\']>\\s*const\\s+userAgentMeta\\s*=\\s*document\\.querySelector\\([^<]*?</script>~is',
         '~<script\\b[^>]*>_satellite\\["_runScript\\d+"\\]\\(function\\s*\\(\\)\\s*\\{[^<]*?dcLana\\.js[^<]*?</script>~is',
         '~<script\\b[^>]*//[^"\']*everest[^"\']*["\'][^>]*>\\s*</script>~is',
-        '~<script\\b[^>]*>_satellite\\["_runScript\\d+"\\].*?</script>~is',
         '~<script[^>]*>\\s*bazadebezolkohpepadr\\s*=.*?</script>~is',
         '~<script\\b[^>]*\\bsrc=["\'][^"\']*akam/13/[^"\']*["\'][^>]*>\\s*</script>~is',
+        '~<script\\b[^>]*\\bsrc=["\'][^"\']*\\/akam\\/13\\/[^"\']*["\'][^>]*>\\s*</script>~is',
+        '~<link\\b[^>]*\\bhref=["\']https?://www\\.adobe\\.com[^"\']*["\'][^>]*>~i',
+        '~<link\\b[^>]*\\bhref=["\']https?://client\\.messaging\\.adobe\\.com[^"\']*["\'][^>]*>~i',
         '~<noscript>\\s*<img\\b[^>]*akam/13/pixel[^>]*>\\s*</noscript>~is',
         '~<img\\b[^>]*\\bsrc=["\'][^"\']*akam/13/pixel[^"\']*["\'][^>]*>~i',
         '~<iframe\\b[^>]*(?:everest|flashtalking|doubleclick|commerce\\.adobe)[^>]*>.*?</iframe>~is',
@@ -85,6 +99,51 @@ function cw_strip_offline_breaking_assets(string $html): string
     $html = cw_disable_adobe_for_business_link($html);
     $html = cw_rewrite_html_urls_to_plain_structure($html);
     $html = cw_localize_document_links($html);
+    $html = cw_strip_post_footer_marketing($html);
+
+    return $html;
+}
+
+/**
+ * Remove mirrored DTM / tracker injections after </footer> (avoids hung tabs on shared hosting).
+ */
+function cw_strip_post_footer_marketing(string $html): string
+{
+    $footerClose = strripos($html, '</footer>');
+    if ($footerClose === false) {
+        return $html;
+    }
+
+    $afterFooter = $footerClose + strlen('</footer>');
+    $bodyClose = stripos($html, '</body>', $afterFooter);
+    if ($bodyClose === false) {
+        return $html;
+    }
+
+    $tail = substr($html, $afterFooter, $bodyClose - $afterFooter);
+    if ($tail === '') {
+        return $html;
+    }
+
+    $needles = [
+        '_satellite',
+        'marketingtech',
+        'commerce.adobe.com',
+        'everestjs.net',
+        'flashtalking.com',
+        'doubleclick.net',
+        'bat.bing.com',
+        'ispot.tv',
+        'page-load-ok-milo',
+        'cs-native-frame-holder',
+        'adobe-target-testid',
+    ];
+
+    foreach ($needles as $needle) {
+        if (stripos($tail, $needle) !== false) {
+            return substr($html, 0, $afterFooter) . "\n" . substr($html, $bodyClose);
+        }
+    }
 
     return $html;
 }
