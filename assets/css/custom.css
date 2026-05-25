@@ -4,6 +4,12 @@ body {
 }
 
 /* Header: visible without Milo gnav init */
+header.global-navigation {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10000 !important;
+}
+
 header.global-navigation.ready,
 header.global-navigation[data-block-status="loaded"] {
   visibility: visible !important;
@@ -12,6 +18,11 @@ header.global-navigation[data-block-status="loaded"] {
 
 header.global-navigation.gnav-hide {
   opacity: 1 !important;
+}
+
+header.global-navigation,
+header.global-navigation .feds-topnav-wrapper {
+  overflow: visible !important;
 }
 
 @media (min-width: 900px) {
@@ -25,6 +36,56 @@ header.global-navigation.gnav-hide {
 
   header.global-navigation .feds-nav {
     flex-direction: row !important;
+  }
+
+  header.global-navigation .feds-navItem--megaMenu.feds-dropdown--active > .feds-popup,
+  header.global-navigation .feds-navItem--megaMenu:hover > .feds-popup,
+  header.global-navigation .feds-navItem--megaMenu:focus-within > .feds-popup,
+  header.global-navigation .feds-navLink--hoverCaret[aria-expanded="true"] + .feds-popup {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10001 !important;
+  }
+
+  header.global-navigation .feds-navItem--megaMenu > .feds-popup {
+    left: 0 !important;
+    right: 0 !important;
+    min-width: 280px !important;
+    background: var(--feds-background-popup, #f3f3f3) !important;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 20%) !important;
+  }
+
+  header.global-navigation .feds-navItem--megaMenu .feds-menu-headline {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  header.global-navigation .feds-navItem--megaMenu .feds-menu-headline::after {
+    display: none !important;
+  }
+}
+
+header.global-navigation .feds-navItem--megaMenu.feds-dropdown--active .feds-menu-items,
+header.global-navigation .feds-navItem--megaMenu:hover .feds-menu-items {
+  display: flex !important;
+  flex-direction: column !important;
+  border-bottom: none !important;
+}
+
+@media (max-width: 899px) {
+  header.global-navigation .feds-nav-wrapper--expanded {
+    display: flex !important;
+  }
+
+  header.global-navigation .feds-navItem--megaMenu.feds-dropdown--active > .feds-popup {
+    display: flex !important;
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    max-height: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
   }
 }
 
@@ -76,20 +137,27 @@ header.global-navigation .feds-navItem--megaMenu .feds-cta-wrapper {
 @media (min-width: 900px) {
   header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content {
     grid-template-columns: 1fr !important;
-    max-width: 640px !important;
+    max-width: 360px !important;
   }
 
-  header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content > .feds-menu-column:first-child .feds-menu-items > ul {
+  header.global-navigation .feds-popup[data-cw-canonical-popup="1"] .feds-menu-content {
+    max-width: 320px !important;
+  }
+
+  header.global-navigation .feds-popup[data-cw-canonical-popup="1"] .feds-menu-items > ul {
     display: flex !important;
-    flex-flow: row nowrap !important;
-    gap: 32px !important;
-    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 0 !important;
   }
 
-  header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content > .feds-menu-column:first-child .feds-menu-items > ul > li {
-    flex: 1 1 50% !important;
-    max-width: 50% !important;
-    min-width: 0 !important;
+  header.global-navigation .feds-popup[data-cw-canonical-popup="1"] .feds-menu-items > ul > li {
+    flex: none !important;
+    max-width: 100% !important;
+  }
+
+  header.global-navigation .feds-popup[data-cw-canonical-popup="1"] .feds-menu-content .feds-navLink {
+    padding: 10px 24px !important;
+    white-space: normal !important;
   }
 }
 
@@ -169,12 +237,11 @@ body.cw-homepage header.global-navigation .feds-navItem[daa-lh="Learn Support"] 
   display: none !important;
 }
 
-/* Homepage Creative Cloud brick: hide any remaining external links */
-body.cw-homepage .body-xs:has(#creative-cloud) a[href^="http://"],
-body.cw-homepage .body-xs:has(#creative-cloud) a[href^="https://"],
-body.cw-homepage .body-xs:has(#creative-cloud) a[href^="//"] {
-  display: none !important;
-  pointer-events: none !important;
+/* Homepage Creative Cloud brick: keep links visible (localized to site base in PHP). */
+body.cw-homepage .body-xs:has(#creative-cloud) a {
+  pointer-events: auto !important;
+  text-decoration: underline;
+  color: var(--feds-color-blue-link, #274dea);
 }
 
 footer.global-footer li:has([daa-ll*="Design and illustration"]),

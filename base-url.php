@@ -104,6 +104,60 @@ function cw_inject_after_head_open(string $html, string $insertion): string
     return $html;
 }
 
+function cw_canonical_favicon_url(): string
+{
+    return rtrim(CW_BASE_URL, '/') . '/upp/img/favicons/favicon.ico';
+}
+
+/** Ensure every HTML page has a working favicon (fixes data:, placeholders and localhost hrefs). */
+function cw_normalize_favicon_in_html(string $html): string
+{
+    $ico = cw_canonical_favicon_url();
+
+    $html = preg_replace(
+        '~<link\\b([^>]*\\brel=["\'](?:shortcut\\s+)?icon["\'][^>]*\\bhref=)(["\'])data:,\\2~i',
+        '<link$1$2' . $ico . '$2',
+        $html
+    ) ?? $html;
+
+    $html = preg_replace(
+        '~<link\\b([^>]*\\brel=["\'](?:shortcut\\s+)?icon["\'][^>]*\\bhref=)(["\'])\\s*\\2~i',
+        '<link$1$2' . $ico . '$2',
+        $html
+    ) ?? $html;
+
+    $html = preg_replace(
+        '~<link\\b([^>]*\\brel=["\'](?:shortcut\\s+)?icon["\'][^>]*\\bhref=)(["\'])https?://localhost[^"\']*\\2~i',
+        '<link$1$2' . $ico . '$2',
+        $html
+    ) ?? $html;
+
+    $html = preg_replace_callback(
+        '~<link\\b([^>]*\\brel=["\'](?:shortcut\\s+)?icon["\'][^>]*\\bhref=)(["\'])(?!https?:)(?!/)([^"\']+)\\2~i',
+        static function (array $m): string {
+            $path = ltrim($m[3], './');
+            return '<link' . $m[1] . $m[2] . rtrim(CW_BASE_URL, '/') . '/' . $path . $m[2];
+        },
+        $html
+    ) ?? $html;
+
+    // Remove orphans left by the earlier bug (missing "<link" prefix).
+    $html = preg_replace(
+        '~>\\s+rel=["\'](?:shortcut\\s+)?icon["\'][^>]*\\bhref=["\'][^"\']*["\'][^>]*>~i',
+        '>',
+        $html
+    ) ?? $html;
+
+    if (!str_contains($html, 'id="cw-favicon"')) {
+        $html = cw_inject_after_head_open(
+            $html,
+            '<link rel="icon" type="image/x-icon" href="' . $ico . '" id="cw-favicon">'
+        );
+    }
+
+    return $html;
+}
+
 function cw_rewrite_asset_urls_in_html(string $html): string
 {
     $base = CW_BASE_URL;
@@ -193,9 +247,6 @@ function cw_rewrite_asset_urls_in_html(string $html): string
     ) ?? $html;
     if (!str_contains($html, 'cw-offline-shim.js')) {
         $headInsert .= '<script src="' . $base . '/assets/js/cw-offline-shim.js"></script>';
-    }
-    if (!preg_match('/<link[^>]+rel=["\'](?:shortcut\\s+)?icon["\']/i', $html)) {
-        $headInsert .= '<link rel="icon" href="' . $base . '/upp/img/favicons/favicon.ico" id="cw-favicon-anchor">';
     }
     if (!str_contains($html, 'id="cw-asset-root"')) {
         $headInsert .= '<script id="cw-asset-root">window.__CW_ASSET_ROOT=' . json_encode($base) . ';window.__CW_OFFLINE=true;'
@@ -302,15 +353,28 @@ function cw_rewrite_asset_urls_in_html(string $html): string
             . 'header.global-navigation .feds-navItem--megaMenu .feds-popup .feds-menu-content>.feds-menu-column:first-child .feds-menu-items>ul>li{'
             . 'flex:1 1 50%!important;max-width:50%!important;}'
             . '}'
+            . 'header.global-navigation{position:sticky!important;top:0!important;z-index:10000!important;}'
             . 'header.global-navigation,header.global-navigation .feds-topnav-wrapper{overflow:visible!important;}'
-            . 'header.global-navigation .feds-popup{z-index:9999!important;}'
-            . 'body.cw-has-homepage-gnav{padding-top:64px!important;}'
+            . 'header.global-navigation .feds-topnav{align-items:stretch!important;}'
+            . 'header.global-navigation .feds-popup{z-index:10001!important;background:#f3f3f3!important;}'
+            . 'header.global-navigation .feds-navItem--megaMenu.feds-dropdown--active .feds-menu-items,'
+            . 'header.global-navigation .feds-navItem--megaMenu:hover .feds-menu-items{'
+            . 'display:flex!important;flex-direction:column!important;border-bottom:none!important;}'
             . '@media (min-width:900px){'
+            . 'header.global-navigation .feds-navItem--megaMenu .feds-menu-headline{cursor:default;pointer-events:none;}'
+            . 'header.global-navigation .feds-navItem--megaMenu .feds-menu-headline:after{display:none!important;}'
+            . 'header.global-navigation .feds-navItem--megaMenu>.feds-popup{left:0!important;right:0!important;min-width:280px!important;}'
+            . 'header.global-navigation .feds-navItem--megaMenu .feds-menu-content{grid-template-columns:1fr!important;}'
             . 'header.global-navigation .feds-navItem--megaMenu.feds-dropdown--active>.feds-popup,'
             . 'header.global-navigation .feds-navItem--megaMenu:hover>.feds-popup,'
             . 'header.global-navigation .feds-navItem--megaMenu:focus-within>.feds-popup,'
             . 'header.global-navigation .feds-navLink--hoverCaret[aria-expanded="true"]+.feds-popup{'
             . 'display:flex!important;visibility:visible!important;opacity:1!important;}'
+            . '}'
+            . '@media (max-width:899px){'
+            . 'header.global-navigation .feds-navItem--megaMenu.feds-dropdown--active>.feds-popup{'
+            . 'display:flex!important;position:relative!important;top:auto!important;left:auto!important;right:auto!important;'
+            . 'width:100%!important;max-height:none!important;box-shadow:none!important;padding:0!important;}'
             . '}'
             . '</style>';
     }
@@ -318,7 +382,7 @@ function cw_rewrite_asset_urls_in_html(string $html): string
         $headInsert .= '<script id="cw-footer-offline">(function(){function run(){if(!document.body.classList.contains("cw-homepage")){document.querySelectorAll("footer.global-footer,.feds-footer-icons,.feds-footer-wrapper").forEach(function(el){el.remove();});return;}var f=document.querySelector("footer.global-footer");if(!f)return;f.dataset.cwFooterStatic="1";f.dataset.blockStatus="loaded";var w=f.querySelectorAll(".feds-footer-wrapper");for(var i=1;i<w.length;i++)w[i].remove();}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();setTimeout(run,50);setTimeout(run,500);setTimeout(run,2500);})();</script>';
     }
     if (!str_contains($html, 'id="cw-gnav-offline"')) {
-        $headInsert .= '<script id="cw-gnav-offline">(function(){var b=' . json_encode($base) . ';function hideLocalNav(){var h=document.querySelector("header.global-navigation");if(!h)return;h.classList.remove("local-nav","has-breadcrumbs");document.querySelectorAll(".feds-localnav,.feds-localnav-wrapper,header .feds-breadcrumbs,header .feds-topnav-aside").forEach(function(el){el.remove();});}function learnLink(){var el=document.querySelector("header .feds-navItem[daa-lh=\\"Learn Support\\"]");if(!el)return;var ok=el.querySelector("a.feds-navLink[href*=\\"/community\\"]")&&!el.classList.contains("feds-navItem--megaMenu");if(ok&&el.querySelector("a.feds-navLink").href.indexOf(b)===0)return;var a=document.createElement("a");a.href=b+"/community/";a.className="feds-navLink";a.setAttribute("daa-ll","Learn Support-4");a.textContent="Learn & Support";el.className="feds-navItem feds-navItem--section";el.removeAttribute("style");el.innerHTML="";el.appendChild(a);}function navPopups(){var h=document.querySelector("header.global-navigation");if(!h||h.dataset.cwNavPopups)return;h.dataset.cwNavPopups="1";var mq=window.matchMedia("(min-width:900px)");function closeAll(){h.querySelectorAll(".feds-dropdown--active").forEach(function(s){s.classList.remove("feds-dropdown--active");});h.querySelectorAll(".feds-navLink--hoverCaret[aria-expanded=\\"true\\"],.feds-menu-headline[aria-expanded=\\"true\\"]").forEach(function(el){el.setAttribute("aria-expanded","false");});}function openNav(section,btn){closeAll();section.classList.add("feds-dropdown--active");if(btn)btn.setAttribute("aria-expanded","true");}h.querySelectorAll(".feds-navItem--megaMenu").forEach(function(section){var btn=section.querySelector(":scope>.feds-navLink--hoverCaret");if(!btn)return;section.addEventListener("mouseenter",function(){if(mq.matches)openNav(section,btn);});section.addEventListener("mouseleave",function(){if(mq.matches)closeAll();});btn.addEventListener("click",function(e){e.preventDefault();var open=section.classList.contains("feds-dropdown--active");closeAll();if(!open)openNav(section,btn);});});h.querySelectorAll(".feds-menu-headline").forEach(function(headline){headline.addEventListener("click",function(e){if(mq.matches)return;e.preventDefault();var open=headline.getAttribute("aria-expanded")==="true";h.querySelectorAll(".feds-menu-headline[aria-expanded=\\"true\\"]").forEach(function(el){el.setAttribute("aria-expanded","false");});if(!open)headline.setAttribute("aria-expanded","true");});});document.addEventListener("click",function(e){if(!e.target.closest("header.global-navigation"))closeAll();});var toggle=h.querySelector(".feds-toggle");var wrap=h.querySelector("#feds-nav-wrapper");if(toggle&&wrap){toggle.addEventListener("click",function(){var exp=toggle.getAttribute("aria-expanded")==="true";toggle.setAttribute("aria-expanded",exp?"false":"true");wrap.classList.toggle("feds-nav-wrapper--expanded",!exp);});}}function stripFragPaths(){var h=document.querySelector("header.global-navigation");if(!h)return;h.querySelectorAll("[data-path]").forEach(function(el){el.removeAttribute("data-path");});}function lockPopups(){var h=document.querySelector("header.global-navigation");if(!h)return;var defs={"Creativity Design":{headline:"Shop for",menuLh:"Shop for",links:[{href:b+"/products/firefly/",text:"Creative AI",ll:"Creative AI-1"},{href:b+"/creativecloud/photography/apps/",text:"Photography",ll:"Photography-2"}]},"PDF E signatures":{headline:"Products",menuLh:"Products",links:[{href:b+"/acrobat/",text:"Adobe Acrobat",ll:"Adobe Acrobat-1"},{href:b+"/acrobat/acrobat-studio/",text:"Adobe Acrobat Studio",ll:"Adobe Acrobat Studio-2"}]}};Object.keys(defs).forEach(function(label){var sec=h.querySelector(".feds-navItem--megaMenu[daa-lh=\\""+label+"\\"]");if(!sec)return;var d=defs[label];var lis=d.links.map(function(l){return"<li><a href=\\""+l.href+"\\" class=\\"feds-navLink\\" daa-ll=\\""+l.ll+"\\">"+l.text+"</a></li>";}).join("");var pop="<div class=\\"feds-popup\\" data-cw-canonical-popup=\\"1\\"><div class=\\"feds-menu-container\\"><div class=\\"feds-menu-content\\"><div class=\\"feds-menu-column\\"><div class=\\"feds-menu-section\\"><div class=\\"feds-menu-headline\\" role=\\"heading\\" aria-level=\\"2\\">"+d.headline+"</div><div class=\\"feds-menu-items\\" daa-lh=\\""+d.menuLh+"\\"><ul>"+lis+"</ul></div></div></div></div></div></div>";var old=sec.querySelector(".feds-popup");if(old)old.remove();var btn=sec.querySelector(":scope>.feds-navLink--hoverCaret");if(btn)btn.insertAdjacentHTML("afterend",pop);});var mc=h.querySelector(".feds-navItem--megaMenu[daa-lh=\\"Marketing Commerce\\"]");if(mc)mc.remove();}function r(){var h=document.querySelector("header.global-navigation");if(!h||!h.querySelector(".feds-topnav,.feds-nav"))return;h.classList.add("ready");h.classList.remove("gnav-hide");h.style.setProperty("visibility","visible","important");h.style.setProperty("opacity","1","important");var n=h.querySelector(".feds-nav-wrapper");if(n&&window.matchMedia("(min-width:900px)").matches)n.style.setProperty("display","flex","important");hideLocalNav();stripFragPaths();lockPopups();learnLink();document.querySelectorAll("#unav-profile,.unav-comp-profile,.feds-signIn,.feds-signIn-dropdown,[data-test-id=\\"unav-profile--sign-in\\"]").forEach(function(el){el.remove();});var logo=document.querySelector("header.global-navigation a.feds-brand");if(logo&&b)logo.href=b+"/";navPopups();}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",r);else r();setTimeout(r,50);setTimeout(r,500);setTimeout(r,1500);setTimeout(hideLocalNav,2000);setTimeout(lockPopups,50);setTimeout(lockPopups,500);setTimeout(lockPopups,1200);setTimeout(lockPopups,2500);setTimeout(learnLink,1200);})();</script>';
+        $headInsert .= '<script id="cw-gnav-offline">' . cw_gnav_offline_inline_script($base) . '</script>';
     }
     if (!str_contains($html, 'id="cw-hide-cookie"')) {
         $headInsert .= '<style id="cw-hide-cookie">' .
@@ -336,10 +400,14 @@ function cw_rewrite_asset_urls_in_html(string $html): string
     if (!str_contains($html, 'id="cw-fix-adobe"')) {
         $headInsert .= '<script id="cw-fix-adobe">(function(){var b=' . json_encode($base) . ';function u(v){if(!v||typeof v!=="string")return v;var t=v.trim();var mm=t.match(/^\\/media_([^?#]+)$/i);if(mm)return b+"/assets/images/media_"+mm[1];var m=t.match(/^(https?:)?\\/\\/(?:www\\.)?adobe\\.com\\/([^?#]+?)(?:\\.html)?\\/?$/i);if(m){var p=m[2];return b+"/"+p+(p?"/":"");}if(t.indexOf("assets/www.adobe.com/")!==-1)return t.replace(/\\/?assets\\/www\\.adobe\\.com\\//,b+"/");if(t.charAt(0)==="/"&&t.indexOf("/media_")>0)return b+t;return v;}function f(e){if(!e||!e.getAttribute)return;["href","src","srcset","action"].forEach(function(k){var v=e.getAttribute(k);if(!v)return;var nv=u(v);if(nv!==v)e.setAttribute(k,nv);});}function s(){document.querySelectorAll("[href],[src],[srcset],[action]").forEach(f);}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",s);else s();setTimeout(s,600);setTimeout(s,2000);})();</script>';
     }
-    if ($headInsert !== '') {
+    // Strip mirrored junk before injecting offline head assets (inject must run after strip).
+    $html = cw_strip_offline_breaking_assets($html);
+
+    if ($headInsert !== '' && preg_match('/<head\b[^>]*>/i', $html)) {
         $html = cw_inject_after_head_open($html, $headInsert);
     }
 
+    // Re-run strip for footer/header nav helpers (line-based akam filter is HTML-tag-only now).
     $html = cw_strip_offline_breaking_assets($html);
 
     $homePath = cw_normalize_request_path(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/');
@@ -765,7 +833,7 @@ function cw_rewrite_asset_urls_in_html(string $html): string
         ) ?? $html;
     }
 
-    return $html;
+    return cw_normalize_favicon_in_html($html);
 }
 
 function cw_start_asset_url_rewrite(): void

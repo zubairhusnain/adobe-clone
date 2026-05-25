@@ -7,6 +7,9 @@ RewriteEngine On
 
 DirectoryIndex index.php
 
+# Browsers request /favicon.ico at domain root
+RewriteRule ^favicon\.ico$ upp/img/favicons/favicon.ico [L]
+
 # Legacy static homepage → PHP entry
 RewriteRule ^index\.html$ index.php [L,R=301]
 

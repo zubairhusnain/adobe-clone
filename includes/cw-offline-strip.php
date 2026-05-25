@@ -21,10 +21,10 @@ function cw_strip_adbmsg_client(string $html): string
 function cw_strip_offline_breaking_assets(string $html): string
 {
     $html = cw_strip_adbmsg_client($html);
-    // Line-based pass is faster/safer than huge PCRE on multi-MB HTML.
-    $html = preg_replace('/^.*marketingtech.*\r?\n/mi', '', $html) ?? $html;
-    $html = preg_replace('/^.*\bakam\/13\/.*\r?\n/mi', '', $html) ?? $html;
-    $html = preg_replace('/^.*bazadebezolkohpepadr.*\r?\n/mi', '', $html) ?? $html;
+    // Line-based pass: only whole-line HTML tags (never match strings inside injected <script> bodies).
+    $html = preg_replace('/^\\s*<(?:script|link|iframe|noscript)\\b[^>]*marketingtech[^>]*>.*\\r?\\n/mi', '', $html) ?? $html;
+    $html = preg_replace('/^\\s*<(?:script|link|iframe|noscript)\\b[^>]*akam\\/13\\/.*\\r?\\n/mi', '', $html) ?? $html;
+    $html = preg_replace('/^\\s*<script\\b[^>]*>\\s*bazadebezolkohpepadr\\s*=.*<\\/script>\\s*\\r?\\n/mi', '', $html) ?? $html;
     // Strip broken script tails left when marketing <script> opening lines were removed.
     $html = preg_replace('/^\s*async=""[^>]*>\s*<\/script>\s*\r?\n/mi', '', $html) ?? $html;
     $html = preg_replace('/^\s*data-loaded="true">\s*<\/script>\s*\r?\n/mi', '', $html) ?? $html;
@@ -79,10 +79,17 @@ function cw_strip_offline_breaking_assets(string $html): string
         $html = preg_replace($pattern, '', $html) ?? $html;
     }
 
+    // Older builds matched <header> because /<head>/ lacked a word boundary.
+    $html = preg_replace(
+        '/(<header\\b[^>]*>)\\s*<meta\\s+name=["\']martech["\'][^>]*>\\s*/i',
+        '$1',
+        $html
+    ) ?? $html;
+
     if (preg_match('/<meta\\s+name=["\']martech["\']/i', $html)) {
         $html = preg_replace('/<meta\\s+name=["\']martech["\'][^>]*>/i', '<meta name="martech" content="off">', $html, 1) ?? $html;
-    } else {
-        $html = preg_replace('/<head([^>]*)>/i', '<head$1><meta name="martech" content="off">', $html, 1) ?? $html;
+    } elseif (preg_match('/<head\\b[^>]*>/i', $html)) {
+        $html = preg_replace('/<head\\b([^>]*)>/i', '<head$1><meta name="martech" content="off">', $html, 1) ?? $html;
     }
 
     $html = cw_normalize_footer_social_links($html);
@@ -405,30 +412,49 @@ function cw_apply_canonical_nav_popups(string $html): string
     ) ?? $html;
 }
 
-/** Homepage Creative Cloud brick: drop external URLs (e.g. commerce.adobe.com trial). */
+/** Homepage Creative Cloud brick: keep link text, point CTAs at local pages (never strip <a> tags). */
 function cw_customize_creative_cloud_home_section(string $html): string
 {
     if (!cw_is_homepage_request()) {
         return $html;
     }
 
-    $base = cw_site_base();
-
     if (!preg_match('~(<h2\\s+id="creative-cloud"[^>]*>.*?(?=<h2\\s+id="acrobat"))~is', $html, $m)) {
         return $html;
     }
 
     $block = $m[0];
-    $block = preg_replace(
-        '~href="https?://commerce\\.adobe\\.com[^"]*"~i',
-        'href="' . cw_page_url('/creativecloud/plans/') . '"',
-        $block
-    ) ?? $block;
+    $plansUrl = cw_page_url('/creativecloud/plans/');
+
     $block = preg_replace_callback(
-        '/<a\\b([^>]*)\\shref=(["\'])(https?:\\/\\/[^"\']+)\\2([^>]*)>(.*?)<\\/a>/is',
-        static fn (array $a): string => $a[5],
+        '/\\bhref=(["\'])([^"\']+)\\1/i',
+        static function (array $a) use ($plansUrl): string {
+            $href = $a[2];
+            if (preg_match('#^https?://commerce\\.adobe\\.com#i', $href) === 1) {
+                return 'href=' . $a[1] . $plansUrl . $a[1];
+            }
+            if (preg_match('#^https?://(?:www\\.)?adobe\\.com#i', $href) === 1) {
+                return 'href=' . $a[1] . cw_localize_nav_href($href) . $a[1];
+            }
+            if (str_starts_with($href, '/') || !preg_match('#^https?://#i', $href)) {
+                return 'href=' . $a[1] . cw_localize_nav_href($href) . $a[1];
+            }
+
+            return $a[0];
+        },
         $block
     ) ?? $block;
+
+    // commerce CTA sometimes loses its <a> after other passes — restore a simple link if needed.
+    if (!preg_match('/<a\\b[^>]*>\\s*<span[^>]*>\\s*Creative Cloud Pro free trial/i', $block)
+        && str_contains($block, 'Creative Cloud Pro free trial')) {
+        $block = preg_replace(
+            '~(<p\\s+class="body-xs">)\\s*<span\\s+style="pointer-events:\\s*none;">\\s*Creative Cloud Pro free trial\\s*</span>\\s*(</p>)~i',
+            '$1<a href="' . $plansUrl . '" class="con-button" daa-ll="Creative Cloud Pro f-1--Creative Cloud">Creative Cloud Pro free trial</a>$2',
+            $block,
+            1
+        ) ?? $block;
+    }
 
     return substr_replace($html, $block, (int) strpos($html, $m[0]), strlen($m[0]));
 }
@@ -749,7 +775,7 @@ function cw_apply_homepage_footer(string $html): string
         if (preg_match('/<meta\\s+name=["\']footer["\'][^>]*>/i', $html)) {
             $html = preg_replace('/<meta\\s+name=["\']footer["\'][^>]*>/i', '<meta name="footer" content="off">', $html, 1) ?? $html;
         } else {
-            $html = preg_replace('/<head([^>]*)>/i', '<head$1><meta name="footer" content="off">', $html, 1) ?? $html;
+            $html = preg_replace('/<head\\b([^>]*)>/i', '<head$1><meta name="footer" content="off">', $html, 1) ?? $html;
         }
     }
 
@@ -1022,7 +1048,70 @@ function cw_module_js_stub(): string
     return "export default async function init(el){if(el&&el.dataset)el.dataset.blockStatus='loaded';}\n";
 }
 
-/** Offline global-navigation block: keep server HTML popups, never fetch gnav fragments. */
+/**
+ * Shared offline global-nav behavior: dropdown toggles + mobile menu (no DOM replacement).
+ *
+ * @param string $rootExpr JS expression for the header element, e.g. document.querySelector(...)
+ */
+function cw_gnav_nav_popups_js_body(string $rootExpr): string
+{
+    return 'function cwCloseAll(h){h.querySelectorAll(".feds-dropdown--active").forEach(function(s){s.classList.remove("feds-dropdown--active");});'
+        . 'h.querySelectorAll(".feds-navLink--hoverCaret[aria-expanded=\\"true\\"],.feds-menu-headline[aria-expanded=\\"true\\"]").forEach(function(el){el.setAttribute("aria-expanded","false");});}'
+        . 'function cwOpenNav(h,section,btn){cwCloseAll(h);section.classList.add("feds-dropdown--active");if(btn)btn.setAttribute("aria-expanded","true");}'
+        . 'function cwBindNavPopups(h){if(!h||h.dataset.cwNavPopups)return;h.dataset.cwNavPopups="1";'
+        . 'var mq=window.matchMedia("(min-width:900px)");'
+        . 'h.querySelectorAll(".feds-navItem--megaMenu").forEach(function(section){'
+        . 'var btn=section.querySelector(":scope>.feds-navLink--hoverCaret");if(!btn)return;'
+        . 'section.addEventListener("mouseenter",function(){if(mq.matches)cwOpenNav(h,section,btn);});'
+        . 'section.addEventListener("mouseleave",function(e){if(!mq.matches)return;'
+        . 'if(e.relatedTarget&&section.contains(e.relatedTarget))return;cwCloseAll(h);});'
+        . 'btn.addEventListener("click",function(e){e.preventDefault();'
+        . 'var open=section.classList.contains("feds-dropdown--active");cwCloseAll(h);if(!open)cwOpenNav(h,section,btn);});});'
+        . 'h.querySelectorAll(".feds-menu-headline").forEach(function(headline){'
+        . 'headline.addEventListener("click",function(e){if(mq.matches)return;e.preventDefault();'
+        . 'var open=headline.getAttribute("aria-expanded")==="true";'
+        . 'h.querySelectorAll(".feds-menu-headline[aria-expanded=\\"true\\"]").forEach(function(el){el.setAttribute("aria-expanded","false");});'
+        . 'if(!open)headline.setAttribute("aria-expanded","true");});});'
+        . 'if(!h.dataset.cwNavClickOut){h.dataset.cwNavClickOut="1";document.addEventListener("click",function(e){'
+        . 'if(!e.target.closest("header.global-navigation"))cwCloseAll(h);});}'
+        . 'var toggle=h.querySelector(".feds-toggle");var wrap=h.querySelector("#feds-nav-wrapper");'
+        . 'if(toggle&&wrap&&!toggle.dataset.cwToggle){toggle.dataset.cwToggle="1";'
+        . 'toggle.addEventListener("click",function(){var exp=toggle.getAttribute("aria-expanded")==="true";'
+        . 'toggle.setAttribute("aria-expanded",exp?"false":"true");wrap.classList.toggle("feds-nav-wrapper--expanded",!exp);});}}'
+        . 'var h=' . $rootExpr . ';cwBindNavPopups(h);';
+}
+
+/** Inline script injected on every page (homepage + inner pages). */
+function cw_gnav_offline_inline_script(string $baseUrl): string
+{
+    $b = json_encode($baseUrl, JSON_UNESCAPED_SLASHES);
+
+    return '(function(){var b=' . $b . ';'
+        . 'function hideLocalNav(){var h=document.querySelector("header.global-navigation");if(!h)return;'
+        . 'h.classList.remove("local-nav","has-breadcrumbs");'
+        . 'document.querySelectorAll(".feds-localnav,.feds-localnav-wrapper,header .feds-breadcrumbs,header .feds-topnav-aside").forEach(function(el){el.remove();});}'
+        . 'function learnLink(){var el=document.querySelector("header .feds-navItem[daa-lh=\\"Learn Support\\"]");if(!el)return;'
+        . 'var ok=el.querySelector("a.feds-navLink[href*=\\"/community\\"]")&&!el.classList.contains("feds-navItem--megaMenu");'
+        . 'if(ok&&el.querySelector("a.feds-navLink").href.indexOf(b)===0)return;'
+        . 'var a=document.createElement("a");a.href=b+"/community/";a.className="feds-navLink";'
+        . 'a.setAttribute("daa-ll","Learn Support-4");a.textContent="Learn & Support";'
+        . 'el.className="feds-navItem feds-navItem--section";el.removeAttribute("style");el.innerHTML="";el.appendChild(a);}'
+        . 'function stripFragPaths(){var h=document.querySelector("header.global-navigation");if(!h)return;'
+        . 'h.querySelectorAll("[data-path]").forEach(function(el){el.removeAttribute("data-path");});}'
+        . cw_gnav_nav_popups_js_body('document.querySelector("header.global-navigation")')
+        . 'function r(){var h=document.querySelector("header.global-navigation");if(!h||!h.querySelector(".feds-topnav,.feds-nav"))return;'
+        . 'h.classList.add("ready");h.classList.remove("gnav-hide");'
+        . 'h.style.setProperty("visibility","visible","important");h.style.setProperty("opacity","1","important");'
+        . 'var n=h.querySelector(".feds-nav-wrapper");if(n&&window.matchMedia("(min-width:900px)").matches)n.style.setProperty("display","flex","important");'
+        . 'hideLocalNav();stripFragPaths();learnLink();'
+        . 'document.querySelectorAll("#unav-profile,.unav-comp-profile,.feds-signIn,.feds-signIn-dropdown,[data-test-id=\\"unav-profile--sign-in\\"]").forEach(function(el){el.remove();});'
+        . 'var logo=document.querySelector("header.global-navigation a.feds-brand");if(logo&&b)logo.href=b+"/";'
+        . 'delete h.dataset.cwNavPopups;cwBindNavPopups(h);}'
+        . 'if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",r);else r();'
+        . 'setTimeout(r,50);setTimeout(learnLink,300);setTimeout(hideLocalNav,500);})();';
+}
+
+/** Offline global-navigation block: keep server HTML popups, bind dropdowns (no fragment fetch). */
 function cw_gnav_offline_js_stub(): string
 {
     $base = json_encode(cw_site_base(), JSON_UNESCAPED_SLASHES);
@@ -1034,24 +1123,10 @@ function cw_gnav_offline_js_stub(): string
         . 'block.classList.remove("gnav-hide","local-nav","has-breadcrumbs");'
         . 'block.dataset.blockStatus="loaded";'
         . 'block.dataset.cwStaticGnav="1";'
-        . 'function popHtml(d){var lis=d.links.map(function(l){'
-        . 'return"<li><a href=\\""+l.href+"\\" class=\\"feds-navLink\\" daa-ll=\\""+l.ll+"\\">"+l.text+"</a></li>";}).join("");'
-        . 'return"<div class=\\"feds-popup\\" data-cw-canonical-popup=\\"1\\"><div class=\\"feds-menu-container\\">'
-        . '<div class=\\"feds-menu-content\\"><div class=\\"feds-menu-column\\"><div class=\\"feds-menu-section\\">'
-        . '<div class=\\"feds-menu-headline\\" role=\\"heading\\" aria-level=\\"2\\">"+d.headline+"</div>'
-        . '<div class=\\"feds-menu-items\\" daa-lh=\\""+d.menuLh+"\\"><ul>"+lis+"</ul></div>'
-        . '</div></div></div></div></div>";}'
-        . 'function lockPopups(){'
-        . 'var defs={"Creativity Design":{headline:"Shop for",menuLh:"Shop for",links:[{href:b+"/products/firefly/",text:"Creative AI",ll:"Creative AI-1"},{href:b+"/creativecloud/photography/apps/",text:"Photography",ll:"Photography-2"}]},'
-        . '"PDF E signatures":{headline:"Products",menuLh:"Products",links:[{href:b+"/acrobat/",text:"Adobe Acrobat",ll:"Adobe Acrobat-1"},{href:b+"/acrobat/acrobat-studio/",text:"Adobe Acrobat Studio",ll:"Adobe Acrobat Studio-2"}]}};'
-        . 'Object.keys(defs).forEach(function(label){var sec=block.querySelector(".feds-navItem--megaMenu[daa-lh=\\""+label+"\\"]");'
-        . 'if(!sec)return;var btn=sec.querySelector(":scope>.feds-navLink--hoverCaret");var old=sec.querySelector(".feds-popup");if(old)old.remove();'
-        . 'if(btn)btn.insertAdjacentHTML("afterend",popHtml(defs[label]));});'
+        . 'block.querySelectorAll("[data-path]").forEach(function(el){el.removeAttribute("data-path");});'
         . 'var mc=block.querySelector(".feds-navItem--megaMenu[daa-lh=\\"Marketing Commerce\\"]");if(mc)mc.remove();'
-        . 'block.querySelectorAll("[data-path]").forEach(function(el){el.removeAttribute("data-path");});}'
-        . 'lockPopups();'
-        . 'if(!block.__cwGnavObs){block.__cwGnavObs=1;new MutationObserver(lockPopups).observe(block,{childList:1,subtree:1});}'
-        . '[50,300,800,1500,3000].forEach(function(ms){setTimeout(lockPopups,ms);});'
+        . cw_gnav_nav_popups_js_body('block')
+        . 'var logo=block.querySelector("a.feds-brand");if(logo&&b)logo.href=b+"/";'
         . '}\n';
 }
 
