@@ -1,5 +1,17 @@
-
 node_modules
 .history
 .vscode
 .DS_Store
+
+# Samsung mirror cache — not needed for Adobe deploy (keep locally if you want)
+assets/remote/
+
+# Dev / mirror tools only
+mirror-samsung.mjs
+drafts/
+
+# Local env
+.env
+*.log
+includes/contact-mail.local.php
+storage/contact-messages/

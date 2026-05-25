@@ -101,6 +101,7 @@ function cw_strip_offline_breaking_assets(string $html): string
     $html = cw_strip_sign_in_from_header($html);
     $html = cw_apply_canonical_nav_popups($html);
     $html = cw_customize_learn_support_nav($html);
+    $html = cw_customize_contact_nav_link($html);
     $html = cw_customize_creative_cloud_home_section($html);
     $html = cw_strip_in_the_news_links($html);
     $html = cw_disable_adobe_for_business_link($html);
@@ -614,7 +615,7 @@ function cw_homepage_global_header_html(): string
 {
     static $header = null;
     static $cacheKey = null;
-    $key = 'gnav-v8';
+    $key = 'gnav-v9';
     if ($header !== null && $cacheKey === $key) {
         return $header;
     }
@@ -801,11 +802,38 @@ function cw_has_global_navigation_header(string $html): bool
 }
 
 /** Apply homepage popup customizations to a header fragment. */
+/** Add a top-level Contact link next to Learn & Support. */
+function cw_customize_contact_nav_link(string $html): string
+{
+    if (str_contains($html, 'daa-lh="Contact"')) {
+        return $html;
+    }
+
+    $url = htmlspecialchars(cw_page_url('/about-adobe/contact/'), ENT_QUOTES, 'UTF-8');
+    $section = '<section role="listitem" class="feds-navItem feds-navItem--section" daa-lh="Contact">'
+        . '<a href="' . $url . '" class="feds-navLink" daa-ll="Contact-1">Contact</a>'
+        . '</section>';
+
+    $pattern = '~(<div\\s+role="listitem"\\s+class="feds-navItem feds-navItem--section"\\s+daa-lh="Learn Support">\\s*'
+        . '<a\\b[^>]*class="feds-navLink"[^>]*>.*?</a>\\s*</div>)~is';
+
+    $replaced = preg_replace($pattern, '$1' . $section, $html, 1);
+    if ($replaced !== null && $replaced !== $html) {
+        return $replaced;
+    }
+
+    $patternSection = '~(<section\\s+role="listitem"\\s+class="feds-navItem feds-navItem--section"\\s+daa-lh="Learn Support">\\s*'
+        . '<a\\b[^>]*class="feds-navLink"[^>]*>.*?</a>\\s*</section>)~is';
+
+    return preg_replace($patternSection, '$1' . $section, $html, 1) ?? $html;
+}
+
 function cw_customize_homepage_header_fragment(string $header): string
 {
     $wrapped = '<!DOCTYPE html><html><body>' . $header . '</body></html>';
     $wrapped = cw_apply_canonical_nav_popups($wrapped);
     $wrapped = cw_customize_learn_support_nav($wrapped);
+    $wrapped = cw_customize_contact_nav_link($wrapped);
     $wrapped = cw_strip_sign_in_from_header($wrapped);
     $wrapped = preg_replace('~\\s*data-path="[^"]*"~i', '', $wrapped) ?? $wrapped;
 
@@ -1096,6 +1124,12 @@ function cw_gnav_offline_inline_script(string $baseUrl): string
         . 'var a=document.createElement("a");a.href=b+"/community/";a.className="feds-navLink";'
         . 'a.setAttribute("daa-ll","Learn Support-4");a.textContent="Learn & Support";'
         . 'el.className="feds-navItem feds-navItem--section";el.removeAttribute("style");el.innerHTML="";el.appendChild(a);}'
+        . 'function contactLink(){if(document.querySelector("header .feds-navItem[daa-lh=\\"Contact\\"]"))return;'
+        . 'var learn=document.querySelector("header .feds-navItem[daa-lh=\\"Learn Support\\"]");if(!learn||!learn.parentNode)return;'
+        . 'var sec=document.createElement("section");sec.setAttribute("role","listitem");'
+        . 'sec.className="feds-navItem feds-navItem--section";sec.setAttribute("daa-lh","Contact");'
+        . 'var a=document.createElement("a");a.href=b+"/about-adobe/contact/";a.className="feds-navLink";'
+        . 'a.setAttribute("daa-ll","Contact-1");a.textContent="Contact";sec.appendChild(a);learn.insertAdjacentElement("afterend",sec);}'
         . 'function stripFragPaths(){var h=document.querySelector("header.global-navigation");if(!h)return;'
         . 'h.querySelectorAll("[data-path]").forEach(function(el){el.removeAttribute("data-path");});}'
         . cw_gnav_nav_popups_js_body('document.querySelector("header.global-navigation")')
@@ -1103,12 +1137,12 @@ function cw_gnav_offline_inline_script(string $baseUrl): string
         . 'h.classList.add("ready");h.classList.remove("gnav-hide");'
         . 'h.style.setProperty("visibility","visible","important");h.style.setProperty("opacity","1","important");'
         . 'var n=h.querySelector(".feds-nav-wrapper");if(n&&window.matchMedia("(min-width:900px)").matches)n.style.setProperty("display","flex","important");'
-        . 'hideLocalNav();stripFragPaths();learnLink();'
+        . 'hideLocalNav();stripFragPaths();learnLink();contactLink();'
         . 'document.querySelectorAll("#unav-profile,.unav-comp-profile,.feds-signIn,.feds-signIn-dropdown,[data-test-id=\\"unav-profile--sign-in\\"]").forEach(function(el){el.remove();});'
         . 'var logo=document.querySelector("header.global-navigation a.feds-brand");if(logo&&b)logo.href=b+"/";'
         . 'delete h.dataset.cwNavPopups;cwBindNavPopups(h);}'
         . 'if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",r);else r();'
-        . 'setTimeout(r,50);setTimeout(learnLink,300);setTimeout(hideLocalNav,500);})();';
+        . 'setTimeout(r,50);setTimeout(learnLink,300);setTimeout(contactLink,350);setTimeout(hideLocalNav,500);})();';
 }
 
 /** Offline global-navigation block: keep server HTML popups, bind dropdowns (no fragment fetch). */

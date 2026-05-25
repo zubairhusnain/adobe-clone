@@ -1,0 +1,20 @@
+<?php
+declare(strict_types=1);
+
+/**
+ * Copy to contact-mail.local.php and fill in your values.
+ */
+return [
+    'recipient' => 'your-inbox@example.com',
+    'from_email' => 'noreply@yourdomain.com',
+    'from_name' => 'Adobe Contact Form',
+
+    'smtp' => [
+        'enabled' => true,
+        'host' => 'smtp.gmail.com',
+        'port' => 587,
+        'encryption' => 'tls',
+        'username' => 'your.email@gmail.com',
+        'password' => 'your-app-password',
+    ],
+];
